@@ -1,15 +1,12 @@
 ---
-
+import Layout from '../layouts/MainLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
-import Aboutus from '../components/Aboutus.astro';
 import Services from '../components/Services.astro';
-import FAQ from '../components/FAQ.astro';
-import MainLayout from '../layouts/MainLayout.astro';
+// Importa otros componentes según sea necesario
 ---
 
-<MainLayout title="Mi Proyecto Astro">
-	<HeroSection  />
-	<Aboutus />
-	<Services />
-	<FAQ />
-</MainLayout>
+<Layout title="Tu Salón de Belleza">
+  <HeroSection />
+  <Services />
+  <!-- Agrega otros componentes aquí -->
+</Layout>

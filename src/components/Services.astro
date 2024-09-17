@@ -1,50 +1,107 @@
 ---
-// src/components/TreatmentCards.astro
-import { treatments } from '../utils/servicesdata';
+import { services } from '../utils/services.js';
 ---
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-  {treatments.map((treatment) => (
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2 text-gray-800">{treatment.title}</h2>
-        <p class="text-gray-600 mb-4">{treatment.description}</p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-6 h-6 mr-2 text-gray-600">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="5" />
-            <line x1="50" y1="50" x2="50" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-              <animateTransform
-                attributeName="transform"
-                attributeType="XML"
-                type="rotate"
-                from="0 50 50"
-                to="360 50 50"
-                dur="60s"
-                repeatCount="indefinite"
-              />
-            </line>
-            <line x1="50" y1="50" x2="75" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-              <animateTransform
-                attributeName="transform"
-                attributeType="XML"
-                type="rotate"
-                from="0 50 50"
-                to="360 50 50"
-                dur="3600s"
-                repeatCount="indefinite"
-              />
-            </line>
-          </svg>
-        <p class="text-gray-700 mb-4 font-medium">Duración del efecto: {treatment.effectDuration}</p>
-        <div>
-          <h3 class="font-semibold text-gray-800 mb-2">Cuidados posteriores:</h3>
-          <ul class="list-disc list-inside text-gray-600 space-y-1">
-            {treatment.postCare.map((care) => (
-              <li>{care}</li>
-            ))}
-          </ul>
+<section id="services" class="py-16 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center text-indigo-900">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 p-5 md:grid-cols-1 md:px-44 lg:grid-cols-1 md:py-5 gap-10 gap-x-14">
+          {services.map((service) => (
+            <div class="border border-slate-100 bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-200 flex flex-col justify-between">
+              <div class="p-6 h-full flex flex-col">
+                <div class="text-start mb-4">
+                  <span class="text-2xl text-blue-500 mr-3">
+                    <i class={`icon-${service.icon}`}></i>
+                  </span>
+                  <h3 class="text-2xl font-extrabold text-custom-azulpastel">{service.name}</h3>
+                </div>
+                <p class="font-bold text-custom-blueobscure text-xs max-w-52 text-left mb-4">{service.description}</p>
+                <!-- Botón Ver más -->
+                <div class="flex justify-end mt-auto">
+                  <button class="bg-custom-azulpastel text-white py-1 px-4 text-xs rounded hover:bg-blue-400 transition-all ver-mas-btn" data-id={service.id}>
+                    Ver Información
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+    
+  
+      <div id="service-details" class="bg-indigo-100 p-8 rounded-lg shadow-sm hidden text-center max-w-4xl mx-auto">
+        <h2 id="service-title" class="text-3xl font-extrabold mb-4 text-indigo-800"></h2>
+        <p id="service-description" class="mb-6 text-gray-600"></p>
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Preguntas frecuentes</h3>
+        <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>
-  ))}
-</div>
----
+  </section>
+  
+  <script>
+    import { services } from '../utils/services.js';
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const verMasBtns = document.querySelectorAll('.ver-mas-btn');
+      const serviceDetails = document.getElementById('service-details');
+      const serviceTitle = document.getElementById('service-title');
+      const serviceDescription = document.getElementById('service-description');
+      const serviceFaqs = document.getElementById('service-faqs');
+  
+      verMasBtns.forEach(button => {
+        button.addEventListener('click', (e) => {
+          const serviceId = e.currentTarget.getAttribute('data-id');
+          const service = services.find(s => s.id === serviceId);
+          
+          if (service) {
+            serviceTitle.textContent = service.name;
+            serviceDescription.textContent = service.fullDescription;
+            serviceFaqs.innerHTML = service.faqs.map(faq => `
+              <li class="bg-gray-200 p-4 text-center rounded-lg faq-item transition-all duration-300 hover:bg-gray-300 cursor-pointer">
+                <div class="flex justify-between items-center faq-question">
+                  <h4 class="font-semibold text-gray-800">${faq.question}</h4>
+                  <span class="text-blue-800 font-bold transition-transform duration-300 transform">+</span>
+                </div>
+                <p class="text-gray-600 faq-answer hidden mt-2">${faq.answer}</p>
+              </li>
+            `).join('');
+  
+            serviceDetails.classList.remove('hidden');
+            serviceDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  
+            // Comportamiento del acordeón
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+              const question = item.querySelector('.faq-question');
+              const answer = item.querySelector('.faq-answer');
+              const toggleIcon = question.querySelector('span');
+  
+              question.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+                toggleIcon.textContent = answer.classList.contains('hidden') ? '+' : '-';
+                toggleIcon.classList.toggle('rotate-180');
+                item.classList.toggle('faq-expanded');
+              });
+            });
+          }
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    .faq-item:hover {
+      background-color: #f0f4f8; /* Cambio de color de fondo en hover */
+    }
+  
+    .faq-item .faq-question span {
+      transition: transform 0.3s ease-in-out; /* Transición suave para el ícono */
+    }
+  
+    .faq-expanded .faq-question span {
+      transform: rotate(180deg); /* Rotación del ícono cuando se expande */
+    }
+  
+    .ver-mas-btn:hover {
+      background-color: #2563eb; /* Hover en el botón */
+    }
+  </style>
+  
