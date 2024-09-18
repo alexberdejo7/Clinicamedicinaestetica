@@ -2,25 +2,35 @@
 import { services } from '../utils/services.js';
 ---
 <section id="services" class="py-16 bg-gray-50">
-    <div class="mx-auto max-w-7xl px-4">
-        <h2 class="text-3xl font-bold mb-12 text-center text-indigo-900">Nuestros Servicios</h2>
-        <div class="grid grid-cols-1 p-5 md:grid-cols-1 md:px-44 lg:grid-cols-1 md:py-5 gap-10 gap-x-14">
+    <div class="mx-auto max-w-7xl px-3">
+        <h2 class="text-xl font-semibold mb-3 text-center text-indigo-900">Servicios</h2>
+        <p class="text-center text-xl text-md font-bold font-sans max-w-80 mx-auto text-custom-blueobscure">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
+        
+        <div class="grid grid-cols-1 p-4 md:grid-cols-1 md:px-60 lg:w-10/12 mx-auto lg:grid-cols-2 md:py-5 gap-y-10 gap-x-24">
           {services.map((service) => (
-            <div class="border border-slate-100 bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-200 flex flex-col justify-between">
-              <div class="p-6 h-full flex flex-col">
-                <div class="text-start mb-4">
+            <div class="relative bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-200 flex flex-col justify-between">
+              <div class="relative group">
+                <img src={service.imageList} alt={service.name} class="w-full h-44 object-cover transition-transform duration-500 ease-in group-hover:brightness-75 
+                group-hover:saturate-100" />
+                <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
+                  <h3 class="text-white max-w-44 text-xl font-bold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                </div>
+              </div>
+              <div class="p-2 m-3 h-full flex flex-col">
+                <div class="text-start mb-1">
                   <span class="text-2xl text-blue-500 mr-3">
                     <i class={`icon-${service.icon}`}></i>
                   </span>
-                  <h3 class="text-2xl font-extrabold text-custom-azulpastel">{service.name}</h3>
+                  <h3 class="text-2xl -mt-7 font-extrabold text-custom-blueobscure">{service.name}</h3>
                 </div>
-                <p class="font-bold text-custom-blueobscure text-xs max-w-52 text-left mb-4">{service.description}</p>
-                <!-- Botón Ver más -->
-                <div class="flex justify-end mt-auto">
-                  <button class="bg-custom-azulpastel text-white py-1 px-4 text-xs rounded hover:bg-blue-400 transition-all ver-mas-btn" data-id={service.id}>
-                    Ver Información
-                  </button>
+                <p class="font-semibold mt-4 font-sans text-gray-500 text-xs max-w-64 text-left mb-2">{service.description}</p>
+                
                 </div>
+                <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
+            <div class="w-full mt-auto">
+              <button class="bg-custom-azulpastel text-white py-3  text-xs rounded rounded-t-none  w-full hover:bg-blue-400 transition-all ver-mas-btn" data-id={service.id}>
+                Ver Tratamiento
+              </button>
               </div>
             </div>
           ))}
@@ -48,7 +58,8 @@ import { services } from '../utils/services.js';
   
       verMasBtns.forEach(button => {
         button.addEventListener('click', (e) => {
-          const serviceId = e.currentTarget.getAttribute('data-id');
+          const target = e.currentTarget as HTMLElement;
+          const serviceId = target.getAttribute('data-id');
           const service = services.find(s => s.id === serviceId);
           
           if (service) {
