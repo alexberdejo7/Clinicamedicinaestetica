@@ -3,8 +3,8 @@ import { services } from '../utils/services.js';
 ---
 <section id="services" class="py-16 bg-gray-50">
     <div class="mx-auto max-w-7xl px-3">
-        <h2 class="text-xl font-semibold mb-3 text-center text-indigo-900">Servicios</h2>
-        <p class="text-center text-xl text-md font-bold font-sans max-w-80 mx-auto text-custom-blueobscure">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
+        <h2 class="text-xl font-semibold font-roboto mb-3 text-center text-indigo-900">Servicios</h2>
+        <p class="font-roboto text-center text-xl text-md font-bold font-sans max-w-80 mx-auto text-custom-blueobscure">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
         
         <div class="grid grid-cols-1 p-4 md:grid-cols-1 lg:w-10/12 mx-auto lg:grid-cols-2 md:py-5 gap-y-10 gap-x-24">
           {services.map((service) => (
@@ -14,7 +14,7 @@ import { services } from '../utils/services.js';
                 group-hover:brightness-105
                 group-hover:saturate-100" />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-white max-w-44 text-xl font-bold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-white font-roboto max-w-44 text-xl font-bold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               <div class="p-3 mt-2 mb-3 h-full flex flex-col">
@@ -24,12 +24,12 @@ import { services } from '../utils/services.js';
                   
                   
                 
-                <p class="font-semibold mt-5 p-2 font-sans text-gray-500 text-xs max-w-64 text-left mb-2">{service.description}</p>
+                <p class="font-semibold font-montserrat mt-5 p-2 font-sans text-gray-500 text-xs max-w-64 text-left mb-2">{service.description}</p>
                 
                 </div>
                 <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
             <div class="w-full mt-auto">
-              <button class="bg-aqua-strong text-gray-800 py-3  text-sm font-semibold rounded rounded-t-none  w-full hover:bg-blue-400 transition-all ver-mas-btn" data-id={service.id}>
+              <button class="bg-aqua-strong font-raleway text-gray-800 py-3  text-sm font-semibold rounded rounded-t-none  w-full hover:bg-blue-400 transition-all ver-mas-btn" data-id={service.id}>
                 Ver Tratamiento
               </button>
               </div>
@@ -38,10 +38,10 @@ import { services } from '../utils/services.js';
         </div>
     
   
-      <div id="service-details" class="bg-indigo-100 p-8 rounded-lg shadow-sm hidden text-center max-w-4xl mx-auto">
-        <h2 id="service-title" class="text-3xl font-extrabold mb-4 text-indigo-800"></h2>
-        <p id="service-description" class="mb-6 text-gray-600"></p>
-        <h3 class="text-xl font-semibold mb-4 text-gray-800">Preguntas frecuentes</h3>
+      <div id="service-details" class="bg-indigo-100 font-montserrat p-8 rounded-lg shadow-sm hidden text-center max-w-4xl mx-auto">
+        <h2 id="service-title" class="text-3xl font-montserrat font-extrabold mb-4 text-indigo-800"></h2>
+        <p id="service-description" class="mb-6 font-montserrat text-gray-600"></p>
+        <h3 class="text-xl font-semibold font-roboto mb-4 text-gray-800">Preguntas frecuentes</h3>
         <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>

@@ -2,7 +2,7 @@ export const services = [
   {
     id: 'botox',
     name: 'Botox o Baby Botox',
-    description: 'Tratamiento inyectable para prevenir y tratar arrugas de expresión.',
+    description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: 'zap',
     imageList: '../../img/istock1.jpg',
@@ -89,7 +89,7 @@ export const services = [
   },
   {
     id: 'limpieza-facial',
-    name: 'Limpieza Facial Hidra',
+    name: 'Limpieza HidraFacial ',
     description: 'Limpieza facial grado médico estético no invasivo.',
     fullDescription: 'La limpieza facial hidra es un tratamiento grado médico estético no invasivo que limpia, exfolia e hidrata la piel del rostro. Se realiza en una sesión que combina diferentes cabezales para realizar varios pasos, como extracción de impurezas, exfoliación, ultrasonido, radiofrecuencia, martillo frío y vapor de ozono, entre otros.',
     icon: 'refresh-cw',
