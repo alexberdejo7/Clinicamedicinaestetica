@@ -1,0 +1,65 @@
+<section class="bg-white w-full mb-3 dark:text-gray-100">
+    <div class="container mx-auto px-4 py-8 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between">
+      <!-- Texto de la Hero Section -->
+      <div class="flex flex-col justify-start items-start md:w-1/2 lg:w-5/12 mb-8 md:mb-0">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl mb-5 text-custom-blueobscure font-oswald font-bold leading-tight">
+          CUIDAMOS TU 
+          <span class="text-aqua-medium">BELLEZA </span>
+          DE FORMA 
+          <span class="text-aqua-medium">SEGURA </span>
+        </h1>
+        <p class="text-custom-blueobscure text-base md:text-lg mb-6 font-roboto">
+          La ciencia detras de una piel perfecta. Resultados visibles, confianza inigualable!
+          <span class="font-thin font-poppins mt-2 text-sm text-gray-600 block">Clinica medicina estetica.</span>
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="#" class="btn btn-primary">
+            Contacta ahora
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a href="#" class="btn btn-secondary">
+            Nuestros Servicios
+          </a>
+        </div>
+      </div>
+      
+      <!-- Imagen de la Hero Section -->
+      <div class="md:w-1/2 lg:w-7/12 flex justify-center md:justify-end">
+        <div class="relative w-full max-w-lg">
+          <div class="absolute top-0 -left-4 w-72 h-72 bg-aqua-medium rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div class="absolute top-0 -right-4 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <img src="../../img/assets/Copia de DraJA-30.jpg" alt="DRA JESSICA ALCALA" class="relative rounded-bl-[30%] rounded-tr-[30%] shadow-2xl w-full h-auto object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+    .btn {
+      @apply px-6 py-3 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 shadow-md;
+    }
+    .btn-primary {
+      @apply bg-green-400 text-black hover:bg-pastel-green-soft hover:shadow-lg flex items-center justify-center;
+    }
+    .btn-secondary {
+      @apply bg-aqua-medium text-black hover:bg-pastel-blue-soft hover:shadow-lg;
+    }
+  </style>

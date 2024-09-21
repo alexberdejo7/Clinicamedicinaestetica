@@ -1,22 +1,29 @@
-<section class="bg-white w-full mb-3 dark:text-gray-100 pt-16 md:pt-2">
-  <div class="flex flex-col justify-center p-4 mx-auto md:py-16 md:flex-row md:justify-between md:mt-8">
+<section class="bg-white w-full mb-3 dark:text-gray-100 pt-20 md:pt-2 lg:pt-2">
+  <div class="flex flex-col justify-center p-3 sm:p-4  md:py-16 md:flex-row md:mt-3">
     <!-- Texto de la Hero Section -->
-    <div class="flex mx-auto mt-4 md:mt-0 flex-col justify-center p-4 rounded-sm md:max-w-md lg:max-w-lg">
-      <h1 class="text-4xl mb-5 max-w-96 md:max-w-96 sm:mx-0 text-left  text-custom-blueobscure font-roboto font-bold md:text-2xl lg:text-3xl">
+    <div class="flex  mt-4 md:mt-0 flex-col justify-start items-start p-4 rounded-sm md:max-w-md lg:max-w-lg">
+      <!-- efecto blur -->
+      <div class="absolute top-0 -left-4 w-32 h-32 bg-aqua-medium rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        
+        
+      <h1 class="text-4xl mb-5 max-w-96 md:max-w-96 sm:mx-0 text-left  text-custom-blueobscure font-oswald font-bold md:text-2xl lg:text-3xl">
         CUIDAMOS TU 
-        <span class="dark:text-pastel-peach-strong">BELLEZA </span>
-        DE FORMA <span class="dark:text-pastel-peach-strong">SEGURA </span>
+        <span class="dark:text-aqua-medium">BELLEZA </span>
+        DE FORMA <span class="dark:text-aqua-medium">SEGURA </span>
       </h1>
-      <p class="mt-7 text-custom-blueobscure max-w-prose text-left mb-7 font-semibold font-sans text-md">
-        En clínica medicina estética, combinamos tecnología y experiencia para ofrecerte los mejores tratamientos. Prueba nuestros servicios y descubre una nueva versión de ti. 
-        <span class="font-thin block">¡Tu cuidado es nuestra prioridad!</span>
+      <p class="mt-6 text-custom-blueobscure max-w-80 text-left mb-7 font-roboto text-sm md:text-md">
+        
+       La ciencia detras de una piel perfecta. Resultados visibles, confianza inigualable! 
+        <span class="font-thin font-poppins mt-2 text-xs md:text-sm text-gray-600 block">Clínica de Medicina Estética.</span>
       </p>
          
-      <div class="flex flex-col space-y-4 items-start md:items-start md:flex-row md:space-y-0 md:space-x-4">
+      <div class="flex flex-col mt-4 lg:mt-10 space-y-4 items-start md:items-start md:flex-row md:space-y-0 md:space-x-4">
         <!-- Botón 1 -->
         <a rel="noopener noreferrer" href="#" 
-        class="whitespace-nowrap w-auto max-w-xs md:w-auto px-7 py-3 flex items-center justify-center space-x-2 text-center text-sm font-montserrat font-semibold text-black rounded-lg bg-aqua-medium
-         hover:bg-pastel-peach-strong hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
+        class="border border-black shadow-lg shadow-pastel-mint-soft whitespace-nowrap w-auto max-w-xs md:w-auto px-7 py-3 flex items-center 
+        justify-center space-x-2 text-center text-xs font-montserrat font-semibold text-black rounded-lg
+         bg-green-400
+         hover:bg-pastel-green-soft hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
           <span>Contacta ahora</span>
           <!-- Icono hacia la derecha -->
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
@@ -26,16 +33,32 @@
 
         <!-- Botón 2 -->
         <a rel="noopener noreferrer" href="#" 
-        class="whitespace-nowrap w-auto max-w-xs md:w-auto px-7 py-3 text-center text-sm font-montserrat font-semibold border border-aqua-medium bg-aqua-silver-soft text-black rounded-lg hover:bg-pastel-blue-soft hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
+        class="whitespace-nowrap w-auto max-w-xs md:w-auto px-7 py-3 text-center text-xs font-montserrat 
+        font-semibold border border-black shadow-md shadow-aqua-medium hover bg-aqua-medium text-black rounded-lg hover:bg-pastel-blue-soft hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
           Nuestros Servicios
         </a>
       </div>
+
+      <!-- RRSS -->
+      <div class="flex space-x-3 mt-4 ml-1">
+        <a href="#" class="">
+          <img src="../../facebook.svg" alt="Facebook" class="w-6 brightness-0 saturate-150 h-6">
+        </a>
+        <a href="#" class="">
+          <img src="../../instagram.svg" alt="Instagram" class="w-6 brightness-0 saturate-150 h-6">
+        </a>
+      </div>
+
     </div>
+
+    
     
     <!-- Imagen de la Hero Section -->
-    <div class="flex items-start justify-start p-4 overflow-hidden sm:mt-2 md:mt-0 md:h-96 lg:h-112 xl:h-128">
+    <div class=" items-start justify-start p-4 overflow-hidden sm:mt-2 md:mt-0 md:h-96 lg:h-112 xl:h-128">
+      
       <img src="../../img/assets/Copia de DraJA-30.jpg" alt="DRA JESSICA ALCALA" 
-      class="p-1 rounded-xl h-48 object-cover md:rounded-bl-full md:object-contain md:h-96 lg:h-full xl:h-132 hidden md:block">
+      class="p-1  rounded-xl h-48 sm:h-36 object-cover md:rounded-bl-full md:object-cover md:h-96 aspect-auto lg:h-full xl:h-132 hidden md:block">
+      
     </div>
   </div>
 </section>
