@@ -5,20 +5,54 @@ export const services = [
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: 'zap',
-    imageList: '../../img/istock1.jpg',
+    imageService: ['../../img/assets/botoxfaq.webp', '../../img/assets/botoxfaq.webp'], // Imágenes
+    imageList: '../../img/assets/11.webp',
     faqs: [
       {
         question: '¿Cuánto dura el tratamiento de Botox?',
         answer: 'El procedimiento dura aproximadamente 35 minutos, y los resultados se mantienen alrededor de 4 meses.'
       },
       {
+        question: '¿Cuántas sesiones se necesitan?',
+        answer: 'Generalmente se requiere una sola aplicación, con una revisión a los 15 días.'
+      },
+      {
+        question: '¿Soy candidata(o)?',
+        answer: 'Los candidatos ideales son desde adultos jóvenes y personas que buscan prevenir los signos del envejecimiento sin cambiar drásticamente su apariencia. Se requiere una consulta previa para conocer tus necesidades' 
+      },
+      {
         question: '¿Cuáles son los cuidados posteriores al tratamiento?',
         answer: 'Se recomienda no exponerse al sol, no manipular el área tratada por 4 horas después de la aplicación, y mantener una posición vertical durante las 4 horas siguientes al tratamiento.'
       },
+      
+    ]
+  },
+  {
+    id: 'depilacion-laser',
+    name: 'Depilación Láser Diodo',
+    description: 'Depilación a largo plazo con láser de diodo.',
+    fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
+    icon: 'zap', 
+    imageList: '../../img/assets/depilacion2.JPG',
+    imageService: ['../../img/assets/laser.webp', '../../img/assets/depilacion.JPG'], // Imágenes
+    faqs: [
       {
-        question: '¿Cuántas sesiones se necesitan?',
-        answer: 'Generalmente se requiere una sola aplicación, con una revisión a los 15 días.'
+        question: '¿Cuál es el protocolo de tratamiento?',
+        answer: 'El protocolo sugerido es de 10 sesiones espaciadas cada 30-45 días.'
+      },
+      {
+        question: '¿Cuáles son los beneficios frente a IPL?',
+        answer: 'El láser diodo es óptimo para tratar vello grueso y profundo, y es versátil, pudiendo aplicarse en diferentes tonos de piel, desde claros hasta oscuros.'
+      },
+      {
+        question: '¿Qué cuidados debo tener después del tratamiento?',
+        answer: 'Se recomienda no exponerse al sol, aplicar protector solar y aloe vera, y únicamente utilizar rastrillo para el rasurado en la(s) zona(s) tratada(s).'
+      },
+      {
+        question: '¿Por que laser diodo?',
+        answer: 'El laser con diodo es el mas utilizado y se muestra como la mejor opcion de depilacion definitiva, ya que gracias a su alta potencia el tiempo de disparo se reduce teniendo mayor efectividad en eliminacion del vello'
       }
+      
     ]
   },
   {
@@ -152,27 +186,6 @@ export const services = [
         answer: 'Sí, el tratamiento se personaliza según las necesidades de cada paciente.'
       }
     ]
-  },
-  {
-    id: 'depilacion-laser',
-    name: 'Depilación Láser Diodo',
-    description: 'Depilación a largo plazo con láser de diodo.',
-    fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
-    icon: 'zap',
-    imageList: '../../img/istock1.jpg',
-    faqs: [
-      {
-        question: '¿Cuál es el protocolo de tratamiento?',
-        answer: 'El protocolo sugerido es de 10 sesiones espaciadas cada 30-45 días.'
-      },
-      {
-        question: '¿Cuáles son los beneficios frente a IPL?',
-        answer: 'El láser diodo es óptimo para tratar vello grueso y profundo, y es versátil, pudiendo aplicarse en diferentes tonos de piel, desde claros hasta oscuros.'
-      },
-      {
-        question: '¿Qué cuidados debo tener después del tratamiento?',
-        answer: 'Se recomienda no exponerse al sol, aplicar protector solar y aloe vera, y únicamente utilizar rastrillo para el rasurado en la(s) zona(s) tratada(s).'
-      }
-    ]
   }
+  
 ];

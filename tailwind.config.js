@@ -6,8 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-coffee': '#efe0cc',
-        'custom-beige': '#fbf1e4',
         'custom-dark-blue': '#7cbcfc',
         'custom-light-blue': '#c3f9fc',
         'custom-light-beige': '#F5F5DC',
@@ -17,7 +15,6 @@ module.exports = {
         'custom-gray': '#818185',
         'custom-azulpastel': '#758bfd',
         'custom-blueobscure': '#101a36',
-        'custom-rosa': '#ffafad',
         'custom-background-second': '#feefe8',
         'custmom-indigo-background' : '#f4effc',
         'custmom-indigo-cards' : '#e2daeb',
@@ -32,14 +29,6 @@ module.exports = {
         'pastel-pink-soft': '#F4A6A1',
         'pastel-pink-medium': '#F17E7A',
         'pastel-pink-strong': '#E94A4A',
-
-        'pastel-yellow-soft': '#F6E2B3',
-        'pastel-yellow-medium': '#F2D88F',
-        'pastel-yellow-strong': '#F0C04D',
-
-        'pastel-lavender-soft': '#E0B8E0',
-        'pastel-lavender-medium': '#D8A1D8',
-        'pastel-lavender-strong': '#D27FD2',
 
         'pastel-mint-soft': '#A2D9A2',
         'pastel-mint-medium': '#85C785',
@@ -80,7 +69,7 @@ module.exports = {
         'xs': '320px',
         'sm': '640px',
         'md': '760px',
-        'lg': '824px',
+        'lg': '830px',
         'xl': '1280px',
         '2xl': '1536px',
         'hide-img': {'min': '200px', 'max': '820px'},

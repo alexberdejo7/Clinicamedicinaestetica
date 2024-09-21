@@ -3,10 +3,10 @@ import { services } from '../utils/services.js';
 ---
 <section id="services" class="py-16 bg-gray-50">
     <div class="mx-auto max-w-7xl px-3">
-        <h2 class="text-xl font-semibold font-roboto mb-3 text-center text-indigo-900">Servicios</h2>
-        <p class="font-roboto text-center text-xl text-md font-bold font-sans max-w-80 mx-auto text-custom-blueobscure">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
+        <h2 class="text-5xl font-semibold font-roboto mb-3 text-center text-custom-blueobscure">Servicios</h2>
+        <p class="font-roboto text-center text-sm text-md max-w-80 mx-auto text-aqua-silver-strong">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
         
-        <div class="grid grid-cols-1 p-4 md:grid-cols-1 lg:w-10/12 mx-auto lg:grid-cols-2 md:py-5 gap-y-10 gap-x-24">
+        <div class="grid grid-cols-1 p-4 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 md:py-5 gap-y-10 lg:p-3 lg:gap-x-16">
           {services.map((service) => (
             <div class="relative bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-200 flex flex-col justify-between">
               <div class="relative group">
@@ -14,7 +14,7 @@ import { services } from '../utils/services.js';
                 group-hover:brightness-105
                 group-hover:saturate-100" />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-white font-roboto max-w-44 text-xl font-bold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-white font-roboto max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               <div class="p-3 mt-2 mb-3 h-full flex flex-col">
@@ -24,7 +24,7 @@ import { services } from '../utils/services.js';
                   
                   
                 
-                <p class="font-semibold font-montserrat mt-5 p-2 font-sans text-gray-500 text-xs max-w-64 text-left mb-2">{service.description}</p>
+                <p class="font- font-roboto mt-1 p-2 text-gray-900 text-xs max-w-64 text-left mb-2">{service.description}</p>
                 
                 </div>
                 <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
@@ -38,15 +38,21 @@ import { services } from '../utils/services.js';
         </div>
     
   
-      <div id="service-details" class="bg-indigo-100 font-montserrat p-8 rounded-lg shadow-sm hidden text-center max-w-4xl mx-auto">
-        <h2 id="service-title" class="text-3xl font-montserrat font-extrabold mb-4 text-indigo-800"></h2>
-        <p id="service-description" class="mb-6 font-montserrat text-gray-600"></p>
-        <h3 class="text-xl font-semibold font-roboto mb-4 text-gray-800">Preguntas frecuentes</h3>
-        <ul id="service-faqs" class="space-y-4"></ul>
+        <div id="service-details" class="bg-indigo-100 font-montserrat p-8 rounded-lg shadow-sm hidden max-w-4xl mx-auto">
+          <h2 id="service-title" class="text-3xl font-montserrat font-extrabold mb-4 text-indigo-800 text-center"></h2>
+          <p id="service-description" class="mb-6 font-montserrat text-gray-600 text-center"></p>
+          
+          <!-- Updated container for service images -->
+          <div id="service-images" class="flex flex-wrap justify-center gap-4 mb-6">
+              <img class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
+              <img class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
+          </div>
+          
+          <h3 class="text-xl font-semibold font-roboto mb-4 text-gray-800 text-center">Preguntas frecuentes</h3>
+          <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>
   </section>
-  
   <script>
     import { services } from '../utils/services.js';
   
@@ -55,7 +61,19 @@ import { services } from '../utils/services.js';
       const serviceDetails = document.getElementById('service-details');
       const serviceTitle = document.getElementById('service-title');
       const serviceDescription = document.getElementById('service-description');
+      const serviceImages = document.getElementById('service-images').querySelectorAll('img');
       const serviceFaqs = document.getElementById('service-faqs');
+  
+      function updateServiceImages(images) {
+        serviceImages.forEach((imgElement, index) => {
+          if (index < images.length) {
+            imgElement.src = images[index];
+            imgElement.style.display = 'block';
+          } else {
+            imgElement.style.display = 'none';
+          }
+        });
+      }
   
       verMasBtns.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -66,8 +84,12 @@ import { services } from '../utils/services.js';
           if (service) {
             serviceTitle.textContent = service.name;
             serviceDescription.textContent = service.fullDescription;
+            
+            // Update service images
+            updateServiceImages(service.imageService || []);
+            
             serviceFaqs.innerHTML = service.faqs.map(faq => `
-              <li class="bg-gray-200 p-4 text-center rounded-lg faq-item transition-all duration-300 hover:bg-gray-300 cursor-pointer">
+              <li class="bg-custom-light-gray p-4 text-center font-roboto rounded-lg faq-item transition-all duration-300 hover:bg-gray-300 cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
                   <h4 class="font-semibold text-gray-800">${faq.question}</h4>
                   <span class="text-blue-800 font-bold transition-transform duration-300 transform">+</span>
@@ -98,7 +120,7 @@ import { services } from '../utils/services.js';
       });
     });
   </script>
-  
+
   <style>
     .faq-item:hover {
       background-color: #f0f4f8; /* Cambio de color de fondo en hover */
