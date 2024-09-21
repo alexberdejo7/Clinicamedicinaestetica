@@ -18,7 +18,7 @@ module.exports = {
         'custom-background-second': '#feefe8',
         'custmom-indigo-background' : '#f4effc',
         'custmom-indigo-cards' : '#e2daeb',
-        'pastel-blue-soft': '#B3CDE0',
+        'pastel-blue-soft': '#EAF3F8',
         'pastel-blue-medium': '#9EB4D4',
         'pastel-blue-strong': '#6D9DC5',
 
@@ -69,7 +69,7 @@ module.exports = {
         'xs': '320px',
         'sm': '640px',
         'md': '760px',
-        'lg': '830px',
+        'lg': '860px',
         'xl': '1280px',
         '2xl': '1536px',
         'hide-img': {'min': '200px', 'max': '820px'},

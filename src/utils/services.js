@@ -4,7 +4,7 @@ export const services = [
     name: 'Botox o Baby Botox',
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
-    icon: 'zap',
+    icon: '../../img/depilacion.png',
     imageService: ['../../img/assets/botoxfaq.webp', '../../img/assets/botoxfaq.webp'], // Imágenes
     imageList: '../../img/assets/11.webp',
     faqs: [
@@ -30,9 +30,9 @@ export const services = [
   {
     id: 'depilacion-laser',
     name: 'Depilación Láser Diodo',
-    description: 'Depilación a largo plazo con láser de diodo.',
+    description: 'Depilación a largo plazo con tecnologia de láser de diodo.',
     fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
-    icon: 'zap', 
+    icon: '../../img/depilacion.png',
     imageList: '../../img/assets/depilacion2.JPG',
     imageService: ['../../img/assets/laser.webp', '../../img/assets/depilacion.JPG'], // Imágenes
     faqs: [
@@ -60,7 +60,7 @@ export const services = [
     name: 'Bioestimuladores',
     description: 'Sustancias inyectables que estimulan la producción de colágeno en la piel.',
     fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica (Radiesse).',
-    icon: 'trending-up',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
@@ -82,7 +82,7 @@ export const services = [
     name: 'Rellenos de Ácido Hialurónico',
     description: 'Tratamiento inyectable para dar volumen y mejorar diferentes áreas faciales.',
     fullDescription: 'Los rellenos de ácido hialurónico son un tratamiento inyectable utilizado para dar volumen, mejorar y corregir diferentes áreas faciales. Las áreas que pueden tratarse incluyen nariz, labios, pómulos, mentón, y zona malar, entre otras.',
-    icon: 'droplet',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
@@ -104,7 +104,7 @@ export const services = [
     name: 'Lipoenzimas',
     description: 'Tratamiento inyectable para reducir grasa localizada.',
     fullDescription: 'Las lipoenzimas son un tratamiento inyectable a base de enzimas que ayuda a reducir la grasa localizada actuando en los adipocitos (células grasas).',
-    icon: 'target',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
@@ -126,7 +126,7 @@ export const services = [
     name: 'Limpieza HidraFacial ',
     description: 'Limpieza facial grado médico estético no invasivo.',
     fullDescription: 'La limpieza facial hidra es un tratamiento grado médico estético no invasivo que limpia, exfolia e hidrata la piel del rostro. Se realiza en una sesión que combina diferentes cabezales para realizar varios pasos, como extracción de impurezas, exfoliación, ultrasonido, radiofrecuencia, martillo frío y vapor de ozono, entre otros.',
-    icon: 'refresh-cw',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
@@ -148,7 +148,7 @@ export const services = [
     name: 'Dermapen',
     description: 'Tratamiento estético para mejorar la textura y el aspecto de la piel.',
     fullDescription: 'El Dermapen es un tratamiento estético que mejora la textura y el aspecto de la piel a través de micropunciones. También conocido como microneedling, estimula la producción de colágeno y elastina, ayudando a reafirmar y rejuvenecer la piel. Además, se pueden agregar diferentes activos que complementan el tratamiento, como vitamina C y ácido hialurónico.',
-    icon: 'pen-tool',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
@@ -170,7 +170,7 @@ export const services = [
     name: 'Armonización Facial',
     description: 'Conjunto de técnicas para equilibrar las proporciones del rostro.',
     fullDescription: 'La armonización facial es un conjunto de técnicas que buscan equilibrar las proporciones y características del rostro del paciente para lograr una apariencia más estética y equilibrada. Los procedimientos más utilizados en una armonización pueden ser toxina botulínica, rellenos dérmicos, bioestimuladores, entre otros.',
-    icon: 'sliders',
+    icon: '../../img/depilacion.png',
     imageList: '../../img/istock1.jpg',
     faqs: [
       {
