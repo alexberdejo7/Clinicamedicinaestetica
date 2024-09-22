@@ -6,47 +6,80 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-dark-blue': '#7cbcfc',
-        'custom-light-blue': '#c3f9fc',
-        'custom-light-beige': '#F5F5DC',
-        'custom-light-gray': '#D3D3D3',
-        'custom-piel': '#CBA486',
-        'custom-cafe': '#241E1A',
-        'custom-gray': '#818185',
-        'custom-azulpastel': '#758bfd',
-        'custom-blueobscure': '#101a36',
-        'custom-background-second': '#feefe8',
-        'custmom-indigo-background' : '#f4effc',
-        'custmom-indigo-cards' : '#e2daeb',
-        'pastel-blue-soft': '#EAF3F8',
-        'pastel-blue-medium': '#9EB4D4',
-        'pastel-blue-strong': '#6D9DC5',
+        // Colores azules
+'custom-dark-blue': '#7cbcfc',
+'custom-light-blue': '#c3f9fc',
+'custom-azulpastel': '#758bfd',
+'custom-blueobscure': '#101a36',
+'blue-light-pastel': '#AFCBFF',
+'blue-sky': '#90CAF9',
+'blue-dark': '#1976D2',
+'blue-gray-light': '#B0C4D8',
+'blue-light': '#D4E6F1',
+'blue-sky': '#A9D1EB',
+'blue-clinic': '#5DADE2',
+'blue-dark': '#154360',
 
-        'pastel-green-soft': '#B9D9B8',
-        'pastel-green-medium': '#A1D0A1',
-        'pastel-green-strong': '#6CBF6A',
+// Colores verdes
+'green-primary': '#28B463',
+'green-pastel': '#76D7C4',
+'pastel-green-soft': '#B9D9B8',
+'pastel-green-medium': '#A1D0A1',
+'pastel-green-strong': '#6CBF6A',
+'pastel-mint-soft': '#A2D9A2',
+'pastel-mint-medium': '#85C785',
+'pastel-mint-strong': '#6AB86A',
 
-        'pastel-pink-soft': '#F4A6A1',
-        'pastel-pink-medium': '#F17E7A',
-        'pastel-pink-strong': '#E94A4A',
+// Colores cafés
+'custom-piel': '#CBA486',
+'custom-cafe': '#241E1A',
+'brown-light-pastel': '#E6D5C3',
+'brown-medium': '#C4A484',
+'brown-dark': '#8D6E63',
+'brown-gray': '#A89F94',
 
-        'pastel-mint-soft': '#A2D9A2',
-        'pastel-mint-medium': '#85C785',
-        'pastel-mint-strong': '#6AB86A',
+// Colores grises
+'custom-light-gray': '#D3D3D3',
+'custom-gray': '#818185',
+'gray-light-pastel': '#ECECEC',
+'gray-medium': '#B0B0B0',
+'gray-dark': '#707070',
+'gray-blue-light': '#D1D9DF',
+'gray-light': '#F8F9F9',
+'gray-dark': '#34495E',
+'aqua-silver-soft': '#B2BEB5',
+'aqua-silver-medium': '#8B8D8F',
+'aqua-silver-strong': '#6C6E6B',
 
-        'pastel-peach-soft': '#F8D1C3',
-        'pastel-peach-medium': '#F4B8A1',
-        'pastel-peach-strong': '#F08060',
-        'pastel-soft': '#E6E6FA',
-        
-        'pastel-medium': '#D5B4E8',
-        'pastel-strong': '#B39DDB',
-        'aqua-soft': '#E0FFFF',
-        'aqua-medium': '#00CED1',
-        'aqua-strong': '#20B2AA',
-        'aqua-silver-soft': '#B2BEB5',
-        'aqua-silver-medium': '#8B8D8F',
-        'aqua-silver-strong': '#6C6E6B',
+// Colores rosados
+'pastel-pink-soft': '#F4A6A1',
+'pastel-pink-medium': '#F17E7A',
+'pastel-pink-strong': '#E94A4A',
+
+// Colores aqua/turquesa
+'aqua-soft': '#E0FFFF',
+'aqua-medium': '#00CED1',
+'aqua-strong': '#20B2AA',
+
+// Colores durazno (peach)
+'pastel-peach-soft': '#F8D1C3',
+'pastel-peach-medium': '#F4B8A1',
+'pastel-peach-strong': '#F08060',
+
+// Colores pasteles (mezclados)
+'pastel-blue-soft': '#EAF3F8',
+'pastel-blue-medium': '#9EB4D4',
+'pastel-blue-strong': '#6D9DC5',
+'pastel-soft': '#E6E6FA',
+'pastel-medium': '#D5B4E8',
+'pastel-strong': '#B39DDB',
+
+// Colores adicionales (beige y otros)
+'custom-light-beige': '#F5F5DC',
+'custom-background-second': '#feefe8',
+'custmom-indigo-background': '#f4effc',
+'custmom-indigo-cards': '#e2daeb',
+
       },
       fontFamily: {
         cursive: ['Brush Script MT', 'cursive'],
