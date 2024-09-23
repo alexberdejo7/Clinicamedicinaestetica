@@ -1,0 +1,26 @@
+---
+// ChangingBackground.astro
+---
+
+<div id="changing-background" class="absolute brightness-50 top-0 left-0 w-screen h-full bg-cover bg-center transition-all duration-1000 shadow-gray-200 shadow-lg ease-in-out"></div>
+
+<script>
+  const images = [
+    '../../public/img/assets/7.webp', // Ejemplo: Depilación
+    '../../public/img/assets/2.webp', // Ejemplo: Dermapen
+    '../../public/img/assets/9.webp'  // Ejemplo: Botox
+  ];
+  let currentIndex = 0;
+
+  function changeBackground() {
+    const background = document.getElementById('changing-background');
+    currentIndex = (currentIndex + 1) % images.length;
+    background.style.backgroundImage = `url('${images[currentIndex]}')`;
+  }
+
+  // Cambiar imagen cada 5 segundos
+  setInterval(changeBackground, 4000);
+
+  // Establecer la primera imagen inmediatamente
+  changeBackground();
+</script>

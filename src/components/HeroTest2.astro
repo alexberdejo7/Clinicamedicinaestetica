@@ -1,21 +1,28 @@
-<section class="bg-white w-full mb-3 dark:text-gray-100 pt-16 md:pt-5 lg:pt-5">
-  <div class="flex flex-col justify-center p-3 sm:p-4 md:py-16 md:flex-row md:mt-3">
+---
+import ChangingBackground2 from './ChanginBackground2.astro';
+---
+
+<section class="relative bg-white w-full dark:text-gray-100 pt-16 md:pt-5 lg:pt-5 overflow-hidden">
+  <!-- Componente de fondo cambiante -->
+  <ChangingBackground2 />
+
+  <div class="relative z-10 flex flex-col justify-center p-3 sm:p-4 md:py-16 md:flex-row md:mt-3">
     <!-- Texto de la Hero Section -->
-    <div class="flex mt-4 md:mt-0 flex-col justify-start items-start p-4 rounded-sm md:max-w-md lg:max-w-lg">
+    <div class="flex mt-4 md:mt-0 flex-col justify-start items-start p-4 rounded-sm md:max-w-md lg:max-w-lg relative">
       <!-- efecto blur -->
       <div class="absolute top-0 -left-4 w-20 h-20 bg-blue-clinic rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
-      
+
       <h1 class="text-4xl mb-5 max-w-80 lg:max-w-96 text-left text-custom-blueobscure font-oswald font-bold md:text-4xl lg:text-5xl">
         CUIDAMOS TU 
         <span class="text-blue-clinic">BELLEZA </span>
         DE FORMA <span class="text-blue-clinic">SEGURA </span>
       </h1>
-      <p class="mt-6 text-custom-blueobscure max-w-72 lg:max-w-96 text-left mb-7 font-roboto text-sm md:text-md lg:text-lg ">
-        La ciencia detras de una piel perfecta. Resultados visibles, cuidado excepcional!
+      <p class="mt-6 text-custom-blueobscure max-w-72 lg:max-w-96 text-left mb-7 font-roboto text-sm md:text-md lg:text-lg">
+        La ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional!
         <span class="font-thin font-poppins mt-2 text-xs md:text-sm text-gray-600 block">Clínica de Medicina Estética.</span>
       </p>
-      
-      <!-- Updated button container -->
+
+      <!-- Botones de acción -->
       <div class="flex flex-col mt-4 md:mt-2 lg:mt-3 lg:mt-10 space-y-4 items-start lg:flex-row lg:space-y-0 lg:space-x-4">
         <!-- Botón 1 -->
         <a rel="noopener noreferrer" href="#"
@@ -29,7 +36,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
-        
+
         <!-- Botón 2 -->
         <a rel="noopener noreferrer" href="#"
          class="whitespace-nowrap w-full lg:w-auto px-7 py-3 text-center text-xs font-montserrat
@@ -37,7 +44,7 @@
           Nuestros Servicios
         </a>
       </div>
-      
+
       <!-- RRSS -->
       <div class="flex space-x-3 mt-6 ml-1">
         <a href="#">
@@ -48,11 +55,7 @@
         </a>
       </div>
     </div>
-    
-    <!-- Imagen de la Hero Section -->
-    <div class="flex-1 overflow-hidden md:h-96 lg:h-112 xl:h-128">
-      <img src="../../img/assets/Copia de DraJA-30.jpg" alt="DRA JESSICA ALCALA"
-           class="w-full h-full object-cover rounded-xl md:rounded-bl-full hidden md:block">
-    </div>
+
+    <!-- Imagen (ahora cubierta por el fondo dinámico) -->
   </div>
 </section>
