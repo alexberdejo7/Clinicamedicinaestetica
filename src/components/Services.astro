@@ -2,7 +2,8 @@
 import { services } from '../utils/services.js';
 ---
 
-<section id="services" class="py-16 bg-white-secondary">
+
+<section id="services" class="py-16 bg-pastel-blue-soft">
     <div class="mx-auto max-w-7xl px-3">
         <h2 
         data-aos="fade-down"
@@ -16,16 +17,20 @@ import { services } from '../utils/services.js';
         class="font-roboto text-center text-sm text-md max-w-80 mx-auto mb-10 text-aqua-silver-strong">  Innovación, confianza y resultados visibles. Conocelos todos nuestros procedimientos! </p>
         
         <div 
-         
-        class="grid grid-cols-1 p-3 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 lg:p- gap-y-10 lg:gap-x-10">
-          {services.map((service) => (
-            <div class="relative bg-White-Crest rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-100  flex flex-col justify-between 
-            max-w-md mx-auto"> <!-- max-w-md ajusta el ancho máximo para que se vean más pequeñas -->
+            class="grid grid-cols-1 p-3 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 lg:p- gap-y-10 lg:gap-x-10">
+          {services.map((service, index) => (  // Asegúrate de tener `index` aquí
+            <div 
+                class={`relative bg-White-Crest rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-100 flex flex-col justify-between max-w-md mx-auto`}
+                data-aos={index % 2 === 0 ? 'fade-zoom-down' : 'fade-zoom-down'}  
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                data-aos-delay={index * 100}  
+            >
               <div class="relative group">
                 <img src={service.imageList} alt={service.name} class="w-full h-40 brightness-75 object-cover transition-transform duration-500 ease-in 
                 group-hover:brightness-105 group-hover:saturate-100" />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-white font-oswald max-w-44 text-xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-white font-roboto max-w-44 text-xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               
@@ -51,12 +56,12 @@ import { services } from '../utils/services.js';
   
         <div id="service-details" class=" bg-pastel-blue-soft  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
           <h2 id="service-title" class="text-4xl font-montserrat font-semibold mb-4 text-custom-blueobscure text-center"></h2>
-          <p id="service-description" class="mb-6 font-montserrat text-gray-600 text-center"></p>
+          <p id="service-description" class="mb-6 font-roboto text-sm text-gray-700 text-center"></p>
           
           <!-- Updated container for service images -->
           <div id="service-images" class="flex flex-wrap justify-center gap-4 mb-6">
-              <img class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
-              <img class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
+              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
+              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
           </div>
           
           <h3 class="text-xl font-semibold font-montserrat mb-4 text-custom-blueobscure text-center">Preguntas frecuentes</h3>

@@ -1,26 +1,64 @@
----
-// ChangingBackground.astro
----
+
 
 <div id="changing-background" class="absolute brightness-50 top-0 left-0 w-screen h-full bg-cover bg-center transition-all duration-1000 shadow-gray-200 shadow-lg ease-in-out"></div>
+<div id="next-background" class="absolute brightness-50 top-0 left-0 w-screen h-full bg-cover bg-center transition-all duration-1000 shadow-gray-200 shadow-lg ease-in-out opacity-0"></div>
 
 <script>
   const images = [
-    '../../public/img/assets/7.webp', // Ejemplo: Depilación
-    '../../public/img/assets/2.webp', // Ejemplo: Dermapen
-    '../../public/img/assets/9.webp'  // Ejemplo: Botox
+    '../../img/assets/7.webp', 
+    '../../img/assets/2.webp', 
+    '../../img/assets/9.webp'
   ];
   let currentIndex = 0;
 
-  function changeBackground() {
-    const background = document.getElementById('changing-background');
-    currentIndex = (currentIndex + 1) % images.length;
-    background.style.backgroundImage = `url('${images[currentIndex]}')`;
+  function preloadImages(imageArray) {
+    return Promise.all(imageArray.map(src => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve(src);
+        img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+      });
+    }));
   }
 
-  // Cambiar imagen cada 5 segundos
-  setInterval(changeBackground, 5500);
+  function changeBackground() {
+    const currentBackground = document.getElementById('changing-background');
+    const nextBackground = document.getElementById('next-background');
+    const nextIndex = (currentIndex + 1) % images.length;
 
-  // Establecer la primera imagen inmediatamente
-  changeBackground();
+    // Configurar la siguiente imagen en el fondo oculto
+    nextBackground.style.backgroundImage = `url('${images[nextIndex]}')`;
+
+    // Hacer visible el siguiente fondo y ocultar el actual
+    nextBackground.style.opacity = '1';
+    currentBackground.style.opacity = '0';
+
+    // Después de la transición, intercambiar los roles de los fondos
+    setTimeout(() => {
+      const temp = currentBackground.style.backgroundImage;
+      currentBackground.style.backgroundImage = nextBackground.style.backgroundImage;
+      nextBackground.style.backgroundImage = temp;
+
+      currentBackground.style.opacity = '1';
+      nextBackground.style.opacity = '0';
+
+      currentIndex = nextIndex;
+    }, 1000); // Este tiempo debe coincidir con la duración de la transición CSS
+  }
+
+  preloadImages(images)
+    .then(() => {
+      // Establecer la primera imagen inmediatamente
+      const background = document.getElementById('changing-background');
+      background.style.backgroundImage = `url('${images[currentIndex]}')`;
+      background.style.opacity = '1';
+
+      // Cambiar imagen cada 5.5 segundos
+      setInterval(changeBackground, 7000);
+    })
+    .catch((error) => {
+      console.error('Error al precargar imágenes:', error);
+    });
 </script>
+
