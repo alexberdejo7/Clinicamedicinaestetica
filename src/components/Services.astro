@@ -1,14 +1,25 @@
 ---
 import { services } from '../utils/services.js';
 ---
-<section id="services" class="py-16 bg-white">
+
+<section id="services" class="py-16 bg-white-secondary">
     <div class="mx-auto max-w-7xl px-3">
-        <h2 class="text-5xl font-semibold font-roboto mb-3 text-center text-custom-blueobscure">Servicios</h2>
-        <p class="font-roboto text-center text-sm text-md max-w-80 mx-auto text-aqua-silver-strong">  Innovación, confianza y resultados visibles. Conocelos todos! </p>
+        <h2 
+        data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+        class="text-4xl  font-semibold font-oswald mb-5 text-center text-custom-blueobscure">¿Que ofrecemos?</h2>
         
-        <div class="grid grid-cols-1 p-3 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 lg:p- gap-y-10 lg:gap-x-10">
+        <p 
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        class="font-roboto text-center text-sm text-md max-w-80 mx-auto mb-10 text-aqua-silver-strong">  Innovación, confianza y resultados visibles. Conocelos todos nuestros procedimientos! </p>
+        
+        <div 
+         
+        class="grid grid-cols-1 p-3 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 lg:p- gap-y-10 lg:gap-x-10">
           {services.map((service) => (
-            <div class="relative bg-white rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-200 flex flex-col justify-between 
+            <div class="relative bg-White-Crest rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-100  flex flex-col justify-between 
             max-w-md mx-auto"> <!-- max-w-md ajusta el ancho máximo para que se vean más pequeñas -->
               <div class="relative group">
                 <img src={service.imageList} alt={service.name} class="w-full h-40 brightness-75 object-cover transition-transform duration-500 ease-in 
@@ -28,7 +39,7 @@ import { services } from '../utils/services.js';
               
               <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
               <div class="w-full mt-auto">
-                <button class="bg-pastel-blue-strong font-raleway text-gray-800 py-3 text-sm font-semibold rounded 
+                <button class="bg-Azul-Variacion font-raleway text-White-Crest py-3 text-sm font-semibold rounded 
                 rounded-t-none w-full hover:bg-aqua-strong transition-all ver-mas-btn" data-id={service.id}>
                   Ver Tratamiento
                 </button>

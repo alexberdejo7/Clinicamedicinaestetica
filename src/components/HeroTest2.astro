@@ -1,61 +1,66 @@
----
+--- 
 import ChangingBackground2 from './ChanginBackground2.astro';
 ---
 
 <section class="relative bg-white w-full dark:text-gray-100 pt-16 md:pt-5 lg:pt-5 overflow-hidden">
   <!-- Componente de fondo cambiante -->
   <ChangingBackground2 />
-
-  <div class="relative z-10 flex flex-col justify-center p-3 sm:p-4 md:py-16 md:flex-row md:mt-3">
-    <!-- Texto de la Hero Section -->
-    <div class="flex mt-4 md:mt-0 flex-col justify-start items-start p-4 rounded-sm md:max-w-md lg:max-w-lg relative">
-      <!-- efecto blur -->
-      <div class="absolute top-0 -left-4 w-20 h-20 bg-blue-clinic rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
-
-      <h1 class="text-4xl mb-5 max-w-80 lg:max-w-96 text-left text-custom-blueobscure font-oswald font-bold md:text-4xl lg:text-5xl">
-        CUIDAMOS TU 
-        <span class="text-blue-clinic">BELLEZA </span>
-        DE FORMA <span class="text-blue-clinic">SEGURA </span>
-      </h1>
-      <p class="mt-6 text-custom-blueobscure max-w-72 lg:max-w-96 text-left mb-7 font-roboto text-sm md:text-md lg:text-lg">
-        La ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional!
-        <span class="font-thin font-poppins mt-2 text-xs md:text-sm text-gray-600 block">Clínica de Medicina Estética.</span>
-      </p>
-
-      <!-- Botones de acción -->
-      <div class="flex flex-col mt-4 md:mt-2 lg:mt-3 lg:mt-10 space-y-4 items-start lg:flex-row lg:space-y-0 lg:space-x-4">
-        <!-- Botón 1 -->
-        <a rel="noopener noreferrer" href="#"
-         class="border border-black shadow-lg shadow-pastel-strong whitespace-nowrap w-full lg:w-auto px-7 py-3 flex items-center
-         justify-center space-x-2 text-center text-xs font-montserrat font-semibold text-black rounded-lg
-         bg-pastel-strong
-         hover:bg-pastel-green-soft hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
-          <span>Contacta ahora</span>
-          <!-- Icono hacia la derecha -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-
-        <!-- Botón 2 -->
-        <a rel="noopener noreferrer" href="#"
-         class="whitespace-nowrap w-full lg:w-auto px-7 py-3 text-center text-xs font-montserrat
-         font-semibold border border-black shadow-md shadow-blue-clinic bg-blue-clinic text-black rounded-lg hover:bg-pastel-blue-soft hover:text-slate-900 hover:shadow-lg transition-shadow duration-500 ease-in-out">
-          Nuestros Servicios
-        </a>
-      </div>
-
-      <!-- RRSS -->
-      <div class="flex space-x-3 mt-6 ml-1">
-        <a href="#">
-          <img src="../../facebook.svg" alt="Facebook" class="w-6 brightness-0 saturate-150 h-6">
-        </a>
-        <a href="#">
-          <img src="../../instagram.svg" alt="Instagram" class="w-6 brightness-0 saturate-150 h-6">
-        </a>
+  
+  <div class="relative mt-32 z-10 flex justify-center items-center min-h-[70vh] p-3 sm:p-4">
+    <!-- Contenedor principal centrado -->
+    <div class="w-full max-w-sm md:max-w-md lg:max-w-lg relative">
+      <!-- Overlay semitransparente centrado -->
+      <div class="absolute inset-0 bg-black bg-opacity-35 rounded-lg backdrop-filter backdrop-blur-sm"></div>
+      
+      <!-- Contenido centrado dentro del overlay -->
+      <div class="relative z-10 p-6 text-center">
+        <!-- efecto blur -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-aztext-Azul-Nuevo rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+        
+        <h1 class="text-xl md:text-2xl mb-3 text-white font-oswald font-bold leading-tight">
+          CUIDAMOS TU 
+          <span class="text-Azul-Nuevo">BELLEZA </span>
+          DE FORMA <span class="text-Azul-Nuevo">SEGURA </span>
+        </h1>
+        <p class="mt-3 text-white text-sm md:text-sm lg:text-sm font-roboto mb-4">
+          La ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional!
+          <span class="font-thin font-poppins mt-1 text-xs md:text-xs text-gray-300 block">Clínica de Medicina Estética.</span>
+        </p>
+        
+        <!-- Botones de acción -->
+        <div class="flex flex-col mt-4 space-y-3 items-center">
+          <!-- Botón 1 -->
+          <a rel="noopener noreferrer" href="#"
+            class="border border-black shadow-sm shadow-White-Crest whitespace-nowrap w-full md:w-auto px-6 py-2 flex items-center
+            justify-center space-x-2 text-center text-xs font-montserrat font-semibold text-black rounded-lg
+            bg-White-Crest 
+            hover:bg-pastel-green-strong hover:text-slate-900 hover:shadow-md transition-shadow duration-500 ease-in-out">
+            <span>Contacta ahora</span>
+            <!-- Icono hacia la derecha -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          
+          <!-- Botón 2 -->
+          <a rel="noopener noreferrer" href="#"
+            class="whitespace-nowrap w-full md:w-auto px-6 py-2 text-center text-xs font-montserrat
+            font-semibold border border-black shadow-sm shadow-Azul-Nuevo
+             bg-Azul-Nuevo text-White-Crest rounded-lg hover:bg-blue-dark hover:text-White-Crest hover:shadow-lg transition-shadow duration-500 ease-in-out">
+            Nuestros Servicios
+          </a>
+        </div>
+        
+        <!-- RRSS -->
+        <div class="flex justify-center space-x-3 mt-4">
+          <a href="#">
+            <img src="../../facebook.svg" alt="Facebook" class="w-5 h-5 brightness-100 invert saturate-0">
+          </a>
+          <a href="#">
+            <img src="../../instagram.svg" alt="Instagram" class="w-5 h-5 brightness-100 invert saturate-0">
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- Imagen (ahora cubierta por el fondo dinámico) -->
   </div>
 </section>
