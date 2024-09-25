@@ -28,6 +28,10 @@ module.exports = {
 'cafe-beige': '#E9D6BD',
 'color-piel' :'#dcbb95',
 'color-piel-soft' : '#fbf7f1',
+'Azul-soft' : '#eef9ff',
+'Azul-medium' : '#00acff',
+'Azul-Strong': '#006db4',
+
 
 // Colores verdes
 'green-primary': '#28B463',

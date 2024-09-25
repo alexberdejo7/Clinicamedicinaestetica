@@ -1,25 +1,30 @@
 ---
 // Importa tus imágenes de las instalaciones
 const images = [
-  { src: '../../img/assets/instalaciones33.JPG', alt: 'Tratamientos' },
-  { src: '../../img/assets/instalaciones33.JPG', alt: 'Recepción' },
-  { src: '../../img/assets/instalaciones33.JPG', alt: 'Clinica' },
+  { src: '../../img/assets/instalacion34.webp', alt: '' },
+  { src: '../../img/assets/instalaciones33.JPG', alt: '' },
+  { src: '../../img/assets/lista4.webp', alt: '' },
 ];
 ---
 
-<section id="about-us" class="py-12 bg-white">
+<section id="about-us" class="py-12 bg-pastel-blue-soft">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">Nuestras Instalaciones</h2>
-    <p class="text-lg text-center mb-12">
+    <h2 data-aos="fade-up"
+      data-aos-duration="1500"
+      class="text-4xl font-oswald text-custom-blueobscure font-bold text-center mb-8">Sobre Nosotros</h2>
+    <p
+    data-aos="fade-up"
+      data-aos-duration="1500"
+    class="text-sm font-roboto line-clamp-3 leading-tight  text-center mb-12">
       En nuestra clínica de medicina estética, ofrecemos un ambiente moderno y acogedor,
       diseñado para brindarte la mejor atención y confianza en cada tratamiento.
     </p>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {images.map((image) => (
         <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
-          <img src={image.src} alt={image.alt} class="w-full h-64 object-cover" />
-          <div class="absolute inset-0 bg-black opacity-30"></div>
+          <img src={image.src} alt={image.alt} class="w-52 h-52 object-cover" />
+          
           <div class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold">
             {image.alt}
           </div>

@@ -1,22 +1,25 @@
 ---
 import Layout from '../layouts/MainLayout.astro';
-import HeroTest2 from '../components/HeroTest2.astro';
+import HeroTest3 from '../components/HeroTest3.astro';
 import Services from '../components/Services.astro';
 import Aboutus from '../components/Aboutus.astro';
 import Course from '../components/Course.astro';
 import Feature from '../components/Feature.astro';
+import Frase from '../components/Frase.astro'
 
 import 'aos/dist/aos.css';
 ---
 
 <Layout title="Clinica Medicina Estetica">
-  <HeroTest2  />
-  <Services  />
+  <HeroTest3  />
   <Feature  />
-  <Course  />
+  <Services  />
+  <Frase/>
   <Aboutus  />
+  <Course  />
   <!-- Agrega otros componentes aquí -->
 </Layout>
+
 
 <script>
   if (typeof window !== 'undefined') {

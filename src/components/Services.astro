@@ -3,7 +3,7 @@ import { services } from '../utils/services.js';
 ---
 
 
-<section id="services" class="py-16 bg-pastel-blue-soft">
+<section id="services" class="py-16 mt-10 bg-white">
     <div class="mx-auto max-w-7xl px-3">
         <h2 
         data-aos="fade-down"
@@ -17,10 +17,10 @@ import { services } from '../utils/services.js';
         class="font-roboto text-center text-sm text-md max-w-80 mx-auto mb-10 text-aqua-silver-strong">  Innovación, confianza y resultados visibles. Conocelos todos nuestros procedimientos! </p>
         
         <div 
-            class="grid grid-cols-1 p-3 md:grid-cols-1 lg:w-full mx-auto lg:grid-cols-2 lg:p- gap-y-10 lg:gap-x-10">
+            class="grid grid-cols-1 p-3 md:grid-cols-1 mx-auto lg:grid-cols-2 lg:p- gap-y-14 lg:gap-x-7">
           {services.map((service, index) => (  // Asegúrate de tener `index` aquí
             <div 
-                class={`relative bg-White-Crest rounded-lg shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-slate-100 flex flex-col justify-between max-w-md mx-auto`}
+                class={`relative bg-White rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-white-secondary flex flex-col mx-auto`}
                 data-aos={index % 2 === 0 ? 'fade-zoom-down' : 'fade-zoom-down'}  
                 data-aos-duration="1000"
                 data-aos-delay="200"
@@ -38,15 +38,15 @@ import { services } from '../utils/services.js';
                 <!-- Añadimos el icono SVG -->
                 <div class="flex items-center space-x-2 mb-2">
                   <img src={service.icon} alt={service.name + ' icon'} class="w-6 overflow-hidden h-6"/>
-                  <p class="font-roboto max-w-72 text-gray-900 text-sm">{service.description}</p>
+                  <p class="font-roboto max-w-64 text-gray-900 text-sm">{service.description}</p>
                 </div>
               </div>
               
               <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
               <div class="w-full mt-auto">
-                <button class="bg-Azul-Variacion font-raleway text-White-Crest py-3 text-sm font-semibold rounded 
-                rounded-t-none w-full hover:bg-aqua-strong transition-all ver-mas-btn" data-id={service.id}>
-                  Ver Tratamiento
+                <button class="bg-transparent font-raleway text-Azul-Strong py-3 text-sm font-semibold rounded 
+                rounded-t-none w-full hover:text-blue-dark transition-all ver-mas-btn" data-id={service.id}>
+                  Ver Detalles
                 </button>
               </div>
             </div>
@@ -54,17 +54,17 @@ import { services } from '../utils/services.js';
         </div>
     
   
-        <div id="service-details" class=" bg-pastel-blue-soft  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
-          <h2 id="service-title" class="text-4xl font-montserrat font-semibold mb-4 text-custom-blueobscure text-center"></h2>
+        <div id="service-details" class=" bg-pastel-blue-soft mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
+          <h2 id="service-title" class="text-4xl font-montserrat font-semibold mb-4 text-Azul-Strong text-center"></h2>
           <p id="service-description" class="mb-6 font-roboto text-sm text-gray-700 text-center"></p>
           
           <!-- Updated container for service images -->
           <div id="service-images" class="flex flex-wrap justify-center gap-4 mb-6">
-              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
-              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
+              <img class="w-36 h-36 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
+              <img class="w-36 h-36 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
           </div>
           
-          <h3 class="text-xl font-semibold font-montserrat mb-4 text-custom-blueobscure text-center">Preguntas frecuentes</h3>
+          <h3 class="text-xl font-semibold font-montserrat mb-4 text-Azul-Strong text-center">Preguntas frecuentes</h3>
           <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>
