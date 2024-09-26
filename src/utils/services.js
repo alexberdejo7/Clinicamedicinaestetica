@@ -5,7 +5,7 @@ export const services = [
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: '../../img/assets/botox.webp',
-    imageService: ['../../img/assets/botox1.webp', '../../img/assets/botoxfaq.webp'], // Imágenes 
+    imageService: ['../../img/assets/botox1.webp', ], // Imágenes 
     imageList: '../../img/assets/11.webp',
     faqs: [
       {
@@ -34,7 +34,7 @@ export const services = [
     fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
     icon: '../../img/assets/laser-compress.webp',
     imageList: '../../img/assets/depilacion.webp',
-    imageService: ['../../img/assets/laser.webp', '../../img/assets/depilacion.JPG'], // Imágenes
+    imageService: ['../../img/assets/laser.webp', ], // Imágenes
     faqs: [
       {
         question: '¿Cuál es el protocolo de tratamiento?',
@@ -55,28 +55,7 @@ export const services = [
       
     ]
   },
-  {
-    id: 'bioestimuladores',
-    name: 'Bioestimuladores',
-    description: 'Sustancias inyectables que estimulan la producción de colágeno en la piel.',
-    fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica (Radiesse).',
-    icon: '../../img/assets/botox.webp',
-    imageList: '../../img/istock3.jpg',
-    faqs: [
-      {
-        question: '¿Con qué frecuencia se puede aplicar el tratamiento?',
-        answer: 'El tratamiento se puede reaplicar cada 12 meses.'
-      },
-      {
-        question: '¿Cuánto duran los resultados?',
-        answer: 'Los resultados pueden durar hasta 12 meses.'
-      },
-      {
-        question: '¿Cuáles son los cuidados posteriores?',
-        answer: 'Se recomienda no exponerse al sol y no manipular el área tratada durante las 4 horas posteriores a la aplicación.'
-      }
-    ]
-  },
+
   {
     id: 'armonizacion-facial',
     name: 'Armonización Facial',
@@ -99,12 +78,34 @@ export const services = [
       }
     ]
   },
+  {
+    id: 'bioestimuladores',
+    name: 'Bioestimuladores ',
+    description: 'Sustancias inyectables que estimulan la producción de colágeno en la piel.',
+    fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica (Radiesse).',
+    icon: '../../img/assets/botox.webp',
+    imageList: '../../img/istock3.jpg',
+    faqs: [
+      {
+        question: '¿Con qué frecuencia se puede aplicar el tratamiento?',
+        answer: 'El tratamiento se puede reaplicar cada 12 meses.'
+      },
+      {
+        question: '¿Cuánto duran los resultados?',
+        answer: 'Los resultados pueden durar hasta 12 meses.'
+      },
+      {
+        question: '¿Cuáles son los cuidados posteriores?',
+        answer: 'Se recomienda no exponerse al sol y no manipular el área tratada durante las 4 horas posteriores a la aplicación.'
+      }
+    ]
+  },
  
   {
     id: 'lipoenzimas',
     name: 'Lipoenzimas',
     description: 'Tratamiento inyectable para reducir grasa localizada.',
-    fullDescription: 'Las lipoenzimas son un tratamiento inyectable a base de enzimas que ayuda a reducir la grasa localizada actuando en los adipocitos (células grasas).',
+    fullDescription: 'Las lipoenzimas son un tratamiento inyectable a base de enzimas que ayuda a reducir la grasa localizada actuando en los adipocitos (células grasas). Las lipoenzimas no solo ayudan a la reducción de grasa, sino que también estimulan la producción de colágeno, lo que puede mejorar la firmeza y elasticidad de la piel, ofreciendo un resultado más tonificado. Este tratamiento es ideal para zonas como el abdomen, los flancos, los muslos y la papada.',
     icon: '../../img/assets/barbilla-compress.webp',
     imageList: '../../img/assets/lista7.webp',
     faqs: [
@@ -126,7 +127,7 @@ export const services = [
     id: 'acido-hialuronico',
     name: 'Rellenos de Ácido Hialurónico',
     description: 'Tratamiento inyectable para dar volumen y mejorar diferentes áreas faciales.',
-    fullDescription: 'Los rellenos de ácido hialurónico son un tratamiento inyectable utilizado para dar volumen, mejorar y corregir diferentes áreas faciales. Las áreas que pueden tratarse incluyen nariz, labios, pómulos, mentón, y zona malar, entre otras.',
+    fullDescription: 'Los rellenos de ácido hialurónico son un tratamiento inyectable utilizado para dar volumen, mejorar y corregir diferentes áreas faciales. Las áreas que pueden tratarse incluyen nariz, labios, pómulos, mentón, y zona malar, entre otras. Este tratamiento no solo mejora el contorno facial, sino que también puede corregir asimetrías y restaurar la armonía facial. Además, al ser biocompatible, el ácido hialurónico se integra perfectamente en los tejidos sin riesgo de rechazo.',
     icon: '../../img/assets/botox.webp',
     imageList: '../../img/assets/labios.webp',
     faqs: [
@@ -150,7 +151,7 @@ export const services = [
     description: 'Limpieza facial grado médico estético no invasivo.',
     fullDescription: 'La limpieza facial hidra es un tratamiento grado médico estético no invasivo que limpia, exfolia e hidrata la piel del rostro. Se realiza en una sesión que combina diferentes cabezales para realizar varios pasos, como extracción de impurezas, exfoliación, ultrasonido, radiofrecuencia, martillo frío y vapor de ozono, entre otros.',
     icon: '../../img/assets/dermapen-compress.webp',
-    imageList: '../../img/assets/facial2.webp',
+    imageList: '../../img/assets/hydrafacial.webp',
     imageService: ['../../img/assets/hidrafacialinf.webp'], // Imágenes
     faqs: [
       {

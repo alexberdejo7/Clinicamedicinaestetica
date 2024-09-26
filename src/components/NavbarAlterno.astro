@@ -1,0 +1,84 @@
+---
+// Navbar.astro
+---
+
+<nav id="navbar" class="fixed top-0 inset-x-0 bg-white border-b shadow-md border-gray-200 z-50 transition-all duration-300 transform -translate-y-full">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	  <div class="flex justify-between h-14 relative">
+		<div class="flex-shrink-0 flex items-center">
+		  <a href="/" class="flex items-center">
+			<img src="../../img/logoclinica-removebg-preview.png" class="w-11 h-11 overflow-auto" alt="">
+		  </a>
+		</div>
+		<!-- Menu tradicional visible solo en lg o mayor -->
+		<div class="hidden lg:ml-6 lg:flex lg:space-x-8">
+		  <a href="#cursos" class="text-custom-blueobscure relative inline-flex items-center px-1 pt-1 text-sm font-medium group">
+			Cursos
+			<span class="absolute bottom-0 left-0 w-0 h-1 bg-Azul-Strong transition-all duration-300 ease-in-out group-hover:w-full"></span>
+		  </a>
+		  <a href="#about-us" class="text-custom-blueobscure relative inline-flex items-center px-1 pt-1 text-sm font-medium group">
+			Acerca
+			<span class="absolute bottom-0 left-0 w-0 h-1 bg-Azul-Strong transition-all duration-300 ease-in-out group-hover:w-full"></span>
+		  </a>
+		  <a href="#services" class="text-custom-blueobscure relative inline-flex items-center px-1 pt-1 text-sm font-medium group">
+			Servicios
+			<span class="absolute bottom-0 left-0 w-0 h-1 bg-Azul-Strong transition-all duration-300 ease-in-out group-hover:w-full"></span>
+		  </a>
+		  <a href="#contacto" class="text-custom-blueobscure relative inline-flex items-center px-1 pt-1 text-sm font-medium group">
+			Contacto
+			<span class="absolute bottom-0 left-0 w-0 h-1 bg-Azul-Strong transition-all duration-300 ease-in-out group-hover:w-full"></span>
+		  </a>
+		</div>
+		<!-- Botón de menú móvil, visible hasta md -->
+		<div class="-mr-2 flex items-center lg:hidden">
+		  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+			<span class="sr-only">Abrir menú principal</span>
+			<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		  </button>
+		</div>
+	  </div>
+	</div>
+   
+	<!-- Menú móvil, visible hasta md -->
+	<div class="lg:hidden hidden" id="mobile-menu">
+	  <div class="pt-2 pb-3 space-y-1">
+		<a href="/" class="bg-blue-50 border-gray-500 text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Cursos</a>
+		<a href="/acerca" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Quienes somos</a>
+		<a href="/servicios" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Servicios</a>
+		<a href="/contacto" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contacto</a>
+	  </div>
+	</div>
+</nav>
+
+<script>
+	const navbar = document.getElementById('navbar');
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+   
+	mobileMenuButton.addEventListener('click', () => {
+	  mobileMenu.classList.toggle('hidden');
+	   
+	  const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+	  mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
+	});
+
+
+    // FuncionNavbarHidden
+	function checkScroll() {
+	  const scrollPosition = window.scrollY;
+	  const heroSection = document.querySelector('section'); // Asume que el hero es la primera sección
+	  
+	  if (heroSection && scrollPosition > heroSection.offsetHeight - 100) {
+		navbar.classList.remove('-translate-y-full');
+		navbar.classList.add('translate-y-0');
+	  } else {
+		navbar.classList.add('-translate-y-full');
+		navbar.classList.remove('translate-y-0');
+	  }
+	}
+
+	window.addEventListener('scroll', checkScroll);
+	checkScroll(); // Comprueba la posición inicial
+</script>

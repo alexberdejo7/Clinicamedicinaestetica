@@ -1,0 +1,71 @@
+---
+const testimonials = [
+  {
+    name: "Carlos Ramírez",
+    review: "¡Increíble atención! El servicio fue excelente y me sentí muy bien cuidado en todo momento.",
+    position: "Cliente Satisfecho",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 5,
+  },
+  {
+    name: "Sofía Pérez",
+    review: "El equipo es muy profesional y atento, definitivamente recomendaría este lugar.",
+    position: "Paciente Regular",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    rating: 4,
+  },
+  {
+    name: "Javier López",
+    review: "Un servicio impecable y muy personalizado. Me trataron con mucho respeto y atención a los detalles.",
+    position: "Cliente Frecuente",
+    image: "https://randomuser.me/api/portraits/men/72.jpg",
+    rating: 5,
+  },
+];
+---
+
+<section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-semibold font-oswald text-center text-custom-blueobscure mb-12">Testimonios Que Inspiran</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div class={`bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl transform hover:-translate-y-2 ${index === 1 ? 'md:-mt-8' : ''}`}>
+          <div class="flex flex-col items-center text-center mb-4">
+            <img 
+              class="w-12 h-12 rounded-full border-4 border-gray-200 object-cover mb-4 transform transition-transform duration-500 hover:rotate-6"
+              src={testimonial.image} 
+              alt={`Foto de ${testimonial.name}`} 
+            />
+            <h3 class="text-sm font-poppins font-semibold text-gray-800">{testimonial.name}</h3>
+            <p class="text-xs text-gray-500 font-thin mb-2">{testimonial.position}</p>
+            <div class="flex space-x-1">
+              {[...Array(5)].map((_, i) => (
+                <span class={`text-xl ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}>
+                  ★
+                </span>
+              ))}
+            </div>
+          </div>
+          <p class="text-gray-700 italic font-poppins text-[11px] md:text-xs leading-relaxed relative">
+            <span class="absolute top-0 left-0 text-6xl text-gray-200 opacity-50 transform -translate-x-4 -translate-y-4">"</span>
+            {testimonial.review}
+            <span class="absolute bottom-0 right-0 text-6xl text-gray-300 opacity-50 transform translate-x-2 translate-y-2">"</span>
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .grid > div:hover {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
