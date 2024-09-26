@@ -1,0 +1,152 @@
+---
+---
+<form
+  action="https://formspree.io/f/mdknqkbk"
+  method="POST"
+  class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md"
+  id="contact-form"
+>
+  <div class="mb-4">
+    <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nombre</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+    />
+    <p class="mt-1 text-xs text-red-500 hidden" id="name-error"></p>
+  </div>
+  <div class="mb-4">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+    />
+    <p class="mt-1 text-xs text-red-500 hidden" id="email-error"></p>
+  </div>
+  <div class="mb-4">
+    <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Mensaje</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="4"
+      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+    ></textarea>
+    <p class="mt-1 text-xs text-red-500 hidden" id="message-error"></p>
+  </div>
+  <div class="mb-6 text-center">
+    <button
+      type="submit"
+      class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline transition duration-300"
+    >
+      Enviar
+    </button>
+  </div>
+  <div class="text-center">
+    <p class="text-green-500 hidden" id="success-message">¡Gracias por su mensaje! Nos pondremos en contacto pronto.</p>
+    <p class="text-red-500 hidden" id="error-message">Hubo un error al enviar el mensaje. Por favor, inténtelo de nuevo.</p>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+
+  const validateName = (name) => {
+    const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateMessage = (message) => {
+    return message.trim().length > 0 && message.length <= 500;
+  };
+
+  const showError = (element, message) => {
+    element.textContent = message;
+    element.classList.remove('hidden');
+  };
+
+  const hideError = (element) => {
+    element.textContent = '';
+    element.classList.add('hidden');
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value
+    };
+    
+    let isValid = true;
+
+    if (!validateName(formData.name)) {
+      showError(nameError, 'Por favor, ingrese un nombre válido (solo letras y espacios, 2-50 caracteres).');
+      isValid = false;
+    } else {
+      hideError(nameError);
+    }
+
+    if (!validateEmail(formData.email)) {
+      showError(emailError, 'Por favor, ingrese un email válido.');
+      isValid = false;
+    } else {
+      hideError(emailError);
+    }
+
+    if (!validateMessage(formData.message)) {
+      showError(messageError, 'Por favor, ingrese un mensaje válido (máximo 500 caracteres).');
+      isValid = false;
+    } else {
+      hideError(messageError);
+    }
+
+    if (!isValid) return;
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: JSON.stringify(formData),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        form.reset();
+        successMessage.classList.remove('hidden');
+        errorMessage.classList.add('hidden');
+        setTimeout(() => {
+          successMessage.classList.add('hidden');
+        }, 5000);
+      } else {
+        throw new Error('Error en la respuesta del servidor');
+      }
+    } catch (error) {
+      errorMessage.classList.remove('hidden');
+      successMessage.classList.add('hidden');
+      setTimeout(() => {
+        errorMessage.classList.add('hidden');
+      }, 5000);
+    }
+  });
+</script>

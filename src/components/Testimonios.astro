@@ -10,15 +10,15 @@ const testimonials = [
   {
     name: "Sofía Pérez",
     review: "El equipo es muy profesional y atento, definitivamente recomendaría este lugar.",
-    position: "Paciente Regular",
+    position: "Cliente Satisfecho",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
-    rating: 4,
+    rating: 5,
   },
   {
     name: "Javier López",
     review: "Un servicio impecable y muy personalizado. Me trataron con mucho respeto y atención a los detalles.",
     position: "Cliente Frecuente",
-    image: "https://randomuser.me/api/portraits/men/72.jpg",
+    image: "https://randomuser.me/api/portraits/men/88.jpg",
     rating: 5,
   },
 ];
@@ -26,7 +26,9 @@ const testimonials = [
 
 <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-semibold font-oswald text-center text-custom-blueobscure mb-12">Testimonios Que Inspiran</h2>
+    <h2 data-aos="zoom-in"
+    data-aos-duration="1500"
+    class="text-3xl font-semibold font-oswald text-center text-custom-blueobscure mb-12">Testimonios Que Inspiran</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {testimonials.map((testimonial, index) => (

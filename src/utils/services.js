@@ -33,8 +33,8 @@ export const services = [
     description: 'Depilación a largo plazo con tecnologia de láser de diodo.',
     fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
     icon: '../../img/assets/laser-compress.webp',
-    imageList: '../../img/assets/depilacion.webp',
-    imageService: ['../../img/assets/laser.webp', ], // Imágenes
+    imageList: '../../img/istock2.jpg',  
+    imageService: ['../../img/assets/depilacion.webp', ], // Imágenes
     faqs: [
       {
         question: '¿Cuál es el protocolo de tratamiento?',
@@ -84,7 +84,7 @@ export const services = [
     description: 'Sustancias inyectables que estimulan la producción de colágeno en la piel.',
     fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica (Radiesse).',
     icon: '../../img/assets/botox.webp',
-    imageList: '../../img/istock3.jpg',
+    imageList: '../../img/istock3.webp',
     faqs: [
       {
         question: '¿Con qué frecuencia se puede aplicar el tratamiento?',

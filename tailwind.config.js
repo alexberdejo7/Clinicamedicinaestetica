@@ -10,7 +10,7 @@ module.exports = {
 'custom-dark-blue': '#7cbcfc',
 'custom-light-blue': '#c3f9fc',
 'custom-azulpastel': '#758bfd',
-'custom-blueobscure': '#1a2832',
+'custom-blueobscure': '#072c4a',
 'blue-light-pastel': '#AFCBFF',
 'blue-sky': '#90CAF9',
 'blue-dark': '#1976D2',
