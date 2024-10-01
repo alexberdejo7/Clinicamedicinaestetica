@@ -1,17 +1,17 @@
 ---
 // HeroSection.astro
 
-// Array de rutas de imágenes para el slider de fondo
 const images = [
-  '../../img/assets/teams.webp',
+  '../../img/assets/herotest.webp',
   '../../img/assets/2.webp',
   '../../img/assets/9.webp',
   '../../img/assets/3.webp',
+  '../../img/assets/teams.webp',
   '../../img/assets/facial2.webp',
 ];
 ---
 
-<section class="relative h-screen w-screen overflow-hidden">
+<section class="relative min-h-screen w-screen overflow-hidden flex flex-col">
   <!-- Slider de fondo -->
   <div id="background-slider" class="absolute inset-0 w-full h-full">
     {images.map((src, index) => (
@@ -23,11 +23,11 @@ const images = [
   </div>
   
   <!-- Contenedor principal con efecto glassmorphism y contenido separado -->
-  <div class="relative z-10 mt-16 flex flex-col justify-center items-center h-full p-2">
-    <div class="w-full max-w-lg bg-white bg-opacity-10 backdrop-filter  backdrop-blur-sm rounded-lg p-10  border shadow-lg mb-6">
+  <div class="relative z-10 flex-grow flex flex-col justify-center items-center mx-auto p-4 md:p-6 mt-16 md:mt-20">
+    <div class="w-full max-w-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg p-6 md:p-10 border shadow-lg mb-4">
       <div data-aos="fade-up" data-aos-duration="1000" class="text-center">
         <!-- Título principal -->
-        <h1 class="text-4xl font-dancing uppercase lg:text-3xl md:text-2xl mb-3 text-white font-bold leading-tight">
+        <h1 class="text-3xl md:text-4xl font-dancing uppercase mb-3 text-white font-bold leading-tight">
           Es momento <span class="text-nude-primary"> de cuidarte </span>
         </h1>
         
@@ -40,7 +40,7 @@ const images = [
     </div>
     
     <!-- Botones de acción fuera del efecto glassmorphism -->
-    <div class="flex flex-col space-y-2 items-center">
+    <div class="flex flex-col space-y-2 items-center mb-4">
       <a href="https://wa.me/1234?text=Hola,%20quiero%20más%20información!"
         class="border bg-nude-primary border-white shadow-sm px-6 py-2 flex items-center justify-center text-xs font-montserrat hover:bg-nude-secondary font-semibold text-black rounded-3xl hover:shadow-md transition-shadow duration-500 ease-in-out">
         Contacta ahora
@@ -48,13 +48,13 @@ const images = [
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
       </a>
-      <a href="#services" class="md:w-auto px-6 py-2 text-xs font-montserrat font-semibold border backdrop-filter backdrop-blur-sm  border-white shadow-sm text-white rounded-3xl hover:text-black hover:bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out">
+      <a href="#services" class="md:w-auto px-6 py-2 text-xs font-montserrat font-semibold border backdrop-filter backdrop-blur-sm border-white shadow-sm text-white rounded-3xl hover:text-black hover:bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out">
         Nuestros Servicios
       </a>
     </div>
     
     <!-- Íconos de redes sociales fuera del efecto glassmorphism -->
-    <div class="flex justify-center space-x-3 mt-4">
+    <div class="flex justify-center space-x-3 mb-4">
       <a href="https://www.facebook.com/drajessicaalcala"><img src="../../facebook.svg" alt="Facebook" class="brightness-0 invert w-5 h-5"></a>
       <a href="https://www.instagram.com/dra_jessicaalcala/"><img src="../../instagram.svg" alt="Instagram" class="brightness-0 invert w-5 h-5"></a>
     </div>
@@ -80,14 +80,6 @@ const images = [
     setInterval(changeBackground, 5000);
   });
 </script>
-
-
-
-
-
-
-
-
 
 
 
