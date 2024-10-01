@@ -20,10 +20,10 @@ const teamMembers = [
   
   <div data-aos="fade-up"
   data-aos-duration="1500" class="w-full p-5 mx-auto">
-    <h2 class="text-4xl p-5 font-semibold font-oswald text-custom-blueobscure text-center mb-5">
+    <h2 class="text-4xl p-5 font-semibold font-oswald text-nude-text text-center mb-5">
     Clínica Medicina Estética 
   </h2>
-  <p class="text-xs text-gray-700 font-poppins p-3 leading-relaxed text-center mb-12 max-w-full lg:max-w-[40rem] mx-auto">
+  <p class="text-xs text-nude-text font-poppins p-3 leading-relaxed text-center mb-12 max-w-full lg:max-w-[40rem] mx-auto">
     Ofrecemos una <span class="font-semibold"> experiencia de bienestar exclusiva y personalizada, </span>  diseñada para mejorar tu bienestar y potenciar tu belleza.
     <span class="block">
       Nuestra atención es integral y todo el equipo <span class="font-semibold"> trabajamos en sinergia para proporcionar la mejor atención </span> y
@@ -35,10 +35,10 @@ const teamMembers = [
   <div  class="mt-4 bg-white">
     <h2 data-aos="fade-up"
     data-aos-duration="1500"
-     class="text-4xl text-center font-oswald text-custom-blueobscure p-4 font-semibold mb-2">Nuestro Equipo</h2>
+     class="text-4xl text-center font-oswald text-nude-text p-4 font-semibold mb-2">Nuestro Equipo</h2>
     <p data-aos="fade-up"
     data-aos-duration="1500"
-     class="text-xs text-gray-700 font-poppins p-3 leading-relaxed text-center mb-10 max-w-full lg:max-w-[40rem] mx-auto">
+     class="text-xs text-nude-text font-poppins p-3 leading-relaxed text-center mb-10 max-w-full lg:max-w-[40rem] mx-auto">
       Nuestro equipo está compuesto por <span class="font-semibold">especialistas apasionados y dedicados  </span>, comprometidos con brindarte una atención integral y 
       personalizada, con el <span class="font-semibold">objetivo de ayudarte a lograr tus metas</span> de salud y belleza.</p>
     <div class="p-2 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 lg:gap-y-10 lg:p-5">
@@ -64,11 +64,11 @@ const teamMembers = [
  class="mb-5 mt-7">
   <h2 data-aos="fade-up"
   data-aos-duration="1500"
-  class="text-2xl text-center font-oswald text-custom-blueobscure p-4 font-semibold mb-4">Nuestras Instalaciones</h2>
+  class="text-2xl text-center font-oswald text-nude-text p-4 font-semibold mb-4">Nuestras Instalaciones</h2>
   
   <p data-aos="fade-up"
   data-aos-duration="1500"
-  class="text-xs text-gray-700 font-poppins p-3 leading-relaxed text-center mb-10 max-w-full lg:max-w-[40rem] mx-auto">
+  class="text-xs text-nude-text font-poppins p-3 leading-relaxed text-center mb-10 max-w-full lg:max-w-[40rem] mx-auto">
     Descubre nuestras <span class="font-semibold">modernas y relajantes instalaciones</span>, para ofrecerte los mejores cuidados en un entorno 
     de <span class="font-semibold">confianza plena y tranquilidad.</span>
   </p>
@@ -78,7 +78,7 @@ const teamMembers = [
       <div 
       data-aos="zoom-out"
         data-aos-duration="1500"class={`rounded-lg block shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
-        <img src={asset.image} alt={asset.alt} class="w-full h-52 md:h-60 object-cover rounded-lg shadow-xl shadow-gray-300" />
+        <img src={asset.image} alt={asset.alt} class="w-full h-52 md:h-60 object-scale-down aspect-auto rounded-lg shadow-xl shadow-gray-300" />
       </div>
     ))}
   </div>

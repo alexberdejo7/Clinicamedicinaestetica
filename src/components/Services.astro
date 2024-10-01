@@ -3,18 +3,18 @@ import { services } from '../utils/services.js';
 ---
 
 
-<section id="servicios" class="py-16 mt-7 bg-white">
+<section id="servicios" class=" bg-white">
     <div class="mx-auto max-w-7xl px-3">
         <h2 
         data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500"
-        class="text-4xl  font-semibold font-oswald mb-5 text-center text-custom-blueobscure">¿Que ofrecemos?</h2>
+        class="text-4xl  font-semibold font-oswald mb-5 text-center text-nude-text">¿Que ofrecemos?</h2>
         
         <p 
         data-aos="fade-up"
         data-aos-duration="1500"
-        class="font-poppins  text-slate-700 text-center text-sm text-md max-w-80 mx-auto mb-10 font-thin">  Innovación, confianza y resultados visibles. Conoce aqui nuestros procedimientos: </p>
+        class="font-poppins  text-nude-text text-center text-xs  max-w-80 mx-auto mb-10 font-thin">  Innovación, confianza y resultados visibles. Conoce aqui nuestros procedimientos: </p>
         
         <div 
             class="grid grid-cols-1 p-5 lg:grid-cols-2 mx-auto xl:grid-cols-3  gap-y-14 lg:gap-x-8">
@@ -30,7 +30,7 @@ import { services } from '../utils/services.js';
                 <img src={service.imageList} alt={service.name} class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 
                 group-hover:brightness-105 group-hover:saturate-100" />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-white uppercase font-oswald max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-nude-bg font-oswald max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               
@@ -38,13 +38,13 @@ import { services } from '../utils/services.js';
                  {/* SVG  */}
                 <div class="flex items-center space-x-2 mb-2">
                   <img src={service.icon} alt={service.name + ' icon'} class="w-6 overflow-hidden h-6"/>
-                  <p class="font-montserrat max-w-56 leading-snug  text-gray-700 text-xs">{service.description}</p>
+                  <p class="font-montserrat max-w-56 leading-snug  text-nude-text text-xs">{service.description}</p>
                 </div>
               </div>
               
-              <div class="flex-grow"></div> <!-- Espacio flexible para empujar el botón hacia abajo -->
+              <div class="flex-grow"></div> 
               <div class="w-full mt-auto">
-                <button class="bg-Azul-Strong font-montserrat text-white hover:bg-blue-dark py-3 text-xs font-semibold rounded 
+                <button class="bg-nude-primary  font-montserrat text-white hover:bg-nude-secondary py-3 text-xs font-semibold rounded 
                 rounded-t-none w-full hover:text-white transition-all ver-mas-btn" data-id={service.id}>
                   Ver Detalles
                 </button>
@@ -55,8 +55,8 @@ import { services } from '../utils/services.js';
     
   
         <div id="service-details" class=" bg-pastel-blue-soft mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
-          <h2 id="service-title" class="text-4xl font-roboto font-semibold mb-4 text-Azul-Strong text-center"></h2>
-          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm text-gray-700 text-center"></p>
+          <h2 id="service-title" class="text-4xl font-roboto font-semibold mb-4 text-nude-primary text-center"></h2>
+          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm text-nude-text text-center"></p>
           
           <!-- Updated container for service images -->
           <div id="service-images" class="flex flex-wrap justify-center gap-4 mb-6">
@@ -64,7 +64,7 @@ import { services } from '../utils/services.js';
               <img class="w-36 h-36 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
           </div>
           
-          <h3 class="text-xl font-semibold font-roboto mb-4 text-Azul-Strong text-center">Preguntas Frecuentes</h3>
+          <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-primary text-center">Preguntas Frecuentes</h3>
           <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>
@@ -105,12 +105,12 @@ import { services } from '../utils/services.js';
             updateServiceImages(service.imageService || []);
             
             serviceFaqs.innerHTML = service.faqs.map(faq => `
-              <li class="bg-gray-200  text-gray-900 p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-gray-300 cursor-pointer">
+              <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-gray-300 cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
-                  <h4 class="font-semibold text-start text-gray-800 text-md text-custom">${faq.question}</h4>
+                  <h4 class="font-semibold text-start text-nude-text text-md text-custom">${faq.question}</h4>
                   <span class="text-aqua-strong font-bold transition-transform duration-300 transform">+</span>
                 </div>
-                <p class="text-gray-700  font-poppins text-sm faq-answer hidden mt-2">${faq.answer}</p>
+                <p class="text-nude-text  font-poppins text-sm faq-answer hidden mt-2">${faq.answer}</p>
               </li>
             `).join('');
   

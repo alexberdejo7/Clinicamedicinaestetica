@@ -3,21 +3,21 @@ const testimonials = [
   {
     name: "Carlos Ramírez",
     review: "¡Increíble atención! El servicio fue excelente y me sentí muy bien cuidado en todo momento.",
-    position: "Cliente Satisfecho",
+    position: "Paciente Satisfecho",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
   },
   {
     name: "Sofía Pérez",
     review: "El equipo es muy profesional y atento, definitivamente recomendaría este lugar.",
-    position: "Cliente Satisfecho",
+    position: "Paciente Satisfecho",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
     rating: 5,
   },
   {
     name: "Javier López",
     review: "Un servicio impecable y muy personalizado. Me trataron con mucho respeto y atención a los detalles.",
-    position: "Cliente Frecuente",
+    position: "Paciente Frecuente",
     image: "https://randomuser.me/api/portraits/men/88.jpg",
     rating: 5,
   },
@@ -28,7 +28,7 @@ const testimonials = [
   <div class="container mx-auto px-4">
     <h2 data-aos="zoom-in"
     data-aos-duration="1500"
-    class="text-3xl font-semibold font-oswald text-center text-custom-blueobscure mb-12">Testimonios Que Inspiran</h2>
+    class="text-3xl font-semibold font-oswald text-center text-nude-text mb-12">Testimonios Que Inspiran</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {testimonials.map((testimonial, index) => (
@@ -39,8 +39,8 @@ const testimonials = [
               src={testimonial.image} 
               alt={`Foto de ${testimonial.name}`} 
             />
-            <h3 class="text-sm font-poppins font-semibold text-gray-800">{testimonial.name}</h3>
-            <p class="text-xs text-gray-500 font-thin mb-2">{testimonial.position}</p>
+            <h3 class="text-sm font-poppins font-semibold text-nude-text">{testimonial.name}</h3>
+            <p class="text-xs text-gray-400 font-thin mb-2">{testimonial.position}</p>
             <div class="flex space-x-1">
               {[...Array(5)].map((_, i) => (
                 <span class={`text-xl ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}>
