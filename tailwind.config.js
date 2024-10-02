@@ -48,9 +48,10 @@ module.exports = {
 'brown-gray': '#A89F94',
 'nude-secondary' : '#bb8f78',
 'nude-primary' : '#ceaa97',
-'nude-bg': '#eee1da',
+'nude-bg': '#f7f6f9',
 'nude-strong' : '#bb8f78',
 'nude-text' : '#33241c',
+'footer-color' : '#2b231d',
 
 
 // Colores grises
