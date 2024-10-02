@@ -46,7 +46,7 @@ const teamMembers = [
         <div 
         data-aos="zoom-in"
         data-aos-duration="1500" class="text-center">
-          <img src={member.image} alt={member.name} class="w-24 shadow-md shadow-gray-300 h-24 md:w-48 md:h-48 lg:h-60 lg:w-60 rounded-full mx-auto mb-4  object-cover" />
+          <img src={member.image} alt={member.name} class="w-24 shadow-md shadow-gray-300 h-24 md:w-48 md:h-48 lg:h-60 lg:w-60 rounded-full mx-auto mb-4 overflow-hidden  object-cover" />
           <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
         </div>
         
@@ -78,7 +78,7 @@ const teamMembers = [
       <div 
       data-aos="zoom-out"
         data-aos-duration="1500"class={`rounded-lg block shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
-        <img src={asset.image} alt={asset.alt} class="w-full h-52 md:h-60 object-scale-down aspect-auto rounded-lg shadow-xl shadow-gray-300" />
+        <img src={asset.image} alt={asset.alt} class="w-full h-52 md:h-60 object-scale-down aspect-auto rounded-lg shadow-xl overflow-hidden  shadow-gray-300"  />
       </div>
     ))}
   </div>

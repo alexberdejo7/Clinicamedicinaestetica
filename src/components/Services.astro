@@ -3,7 +3,7 @@ import { services } from '../utils/services.js';
 ---
 
 
-<section id="servicios" class=" bg-white">
+<section id="servicios" class="py-16 mt-7 bg-white">
     <div class="mx-auto max-w-7xl px-3">
         <h2 
         data-aos="fade-down"
@@ -24,7 +24,7 @@ import { services } from '../utils/services.js';
                 data-aos={index % 2 === 0 ? 'fade-zoom-down' : 'fade-zoom-down'}  
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                data-aos-delay={index * 100}  
+                data-aos-delay={index * 100}
             >
               <div class="relative group">
                 <img src={service.imageList} alt={service.name} class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 

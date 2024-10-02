@@ -26,39 +26,72 @@
 		  </a>
 		</div>
 		<!-- Botón de menú móvil, visible hasta md -->
-		<div class="-mr-2 flex items-center lg:hidden"> <!-- Se oculta a partir de lg -->
+		<div class="-mr-2 flex items-center lg:hidden">
 		  <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-nude-text hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
 			<span class="sr-only">Abrir menú principal</span>
-			<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+			<svg class="block h-6 w-6 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 			</svg>
-		  </button
+		  </button>
 		</div>
-	  </div>
-	</div>
-  
-	<!-- Menú móvil, visible hasta md -->
-	<div class="lg:hidden hidden" id="mobile-menu"> <!-- Se oculta a partir de lg -->
-	  <div class="pt-2 pb-3 space-y-1">
-		
-		<a href="/" class="border-transparent text-nude-text hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-roboto">Inicio</a>
-		<a href="#cursos" class="border-transparent text-nude-text hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-roboto">Curso</a>
-		<a href="#about-us" class="border-transparent text-nude-text hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-roboto">Quienes somos</a>
-		<a href="#servicios" class="border-transparent text-nude-text hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-roboto">Servicios</a>
-		<a href="#contacto" class="border-transparent text-nude-text hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-roboto">Contacto</a>
 	  </div>
 	</div>
   </nav>
   
+  <!-- Menú móvil, visible hasta md -->
+  <div class="lg:hidden fixed inset-x-0 top-14 z-40 hidden" id="mobile-menu">
+	<div class="glassmorphism pt-2 pb-3 space-y-1">
+	  <a href="/" class="block px-4 py-2 text-base font-roboto text-nude-text hover:bg-white/30 transition-all duration-300">Inicio</a>
+	  <a href="#cursos" class="block px-4 py-2 text-base font-roboto text-nude-text hover:bg-white/30 transition-all duration-300">Curso</a>
+	  <a href="#about-us" class="block px-4 py-2 text-base font-roboto text-nude-text hover:bg-white/30 transition-all duration-300">Quienes somos</a>
+	  <a href="#servicios" class="block px-4 py-2 text-base font-roboto text-nude-text hover:bg-white/30 transition-all duration-300">Servicios</a>
+	  <a href="#contacto" class="block px-4 py-2 text-base font-roboto text-nude-text hover:bg-white/30 transition-all duration-300">Contacto</a>
+	</div>
+  </div>
+  
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+  
+	body {
+	  font-family: 'Roboto', sans-serif;
+	}
+  
+	.font-poppins {
+	  font-family: 'Poppins', sans-serif;
+	}
+  
+	.glassmorphism {
+	  background: rgba(255, 255, 255, 0.2);
+	  backdrop-filter: blur(10px);
+	  -webkit-backdrop-filter: blur(10px);
+	  border-radius: 0 0 10px 10px;
+	  border: 1px solid rgba(255, 255, 255, 0.18);
+	  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	  transition: all 0.3s ease-in-out;
+	  opacity: 0;
+	  transform: translateY(-20px);
+	}
+  
+	#mobile-menu.show .glassmorphism {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  </style>
+  
   <script>
 	const mobileMenuButton = document.getElementById('mobile-menu-button');
 	const mobileMenu = document.getElementById('mobile-menu');
+	const menuIcon = mobileMenuButton.querySelector('svg');
   
 	mobileMenuButton.addEventListener('click', () => {
 	  mobileMenu.classList.toggle('hidden');
+	  mobileMenu.classList.toggle('show');
 	  
 	  const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
 	  mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
+  
+	  // Animate menu icon
+	  menuIcon.classList.toggle('rotate-90');
 	});
   </script>
-  
