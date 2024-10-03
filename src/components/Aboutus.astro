@@ -14,13 +14,11 @@ const teamMembers = [
 ---
 
 <section id="about-us" class="bg-nude-bg">
-  <div 
-       
-  class="mx-auto p-5">
-    <h2
+  <div class="container mx-auto p-5">
+    <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-    class="text-4xl font-semibold font-oswald text-nude-text text-center mb-5">
+        class="text-4xl font-semibold font-oswald text-nude-text text-center mb-5">
       Clínica Medicina Estética
     </h2>
     <p 
@@ -37,53 +35,61 @@ const teamMembers = [
   </div>
 </section>
 
-<div 
-        
-    class="bg-white"  >
-  <h2 
+<div class="bg-white">
+  <div class="container mx-auto p-5">
+    <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-4xl text-center font-oswald text-nude-text p-4 font-semibold mb-2">Nuestro Equipo</h2>
-  <p 
-  
-      data-aos="zoom-in"
+        class="text-4xl text-center font-oswald text-nude-text p-4 font-semibold mb-2">
+      Nuestro Equipo
+    </h2>
+    <p 
+        data-aos="zoom-in"
         data-aos-duration="1500"
-      class="text-xs text-nude-text font-poppins p-3 leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
-    Nuestro equipo está compuesto por <span class="font-semibold">especialistas apasionados y dedicados </span>, 
-    comprometidos con brindarte una atención integral y personalizada, con el 
-    <span class="font-semibold">objetivo de ayudarte a lograr tus metas</span> de salud y belleza.
-  </p>
-  <div class="p-2 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 lg:gap-y-10 lg:p-5">
-    {teamMembers.map(member => (
-      <div class="text-center">
-        <img src={member.image} alt={member.name} 
-         data-aos="zoom-in"
-          data-aos-duration="1500"
-        
-        class="w-24 shadow-md shadow-gray-300 h-24 md:w-48 md:h-48 lg:h-60 lg:w-60 rounded-full mx-auto mb-4 overflow-hidden object-cover" />
-        <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
-      </div>
-    ))}
+        class="text-xs text-nude-text font-poppins leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
+      Nuestro equipo está compuesto por <span class="font-semibold">especialistas apasionados y dedicados </span>, 
+      comprometidos con brindarte una atención integral y personalizada, con el 
+      <span class="font-semibold">objetivo de ayudarte a lograr tus metas</span> de salud y belleza.
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 lg:gap-y-10">
+      {teamMembers.map(member => (
+        <div class="text-center">
+          <img 
+              src={member.image} 
+              alt={member.name} 
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+              class="w-24 h-24 md:w-48 md:h-48 lg:h-60 lg:w-60 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover" 
+          />
+          <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
+        </div>
+      ))}
+    </div>
   </div>
 </div>
 
-<div 
-     
-    class="mb-5 mt-7">
-  <h2 
-  
-      data-aos="zoom-out"
-      data-aos-duration="1500" 
-      class="text-2xl text-center font-oswald text-nude-text p-4 font-semibold mb-4">Nuestras Instalaciones</h2>
-  <p class="text-xs text-nude-text font-poppins p-3 leading-relaxed text-center mb-10 max-w-full lg:max-w-[40rem] mx-auto">
-    Descubre nuestras <span class="font-semibold">modernas y relajantes instalaciones</span>, para ofrecerte los mejores cuidados en un entorno 
-    de <span class="font-semibold">confianza plena y tranquilidad.</span>
-  </p>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-5 gap-8">
-    {assets.map((asset, index) => (
-      <div class={`rounded-lg block shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
-        <img src={asset.image} alt={asset.alt} class="w-full h-52 md:h-60 object-scale-down rounded-lg shadow-xl shadow-gray-300" />
-      </div>
-    ))}
+<div class="mb-5 mt-7">
+  <div class="container mx-auto p-5">
+    <h2 
+        data-aos="zoom-out"
+        data-aos-duration="1500"
+        class="text-2xl text-center font-oswald text-nude-text p-4 font-semibold mb-4">
+      Nuestras Instalaciones
+    </h2>
+    <p class="text-xs text-nude-text font-poppins leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
+      Descubre nuestras <span class="font-semibold">modernas y relajantes instalaciones</span>, para ofrecerte los mejores cuidados en un entorno 
+      de <span class="font-semibold">confianza plena y tranquilidad.</span>
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {assets.map((asset, index) => (
+        <div class={`rounded-lg shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
+          <img 
+              src={asset.image} 
+              alt={asset.alt} 
+              class="w-full h-52 md:h-60 object-cover rounded-lg" 
+          />
+        </div>
+      ))}
+    </div>
   </div>
 </div>
