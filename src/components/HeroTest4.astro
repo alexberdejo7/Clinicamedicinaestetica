@@ -1,6 +1,4 @@
 ---
-// HeroSection.astro
-
 const images = [
   '../../img/assets/herotest.webp',
   '../../img/assets/2.webp',
@@ -11,54 +9,55 @@ const images = [
 ];
 ---
 
-<section class="relative min-h-full w-full overflow-hidden flex flex-col">
+<section class="relative w-full overflow-hidden flex flex-col">
   <!-- Slider de fondo -->
   <div id="background-slider" class="absolute inset-0 w-full h-full">
     {images.map((src, index) => (
       <div 
         class={`absolute inset-0 bg-cover bg-center overflow-hidden transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
-        style={`background-image: url(${src}); filter: brightness(0.7);`}
+        style={`background-image: url(${src}); filter: brightness(0.5);`} 
+        class="h-[65vh] sm:h-full w-full"
       ></div>
     ))}
   </div>
   
   <!-- Contenedor principal con efecto glassmorphism y contenido separado -->
-  <div class="relative z-10 flex-grow flex flex-col justify-center items-center mx-auto p-3 md:p-5 lg:pt-10 mt-20 lg:mt-20 md:mt-20">
-    <div class="w-full max-w-lg bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl rounded-lg p-3 md:p-10 lg:p-4 border border-gray-50 shadow-lg mb-4">
+  <div class="relative z-10 w-full max-w-md mx-auto p-6 text-center mt-16 sm:mt-[20vh] md:mt-[27vh] lg:mt-[27vh]">
+    <div class="w-full max-w-lg bg-black/10 backdrop-blur-md rounded-lg p-4 md:p-10 lg:p-5 border border-white/20 shadow-xl mt-6 sm:mt-8 md:mt-12 lg:mt-14">
       <div data-aos="fade-up" data-aos-duration="1000" class="text-center">
         <!-- Título principal -->
-        <h1 class="text-3xl md:text-4xl font-dancing uppercase mb-3 text-white font-bold leading-tight">
+        <h1 class="text-3xl md:text-2xl font-dancing uppercase mb-3 md:mb-3 text-white font-bold leading-tight">
           Es momento <span class="text-nude-primary"> de cuidarte </span>
         </h1>
         
         <!-- Descripción -->
-        <p class="mt-3 p-2 max-w-80 text-center mx-auto text-white text-xs font-montserrat font-semibold">
+        <p class="mt-3 p-3 max-w-80 text-center mx-auto text-white text-xs md:text-xs font-montserrat font-semibold">
           La ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional!
-          <span class="font-thin text-center font-poppins mt-1 text-md text-nude-bg block">Clínica de Medicina Estética.</span>
+          <span class="font-thin text-center font-poppins mt-1 text-sm text-nude-bg block">Clínica de Medicina Estética.</span>
         </p>
-        <div class="flex flex-col space-y-2 mt-7 items-center mb-4">
+
+        <div class="flex flex-col space-y-2 mt-4 md:mt-5 items-center mb-2">
           <a href="https://wa.me/1234?text=Hola,%20quiero%20más%20información!"
-            class="border bg-nude-primary border-white shadow-sm px-6 py-2 flex items-center justify-center text-xs font-montserrat hover:bg-nude-secondary font-semibold text-black rounded-3xl hover:shadow-md transition-shadow duration-500 ease-in-out">
+            class="border bg-nude-primary border-white shadow-sm px-4 py-1.5 md:px-6 md:py-2 flex items-center justify-center text-xs md:text-xs font-montserrat hover:bg-nude-secondary font-semibold text-black rounded-3xl hover:shadow-md transition-shadow duration-500 ease-in-out">
             Contacta ahora
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href="#services" class="md:w-auto px-6 py-2 text-xs font-montserrat font-semibold border backdrop-filter backdrop-blur-sm border-white shadow-sm text-white rounded-3xl hover:text-black hover:bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out">
+          <a href="#services" class="md:w-auto px-4 py-1.5 md:px-6 md:py-2 text-xs md:text-xs font-montserrat font-semibold border backdrop-filter backdrop-blur-sm border-white shadow-sm text-white rounded-3xl hover:text-black hover:bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out">
             Nuestros Servicios
           </a>
+        </div>
+
+        <div class="flex justify-center space-x-3 mt-4 mb-3"> <!-- Se añadió mb-10 para mayor espacio -->
+          <a href="https://www.facebook.com/drajessicaalcala"><img src="../../facebook.svg" alt="Facebook" class="brightness-0 invert w-5 h-5"></a>
+          <a href="https://www.instagram.com/dra_jessicaalcala/"><img src="../../instagram.svg" alt="Instagram" class="brightness-0 invert w-5 h-5"></a>
         </div>
       </div>
     </div>
     
-    <!-- Botones de acción fuera del efecto glassmorphism -->
-    
-    
     <!-- Íconos de redes sociales fuera del efecto glassmorphism -->
-    <div class="flex justify-center space-x-3 mb-4">
-      <a href="https://www.facebook.com/drajessicaalcala"><img src="../../facebook.svg" alt="Facebook" class="brightness-0 invert w-5 h-5"></a>
-      <a href="https://www.instagram.com/dra_jessicaalcala/"><img src="../../instagram.svg" alt="Instagram" class="brightness-0 invert w-5 h-5"></a>
-    </div>
+    
   </div>
 </section>
 
@@ -81,114 +80,3 @@ const images = [
     setInterval(changeBackground, 5000);
   });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ---
-// HeroSection.astro
-
-// Array de rutas de imágenes para el slider de fondo
-const images = [
-  '../../img/assets/teams.webp',
-  '../../img/assets/lista3.webp',
-  '../../img/assets/2.webp',
-  '../../img/assets/7.webp',
-  '../../img/assets/5.webp'
-];
---- -->
-
-<!-- <section class="relative h-screen w-screen overflow-hidden ">
-
-
-  <div id="background-slider" class="absolute inset-0 w-full h-full">
-    {images.map((src, index) => (
-      <div 
-        class={`absolute inset-0 bg-cover bg-center overflow-hidden transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
-        style={`background-image: url(${src}); filter: brightness(0.7);`}
-      ></div>
-    ))}
-  </div>
-  
- Contenedor principal con efecto glassmorphism -
-  <div class="relative z-10 mt-16 flex justify-center items-center h-full p-4">
-    <div class="w-full max-w-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg p-8 border shadow-lg">
-      <div data-aos="fade-up" data-aos-duration="1000" class="text-center">
-      
-        <h1 class="text-3xl font-dancing uppercase lg:text-3xl md:text-2xl mb-3 text-white font-bold leading-tight">
-         Es momento <span class="text-nude-secondary"> de cuidarte </span>
-        </h1>
-        
-    
-        <p class="mt-3 max-w-80 text-center mx-auto text-white text-xs font-montserrat font-semibold">
-          La ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional!
-          <span class="font-thin text-center font-poppins mt-1 text-md text-nude-bg block">Clínica de Medicina Estética.</span>
-        </p>
-        
-     
-        <div class="flex flex-col mt-6 space-y-2 mx-auto items-center">
-          <a href="https://wa.me/1234?text=Hola,%20quiero%20más%20información!"
-            class="border bg-nude-secondary border-white shadow-sm px-6 py-2 flex items-center justify-center text-xs font-montserrat hover:bg-nude-primary font-semibold text-black rounded-lg hover:shadow-md transition-shadow duration-500 ease-in-out">
-            Contacta ahora
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-          <a href="#services" class="md:w-auto px-6 py-2 text-xs font-montserrat font-semibold border border-white shadow-sm text-white rounded-lg hover:text-black hover:bg-white hover:shadow-lg transition-shadow duration-500 ease-in-out">
-            Nuestros Servicios
-          </a>
-        </div>
-        
-      
-        <div class="flex justify-center space-x-3 mt-2 mb-7">
-          <a href="https://www.facebook.com/drajessicaalcala"><img src="../../facebook.svg" alt="Facebook" class="brightness-0 invert w-5 h-5"></a>
-          <a href="https://www.instagram.com/dra_jessicaalcala/"><img src="../../instagram.svg" alt="Instagram" class="brightness-0 invert w-5 h-5"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> 
-
- <script>
-  const backgroundElements = document.querySelectorAll('#background-slider > div');
-  let currentIndex = 0;
-  const totalBackgrounds = backgroundElements.length;
-
-  function changeBackground() {
-    backgroundElements[currentIndex].classList.remove('opacity-100');
-    backgroundElements[currentIndex].classList.add('opacity-0');
-    
-    currentIndex = (currentIndex + 1) % totalBackgrounds;
-    
-    backgroundElements[currentIndex].classList.remove('opacity-0');
-    backgroundElements[currentIndex].classList.add('opacity-100');
-  }
-
-  window.addEventListener('load', () => {
-    setInterval(changeBackground, 5000);
-  });
-</script>  -->
