@@ -147,7 +147,7 @@ export const services = [
   },
   {
     id: 'limpieza-facial',
-    name: 'Limpieza HidraFacial ',
+    name: 'Limpieza Facial Hidra ',
     description: 'Limpieza facial grado médico estético no invasivo.',
     fullDescription: 'La limpieza facial hidra es un tratamiento grado médico estético no invasivo que limpia, exfolia e hidrata la piel del rostro. Se realiza en una sesión que combina diferentes cabezales para realizar varios pasos, como extracción de impurezas, exfoliación, ultrasonido, radiofrecuencia, martillo frío y vapor de ozono, entre otros.',
     icon: '../../img/assets/dermapen-compress.webp',

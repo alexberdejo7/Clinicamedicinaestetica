@@ -114,7 +114,7 @@ module.exports = {
         'xs': '320px',
         'sm': '640px',
         'md': '760px',
-        'lg': '860px',
+        'lg': '960px',
         'xl': '1220px',
         '2xl': '1536px',
         'hide-img': {'min': '200px', 'max': '820px'},

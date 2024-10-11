@@ -1,0 +1,128 @@
+<section class="relative min-h-screen overflow-hidden bg-white mt-14 md:mt-3 rounded-b-[70px] sm:rounded-b-[90px]">
+    <!-- Imagen de fondo con opacidad reducida -->
+    <div class="absolute inset-0 z-0">
+        <img
+            src="../../img/assets/2.webp"
+            alt="Fondo de productos de belleza"
+            class="object-cover w-full h-full opacity-50 "
+        />
+        <div class="absolute inset-0 bg-nude-bg opacity-40"></div>
+    </div>
+
+    <!-- Contenedor principal del contenido del Hero -->
+    <div class="relative z-10 mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-28">
+        <div class="flex  flex-col lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-20 p-5">
+            <!-- Sección de texto y botones con efecto Glassmorphism -->
+            <div class="w-full lg:w-1/2   space-y-4 text-center lg:text-left bg-white bg-opacity-20 backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg border border-white/30">
+                <h1 class="text-3xl sm:text-3xl md:text-4xl lg:text-4xl max-w-prose font-bold text-nude-text leading-tight animate-fade-in-up font-oswald">
+                    Clinica de <span class="text-nude-primary">Medicina Estetica</span>
+                </h1>
+                <p class="text-xs md:text-sm text-nude-secondary animate-fade-in-up animation-delay-200 font-poppins ">
+                    Es momento de cuidarte
+                </p>
+                <p class="text-xs max-w-prose md:text-sm text-nude-text  mx-auto lg:mx-0 animate-fade-in-up animation-delay-300 font-roboto leading-relaxed">
+                    Descubre la ciencia detrás de una piel perfecta. Resultados visibles, cuidado excepcional.
+                </p>
+                <!-- Botones de acción -->
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 animate-fade-in-up animation-delay-600">
+                    <a href="#contact" class="btn btn-primary group flex-shrink-0">
+                      Contáctanos
+                      <span class="ml-2 transition-transform duration-300 transform group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary group flex-shrink-0">
+                      Nuestros Servicios
+                    </a>
+                  </div>
+            </div>
+
+            <!-- Sección de imágenes flotantes -->
+            <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0">
+                <div class="relative w-60 h-60 sm:w-72 sm:h-72 mx-auto">
+                    <!-- Imagen principal redondeada y con sombra -->
+                    <img
+                        src="../../img/assets/facial2.webp"
+                        alt="Mujer aplicando productos de cuidado de la piel"
+                        class="rounded-full shadow-2xl object-cover w-full h-full animate-float"
+                    />
+                    <!-- Imagen flotante superior izquierda -->
+                    <div class="absolute -top-8 -left-8 sm:-top-12 sm:-left-12 w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-nude-bg shadow-lg animate-float animation-delay-150">
+                        <img
+                            src="../../img/assets/teams.webp"
+                            alt="Producto de belleza"
+                            class="object-cover w-full h-full"
+                        />
+                    </div>
+                    <!-- Imagen flotante inferior derecha -->
+                    <div class="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-nude-bg shadow-lg animate-float animation-delay-300">
+                        <img
+                            src="../../img/assets/3.webp"
+                            alt="Aplicación de producto"
+                            class="object-cover w-full h-full"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gradiente para suavizar la transición del fondo al contenido inferior -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-nude-bg to-transparent"></div>
+</section>
+
+<style>
+    /* Estilos para los botones */
+  /* Estilos para los botones */
+.btn {
+  @apply px-3 py-2 text-xs sm:text-xs md:text-xs rounded-full font-semibold transition-all duration-300 ease-in-out; /* Ajustar el padding */
+}
+
+.btn-primary {
+  @apply bg-nude-text text-white hover:bg-nude-strong hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white text-nude-secondary border-2 border-nude-primary hover:bg-nude-bg hover:shadow-lg;
+}
+
+
+    /* Animaciones personalizadas */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Clases de animación */
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .animation-delay-150 {
+        animation-delay: 150ms;
+    }
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+    .animation-delay-300 {
+        animation-delay: 300ms;
+    }
+    .animation-delay-600 {
+        animation-delay: 600ms;
+    }
+
+    /* Fuentes personalizadas */
+    .font-montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .font-roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+    .font-poppins {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
