@@ -94,26 +94,13 @@ module.exports = {
 
       },
       fontFamily: {
-        cursive: ['Brush Script MT', 'cursive'],
         montserrat: ['Montserrat', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         opensans: ['Open Sans', 'sans-serif'],
-        merriweather: ['Merriweather', 'serif'],
-        robotoslab: ['Roboto Slab', 'serif'],
-        lora: ['Lora', 'serif'],
-        playfair: ['Playfair Display', 'serif'],
-        dancing: ['Dancing Script', 'cursive'],
-        bitter: ['Bitter', 'serif'],
-        oswald: ['Oswald', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        bebas: ['Bebas Neue', 'sans-serif'],
-        oswald: ['Oswald', 'sans-serif'],
         cinzel: ['Cinzel', 'serif'],
-        dancingscript: ['Dancing Script", cursive'],
         collection: ['Collection', 'sans-serif'],
         neoteric: ['Neoteric', 'sans-serif'],
-        
       },
       screens: {
         'xs': '320px',

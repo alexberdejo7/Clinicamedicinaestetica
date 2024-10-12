@@ -59,7 +59,8 @@ const teamMembers = [
               alt={member.name} 
               data-aos="zoom-in"
               data-aos-duration="1500"
-              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-60 lg:w-60 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover" 
+              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-52 lg:w-52 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover" 
+            loading="lazy"
           />
           <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
         </div>
@@ -87,6 +88,7 @@ const teamMembers = [
               src={asset.image} 
               alt={asset.alt} 
               class="w-full h-52 md:h-60 object-cover rounded-lg" 
+            loading="lazy"
           />
         </div>
       ))}

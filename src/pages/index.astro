@@ -5,7 +5,7 @@ import Services from '../components/Services.astro';
 import Aboutus from '../components/Aboutus.astro';
 import Course from '../components/Course.astro';
 import Feature from '../components/Feature.astro';
-import Frase from '../components/Frase.astro'
+import Frase from '../components/Frase.astro';
 import Testimonios from '../components/Testimonios.astro';
 
 import 'aos/dist/aos.css';
@@ -14,21 +14,20 @@ import 'aos/dist/aos.css';
 <Layout title="Clinica Medicina Estetica">
   <HeroTest5 />
   <Feature />
-  <Services  />
-  <Frase/>
+  <Services />
+  <Frase />
   <Aboutus />
- 
-  <Testimonios/>
-  <Course  />
-  </Layout>
-  <!-- Agrega otros componentes aquí -->
+  <Testimonios />
+  <Course />
 </Layout>
 
-
 <script>
-  if (typeof window !== 'undefined') {
-    import('aos').then(AOS => {
-      AOS.default.init();
-    });
-  }
+  // Inicializar AOS de manera diferida
+  window.addEventListener('load', () => {
+    if (typeof window !== 'undefined') {
+      import('aos').then(AOS => {
+        AOS.init();
+      });
+    }
+  });
 </script>

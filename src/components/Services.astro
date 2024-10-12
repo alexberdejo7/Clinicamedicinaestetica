@@ -27,8 +27,11 @@ import { services } from '../utils/services.js';
                 data-aos-delay={index * 100}
             >
               <div class="relative group">
-                <img src={service.imageList} alt={service.name} class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 
-                group-hover:brightness-105 group-hover:saturate-100" />
+                <img src={service.imageList} alt={service.name} 
+                class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 
+                group-hover:brightness-105 group-hover:saturate-100"
+                loading="lazy"
+                />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
                   <h3 class="text-nude-bg font-neoteric max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
@@ -44,7 +47,9 @@ import { services } from '../utils/services.js';
               
               <div class="flex-grow"></div> 
               <div class="w-full mt-auto">
-                <button class="bg-nude-clinica  font-poppins text-white hover:bg-nude-clinica py-3 text-xs font-semibold rounded 
+                <button
+                aria-label={`Ver detalles sobre ${service.name}`} 
+                 class="bg-nude-clinica  font-poppins text-white hover:bg-nude-clinica py-3 text-xs font-semibold rounded 
                 rounded-t-none w-full hover:text-white transition-all ver-mas-btn" data-id={service.id}>
                   Ver Detalles
                 </button>
