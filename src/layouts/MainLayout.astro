@@ -16,6 +16,50 @@ const { title } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Collection:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Collection:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Aquí van tus estilos globales o CDN de Tailwind -->
+</head>
+<body>
+    <Navbar />
+    <main class="">
+      <slot />
+    </main>
+    <Footer />
+</body>
+<style>
+  @font-face {
+      font-family: 'Collection';
+      src: url('/src/fonts/Collection.otf') format('opentype');
+  }
+  
+  @font-face {
+      font-family: 'Neoteric';
+      src: url('/src/fonts/NeotericRegular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'Neoteric';
+      src: url('/src/fonts/NeotericBold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+  }
+</style>
+</html>
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width" />
@@ -35,4 +79,27 @@ const { title } = Astro.props;
     
   </body>
   
+  <style>
+    
+@font-face {
+    font-family: 'Collection';
+    src: url('/src/fonts/Collection.otf') format('opentype');
+    
+  }
+  
+  @font-face {
+    font-family: 'Neoteric';
+    src: url('/src/fonts/NeotericRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Neoteric';
+    src: url('/src/fonts/NeotericBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  </style>
 </html>

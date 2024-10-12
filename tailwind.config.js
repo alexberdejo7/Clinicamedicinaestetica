@@ -51,6 +51,7 @@ module.exports = {
 'nude-bg': '#f7f6f9',
 'nude-strong' : '#bb8f78',
 'nude-text' : '#33241c',
+'nude-clinica' : '#bea59b',
 'footer-color' : '#2b231d',
 
 
@@ -108,7 +109,11 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],
+        cinzel: ['Cinzel', 'serif'],
         dancingscript: ['Dancing Script", cursive'],
+        collection: ['Collection', 'sans-serif'],
+        neoteric: ['Neoteric', 'sans-serif'],
+        
       },
       screens: {
         'xs': '320px',

@@ -9,7 +9,7 @@ import { services } from '../utils/services.js';
         data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500"
-        class="text-4xl  font-semibold font-oswald mb-5 text-center text-nude-text">¿Que ofrecemos?</h2>
+        class="text-4xl  font-semibold font-neoteric mb-5 text-center text-nude-text">¿Que ofrecemos?</h2>
         
         <p 
         data-aos="fade-up"
@@ -17,7 +17,7 @@ import { services } from '../utils/services.js';
         class="font-poppins  text-nude-text text-center text-xs  max-w-80 mx-auto mb-10 font-thin">  Innovación, confianza y resultados visibles. Conoce aqui nuestros procedimientos: </p>
         
         <div 
-            class="grid grid-cols-1 p-5 md:grid-cols-2 mx-auto xl:grid-cols-3  gap-y-14 lg:gap-x-8">
+            class="grid grid-cols-1 p-4 md:grid-cols-2 mx-auto xl:grid-cols-3 md:gap-x-5 gap-y-14 lg:gap-x-8">
           {services.map((service, index) => ( 
             <div 
                 class={`relative bg-White rounded-xl shadow-lg shadow-gray-400 overflow-hidden transition-all duration-700 hover:shadow-gray-500 hover:bg-gray-100 flex flex-col mx-auto`}
@@ -30,7 +30,7 @@ import { services } from '../utils/services.js';
                 <img src={service.imageList} alt={service.name} class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 
                 group-hover:brightness-105 group-hover:saturate-100" />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-nude-bg font-oswald max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-nude-bg font-neoteric max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               
@@ -44,7 +44,7 @@ import { services } from '../utils/services.js';
               
               <div class="flex-grow"></div> 
               <div class="w-full mt-auto">
-                <button class="bg-nude-primary  font-montserrat text-white hover:bg-nude-secondary py-3 text-xs font-semibold rounded 
+                <button class="bg-nude-clinica  font-poppins text-white hover:bg-nude-clinica py-3 text-xs font-semibold rounded 
                 rounded-t-none w-full hover:text-white transition-all ver-mas-btn" data-id={service.id}>
                   Ver Detalles
                 </button>

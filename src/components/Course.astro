@@ -1,101 +1,150 @@
 ---
 // MicrobladingCourse.astro
+import pdf from "../img/assets/TEMARIO.pdf"; // Asegúrate de que esta ruta sea la correcta.
 ---
-<section id="cursos">
 
-  <div class=" mx-auto px-4 py-8 sm:py-16">
+<section id="cursos">
+  <div class="mx-auto px-4 py-8 sm:py-16">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-    <div class="p-4 sm:p-6">
-      <h1 
-      data-aos="zoom-in"
-    data-aos-duration="1500"
-      class="text-4xl font-oswald sm:text-3xl font-bold text-nude-text text-center">Curso de Microblading</h1>
-      <p 
-      data-aos="zoom-in"
-      data-aos-duration="1500"
-      class="text-center font-poppins text-xs sm:text-sm mt-2 text-nude-text">
-        Domina el arte del microblading
-      </p>
-    </div>
-    <div  data-aos="zoom-in"
-    data-aos-duration="1500"
-    class="px-4 sm:px-6 py-4 space-y-6 sm:space-y-8">
-      <div>
-        <h3 class=" sm:text-xl font-poppins text-sm font-semibold mb-2">¿Quién puede tomar este curso?</h3>
-        <p class="font-poppins text-xs sm:text-xs text-nude-text">
-          Este curso está diseñado para profesionales de la belleza y cualquier persona interesada en aprender la técnica de microblading.
+      <div class="p-4 sm:p-6">
+        <h1 data-aos="zoom-in" data-aos-duration="1500" class="text-4xl font-neoteric sm:text-3xl text-nude-text text-center">
+          Curso de Microblading <span class="block font-cinzel text-base"> Curso Intensivo </span>
+        </h1>
+        <p data-aos="zoom-in" data-aos-duration="1500" class="text-center font-poppins text-xs sm:text-sm mt-4 text-nude-text">
+          Domina el arte del microblading con certificación oficial
         </p>
       </div>
-      
-      <div>
-        <h3 
-        
-        class="font-poppins text-sm sm:text-xl font-semibold mb-2">Beneficios del curso</h3>
-        <ul class="space-y-2 font-poppins text-xs sm:text-xs" id="benefits-list">
-          <!-- Benefits will be populated by JavaScript -->
-        </ul>
+
+      <div data-aos="zoom-in" data-aos-duration="1500" class="px-4 sm:px-6 py-4 space-y-6 sm:space-y-8">
+        <div>
+          <h3 class="sm:text-xl font-poppins text-sm font-semibold mb-2">¿Quién puede tomar este curso?</h3>
+          <p class="font-poppins text-xs sm:text-xs text-nude-text">
+            Diseñado para profesionales de la belleza y personas interesadas en aprender microblading.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-2">Beneficios del curso</h3>
+          <ul class="space-y-2 font-poppins text-xs sm:text-xs" id="benefits-list">
+            <!-- Benefits populated by JS -->
+          </ul>
+        </div>
+
+        <!-- New section for instructor information -->
+        <div class="mt-8">
+          <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-4">Conoce a tu Master</h3>
+          <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+            <img src="../img/assets/lista5.webp" alt="Dra Jessica Alcalá" class="w-full md:w-1/2 rounded-lg shadow-md">
+            <div class="w-full md:w-1/2">
+              <h4 class="font-poppins text-lg font-semibold mb-2">DRA JESSICA ALCALÁ</h4>
+              <p class="font-poppins leading-normal text-xs sm:text-sm text-nude-text">
+                La Dra. Jessica Alcalá CP11911567, es médico cirujano egresada de la UAEM; cuenta con maestría en
+                 Medicina Estética y Longevidad CP13113841 además de dos certificaciones internacionales "Microblading and 
+                 Shade" y "Powder Brows" expedidas por la Academia Beauty Angels. En su trayectoria ha realizado más de 600 
+                 procedimientos de micropigmentación médica y enseñado la técnica a 6 generaciones de alumnos. 
+                 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-2">Temario del curso</h3>
+          <ul class="space-y-2 font-poppins text-xs sm:text-xs" id="modules-list">
+            <!-- Modules populated by JS -->
+          </ul>
+          <button id="view-more-btn" class="text-sm text-blue-dark font-semibold mt-4">
+            Ver más
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center space-x-2 text-sm sm:text-sm font-semibold font-poppins">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-brown-medium" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span class="font-poppins text-nude-secondary">Fecha de inicio: 30 de Septiembre, 2024</span>
+        </div>
       </div>
 
-      <div>
-        <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-2">Temario del curso</h3>
-        <ul class="space-y-2 font-poppins text-xs sm:text-xs" id="modules-list">
-          <!-- Modules will be populated by JavaScript -->
-        </ul>
+      <div class="px-4 sm:px-6 py-4 bg-gray-50">
+        <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20el%20curso%20de%20Microblading" target="_blank" rel="noopener noreferrer"
+           id="enroll-button" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 text-center text-sm sm:text-base">
+          Inscríbete Ahora por WhatsApp
+        </a>
+        <a href={pdf} target="_blank" rel="noopener noreferrer"
+           class="block w-full mt-5 bg-blue-dark hover:bg-Azul-Strong text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 text-center text-sm sm:text-base">
+          Ver Temario Completo
+        </a>
       </div>
-      
-      <div class="flex items-center justify-center space-x-2 text-sm sm:text-sm font-semibold font-poppins">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-brown-medium" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <span class="font-poppins text-nude-secondary">Fecha de inicio: 30 de Septiembre, 2024</span>
-      </div>
-    </div>
-    <div class="px-4 sm:px-6 py-4 bg-gray-50">
-      <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20el%20curso%20de%20Microblading" target="_blank" rel="noopener noreferrer" id="enroll-button"
-       class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 text-center text-sm sm:text-base">
-        Inscríbete Ahora por WhatsApp
-      </a>
-      <a href="" target="_blank" rel="noopener noreferrer"
-       class="block w-full mt-5 bg-blue-dark hover:bg-Azul-Strong text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300 text-center text-sm sm:text-base">
-        Mas informacion
-      </a>
     </div>
   </div>
-</div>
 </section>
 
-<script defer>
-  const benefits = [
-    "Aprende técnicas avanzadas de microblading",
-    "Obtén certificación",
-    "Prácticas con modelos reales",
-    "Conoce las mejores herramientas",
-    "Desarrolla habilidades"
-  ];
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const benefits = [
+      "Aprende técnicas avanzadas de microblading",
+      "Certificación con validez oficial",
+      "Prácticas con modelos reales",
+      "Material completo incluido",
+      "Desarrolla habilidades en rotaciones clínicas"
+    ];
 
-  const modules = [
-    "Módulo 1: Introducción",
-    "Módulo 2: Técnicas ",
-    "Módulo 3: Práctica",
-    
-  ];
+    const initialModules = [
+      "Micropigmentación: Conceptos e indicaciones",
+      "Pigmentos: Ingredientes y técnicas de implante",
+      "Histología de la piel",
+      "Dermografo inductores y navajas",
+      "Teoria del color y reglas basicas",
+      "Diseño de ceja y diseño medico"
+    ];
 
-  function populateList(items, listId) {
-    const list = document.getElementById(listId);
-    list.innerHTML = ''; 
-    items.forEach(item => {
-      const li = document.createElement('li');
-      li.className = 'flex items-start';
-      li.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg>
-        <span class="text-xs sm:text-xs">${item}</span>
-      `;
-      list.appendChild(li);
+    const additionalModules = [
+      "Anesteria: generalidades e indicaciones",
+      "Retoque y etapas de citatrizacion",
+      "Asepsia y Antisepsia",
+      "Tips y marketing de publicidad",
+      "Valoracion de paciente",
+      "Documentos legales para las buenas practicas",
+      "Reflexiones Finales"
+    ];
+
+    let modulesVisible = false;
+
+    function populateList(items, listId) {
+      const list = document.getElementById(listId);
+      list.innerHTML = '';
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start';
+        li.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-xs sm:text-xs">${item}</span>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    // Poblamos la lista de beneficios
+    populateList(benefits, 'benefits-list');
+
+    // Manejo del botón de "Ver más" para el temario
+    document.getElementById('view-more-btn').addEventListener('click', () => {
+      const modulesList = document.getElementById('modules-list');
+      modulesVisible = !modulesVisible;
+
+      if (modulesVisible) {
+        populateList(initialModules.concat(additionalModules), 'modules-list');
+        document.getElementById('view-more-btn').innerText = 'Ver menos';
+      } else {
+        populateList(initialModules, 'modules-list');
+        document.getElementById('view-more-btn').innerText = 'Ver más';
+      }
     });
-  }
 
-  populateList(benefits, 'benefits-list');
-  populateList(modules, 'modules-list');
+    // Inicialmente solo mostramos los módulos principales
+    populateList(initialModules, 'modules-list');
+  });
 </script>
