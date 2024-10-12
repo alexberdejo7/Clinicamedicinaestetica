@@ -2,7 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description = "Descripción predeterminada de mi sitio web" } = Astro.props;
+const { title, description = "Clínica de Medicina estética en Cuernavaca, Morelos." } = Astro.props;
 ---
 
 <html lang="es">
@@ -11,8 +11,16 @@ const { title, description = "Descripción predeterminada de mi sitio web" } = A
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ? `${title} | Mi Sitio` : 'Mi Sitio'}</title>
+    <title>{title ? `${title} | Clínica Estética Cuernavaca` : 'Clínica Estética Cuernavaca'}</title>
     <meta name="description" content={description}>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+
+    <link rel="canonical" href={Astro.url} />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
