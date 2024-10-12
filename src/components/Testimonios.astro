@@ -1,73 +1,123 @@
 ---
+
 const testimonials = [
+ 
   {
-    name: "Carlos Ramírez",
-    review: "¡Increíble atención! El servicio fue excelente y me sentí muy bien cuidado en todo momento.",
-    position: "Paciente Satisfecho",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    rating: 5,
+    name: "Lu Rodriguez",
+    content: "Recomiendo mucho la clínica, todas las chicas súper atentas y te hacen sentir segura en todos los procedimientos! Mantienen profesionalismo e higiene en todo momento",
+    image: "../../img/assets/testimonio7.webp"
   },
   {
-    name: "Sofía Pérez",
-    review: "El equipo es muy profesional y atento, definitivamente recomendaría este lugar.",
-    position: "Paciente Satisfecho",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
-    rating: 5,
+    name: "Miriam ",
+    content: "Recomiendo los servicios de la clínica, me he realizado hidrofaciales y estoy muy contenta con los resultados",
+    image: "../../img/assets/testimonio2.webp"
   },
   {
-    name: "Javier López",
-    review: "Un servicio impecable y muy personalizado. Me trataron con mucho respeto y atención a los detalles.",
-    position: "Paciente Frecuente",
-    image: "https://randomuser.me/api/portraits/men/88.jpg",
-    rating: 5,
+    name: "Caro ",
+    content: "Súper contenta con mi procedimiento y todo el trato excelente.",
+    image: "../../img/assets/testimonio3.webp"
+  },
+  {
+    name: "Itayetzi ",
+    content: "El lugar es muy ameno y limpio, la atención muy buena te explican todo",
+    image: "../../img/assets/testimonio4.webp"
+  },
+  {
+    name: "Kira ",
+    content: "La atención fue súper profesional, respondieron todas mis dudas sobre los procedimientos, excelente la atención de todo el equipo!",
+    image: "../../img/assets/testimonio5.webp"
+  },
+  {
+    name: "Leslie Talia",
+    content: "Excelente servicio y atención, cuidan cada detalle de principio a fin 100% recomendable!",
+    image: "../../img/assets/testimonio6.webp"
+  },
+  {
+    name: "Azul G ",
+    content: "Excelente servicio, voy fascinada",
+    image: "../../img/assets/testimonio1.webp"
   },
 ];
+
+const facebookReviewsUrl = "https://www.facebook.com/drajessicaalcala/reviews";
 ---
 
-<section class="py-16  bg-nude-bg">
-  <div class="container mx-auto px-4">
-    <h2 data-aos="zoom-in"
-    data-aos-duration="1500"
-    class="text-3xl font-semibold font-neoteric text-center text-nude-text mb-12">Testimonios Que Inspiran</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {testimonials.map((testimonial, index) => (
-        <div class={`bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl transform hover:-translate-y-2 ${index === 1 ? 'md:-mt-8' : ''}`}>
-          <div class="flex flex-col items-center text-center mb-4">
-            <img 
-              class="w-12 h-12 rounded-full border-4 border-gray-200 object-cover mb-4 transform transition-transform duration-500 hover:rotate-6"
-              src={testimonial.image} 
-              alt={`Foto de ${testimonial.name}`} 
-            />
-            <h3 class="text-sm font-poppins font-semibold text-nude-text">{testimonial.name}</h3>
-            <p class="text-xs text-gray-400 font-thin mb-2">{testimonial.position}</p>
-            <div class="flex space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <span class={`text-xl ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}>
-                  ★
-                </span>
-              ))}
+<div class="bg-gray-100 py-10 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto"> <!-- Cambié a max-w-6xl para reducir el tamaño -->
+    <h2 class="text-3xl font-neoteric text-nude-text text-center mb-12">Reseñas</h2>
+    <div class="testimonial-carousel relative">
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-300 ease-in-out" id="testimonialSlider">
+          {testimonials.map((testimonial, index) => (
+            <div class="w-full flex-shrink-0 px-2 sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+                <div class="flex items-center mb-2">
+                  <img src={testimonial.image} alt={testimonial.name} class="w-6 h-6 rounded-full mr-4" />
+                  <div>
+                    <h3 class="font-semibold text-md font-roboto">{testimonial.name}</h3>
+                  </div>
+                </div>
+                <p class="text-gray-800 flex-grow text-xs font-poppins font-thin ">{testimonial.content}</p>
+                <a href={facebookReviewsUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center text-xs text-blue-800 hover:text-blue-900">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Ver en Facebook
+                </a>
+              </div>
             </div>
-          </div>
-          <p class="text-gray-700 italic font-poppins text-[11px] md:text-xs leading-relaxed relative">
-            <span class="absolute top-0 left-0 text-6xl text-gray-200 opacity-50 transform -translate-x-4 -translate-y-4">"</span>
-            {testimonial.review}
-            <span class="absolute bottom-0 right-0 text-6xl text-gray-300 opacity-50 transform translate-x-2 translate-y-2">"</span>
-          </p>
+          ))}
         </div>
-      ))}
+      </div>
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" id="prevBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-2 h-2">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" id="nextBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-2 h-2">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </div>
   </div>
-</section>
+</div>
 
-<style>
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+<script>
+  const slider = document.getElementById('testimonialSlider');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
+  const testimonialCount = 12; // Número total de testimonios
+
+  function getTestimonialsToShow() {
+    if (window.innerWidth >= 1280) return 4; // xl
+    if (window.innerWidth >= 1024) return 3; // lg
+    if (window.innerWidth >= 768) return 2; // md
+    return 1; // sm and below
   }
 
-  .grid > div:hover {
-    animation: float 3s ease-in-out infinite;
+  function updateSlider() {
+    const testimonialsToShow = getTestimonialsToShow();
+    const offset = (currentIndex * -100) / testimonialsToShow;
+    slider.style.transform = `translateX(${offset}%)`;
   }
-</style>
+
+  function moveSlider(direction) {
+    const testimonialsToShow = getTestimonialsToShow();
+    currentIndex = (currentIndex + direction + Math.ceil(testimonialCount / testimonialsToShow)) % Math.ceil(testimonialCount / testimonialsToShow);
+    updateSlider();
+  }
+
+  prevBtn.addEventListener('click', () => moveSlider(-1));
+  nextBtn.addEventListener('click', () => moveSlider(1));
+
+  // Update slider on window resize
+  window.addEventListener('resize', updateSlider);
+
+  // Initial update
+  updateSlider();
+
+  // Optional: Auto-slide
+  setInterval(() => moveSlider(1), 5000);
+</script>

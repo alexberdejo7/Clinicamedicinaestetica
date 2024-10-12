@@ -42,7 +42,7 @@ module.exports = {
 // Colores cafés
 
 'custom-cafe': '#241E1A',
-'brown-light-pastel': '#E6D5C3',
+'nude-pastel': '#E6D5C3',
 'brown-medium': '#C4A484',
 'brown-dark': '#8D6E63',
 'brown-gray': '#A89F94',

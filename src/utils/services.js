@@ -5,7 +5,7 @@ export const services = [
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: '../../img/assets/botox.webp',
-    imageService: ['../../img/assets/botox1.webp', ], // Imágenes 
+    imageService: [ ], // Imágenes 
     imageList: '../../img/assets/11.webp',
     faqs: [
       {
@@ -34,7 +34,7 @@ export const services = [
     fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
     icon: '../../img/assets/laser-compress.webp',
     imageList: '../../img/istock2.jpg',  
-    imageService: ['../../img/assets/depilacion.webp', ], // Imágenes
+    imageService: ['../../img/assets/depilacionprice.webp', '../../img/assets/zonaslaser.webp' ], // Imágenes
     faqs: [
       {
         question: '¿Cuál es el protocolo de tratamiento?',
@@ -45,9 +45,14 @@ export const services = [
         answer: 'El láser diodo es óptimo para tratar vello grueso y profundo, y es versátil, pudiendo aplicarse en diferentes tonos de piel, desde claros hasta oscuros.'
       },
       {
+        question: '¿Qué cuidados debo tener antes del tratamiento?',
+        answer: 'No broncearse al menos 15 dias antes de la cita. No usar cremas, desodorantes, maquillaje, perfumes el dia de tu sesion. Acudir rasurada con rastrilo o perfilador 24hrs antes. No venir menstruando (aumenta la sensibilidad)'
+      },
+      {
         question: '¿Qué cuidados debo tener después del tratamiento?',
         answer: 'Se recomienda no exponerse al sol, aplicar protector solar y aloe vera, y únicamente utilizar rastrillo para el rasurado en la(s) zona(s) tratada(s).'
       },
+      
       {
         question: '¿Por que laser diodo?',
         answer: 'El laser con diodo es el mas utilizado y se muestra como la mejor opcion de depilacion definitiva, ya que gracias a su alta potencia el tiempo de disparo se reduce teniendo mayor efectividad en eliminacion del vello'

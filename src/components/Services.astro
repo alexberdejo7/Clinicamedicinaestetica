@@ -14,7 +14,7 @@ import { services } from '../utils/services.js';
         <p 
         data-aos="fade-up"
         data-aos-duration="1500"
-        class="font-poppins  text-nude-text text-center text-xs  max-w-80 mx-auto mb-10 font-thin">  Innovación, confianza y resultados visibles. Conoce aqui nuestros procedimientos: </p>
+        class="font-poppins  text-nude-text text-center text-xs md:text-sm  max-w-80 mx-auto mb-10 font-thin">  Innovación, confianza y resultados visibles. Conoce aqui nuestros procedimientos: </p>
         
         <div 
             class="grid grid-cols-1 p-4 md:grid-cols-2 mx-auto xl:grid-cols-3 md:gap-x-5 gap-y-14 lg:gap-x-8">
@@ -54,17 +54,17 @@ import { services } from '../utils/services.js';
         </div>
     
   
-        <div id="service-details" class=" bg-pastel-blue-soft mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
-          <h2 id="service-title" class="text-4xl font-roboto font-semibold mb-4 text-nude-primary text-center"></h2>
-          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm text-nude-text text-center"></p>
+        <div id="service-details" class=" bg-nude-primary mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
+          <h2 id="service-title" class="text-4xl font-roboto font-semibold mb-4 text-nude-text text-center"></h2>
+          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm md:text-sm text-nude-text text-center"></p>
           
           <!-- Updated container for service images -->
-          <div id="service-images" class="flex flex-wrap justify-center gap-4 mb-6">
-              <img class="w-36 h-36 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 1">
-              <img class="w-36 h-36 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-105" src="" alt="Service image 2">
+          <div id="service-images" class="flex flex-wrap justify-center gap-7 mb-10">
+              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 object-fill rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-110" src="" alt="Service image 1">
+              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 object-fill rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-110" src="" alt="Service image 2">
           </div>
           
-          <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-primary text-center">Preguntas Frecuentes</h3>
+          <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-text text-center">Preguntas Frecuentes</h3>
           <ul id="service-faqs" class="space-y-4"></ul>
       </div>
     </div>
@@ -105,7 +105,7 @@ import { services } from '../utils/services.js';
             updateServiceImages(service.imageService || []);
             
             serviceFaqs.innerHTML = service.faqs.map(faq => `
-              <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-gray-300 cursor-pointer">
+              <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-nude-pastel cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
                   <h4 class="font-semibold text-start text-nude-text text-md text-custom">${faq.question}</h4>
                   <span class="text-aqua-strong font-bold transition-transform duration-300 transform">+</span>
