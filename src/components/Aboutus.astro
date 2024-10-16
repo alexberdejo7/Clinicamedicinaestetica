@@ -1,8 +1,8 @@
 ---
 const assets = [
-  { id: 1, image: '/img/assets/instalaciones33.JPG', alt: 'Recepción principal' },
-  { id: 2, image: '/img/assets/instalacion34.webp', alt: 'Sala de tratamientos' },
-  { id: 3, image: '/img/assets/lista4.webp', alt: 'General' },
+  { id: 1, image: 'https://clinicasden.com/wp-content/uploads/2021/05/Clinicas-Den-Nuestras-Instalaciones-Cabecera.jpg.webp', alt: 'Recepción principal' },
+  { id: 2, image: 'https://clinicasden.com/wp-content/uploads/2021/05/Clinicas-Den-Nuestras-Instalaciones-Cabecera.jpg.webp', alt: 'Foto 1' },
+  { id: 3, image: 'https://clinicasden.com/wp-content/uploads/2021/05/Clinicas-Den-Nuestras-Instalaciones-Cabecera.jpg.webp', alt: 'Foto 2' },
 ];
 
 const teamMembers = [
@@ -11,14 +11,29 @@ const teamMembers = [
   { id: 3, name: 'Nombre Apellido', image: '/img/assets/c.webp' },
   { id: 4, name: 'Nombre Apellido', image: '/img/assets/o.webp' },
 ];
+
+const mainDoctors = [
+  { 
+    id: 1, 
+    name: 'Dra. Jessica Alcala', 
+    role: 'Médico Cirujano y Maestria en Medicina Estetica y Longevidad - CP 11911567 | CP 13113841',
+    image: '/img/assets/doctor1.webp' 
+  },
+  { 
+    id: 2, 
+    name: 'Dra. Lizette Piña', 
+    role: 'Médico Cirujano - CP 11317288 ',
+    image: '/img/assets/logos.webp' 
+  }
+];
 ---
 
 <section id="about-us" class="bg-nude-bg">
-  <div class="container mx-auto p-5 mt-10">
+  <div class="container mx-auto p-5 ">
     <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-4xl font-semibold font-neoteric text-nude-text  text-center mb-5">
+        class="text-4xl font-semibold font-neoteric text-nude-text mt-10 text-center mb-5">
       Clínica Medicina Estética
     </h2>
     <p 
@@ -47,10 +62,33 @@ const teamMembers = [
         data-aos="zoom-in"
         data-aos-duration="1500"
         class="text-xs md:text-sm text-nude-text font-poppins leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
-      Nuestro equipo está compuesto por <span class="font-semibold">especialistas apasionados y dedicados </span>, 
-      comprometidos con brindarte una atención integral y personalizada, con el 
+      Nuestro equipo está conformado por <span class="font-semibold">especialistas apasionados y dedicados</span>, 
+      comprometidos en brindarte una atención personalizada, con el 
       <span class="font-semibold">objetivo de ayudarte a lograr tus metas</span> de salud y belleza.
     </p>
+
+    {/* Sección de doctoras principales */}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+      {mainDoctors.map(doctor => (
+        <div class="text-center">
+          <img 
+              src={doctor.image} 
+              alt={doctor.name} 
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+              class="w-40 h-40 md:w-64 md:h-64 lg:h-72 lg:w-72 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top border-1 border-nude-text" 
+              loading="lazy"
+          />
+          <p class="font-medium text-gray-700 font-montserrat text-sm md:text-base mb-1">{doctor.name}</p>
+          <p class="font-light text-gray-600 font-montserrat text-xs md:text-sm">{doctor.role}</p>
+        </div>
+      ))}
+    </div>
+
+    {/* Separador */}
+    <div class="w-32 h-0.5 bg-nude-text mx-auto mb-16"></div>
+
+    {/* Resto del equipo */}
     <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 lg:gap-y-10">
       {teamMembers.map(member => (
         <div class="text-center">
@@ -59,8 +97,8 @@ const teamMembers = [
               alt={member.name} 
               data-aos="zoom-in"
               data-aos-duration="1500"
-              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-52 lg:w-52 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover" 
-            loading="lazy"
+              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-52 lg:w-52 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top" 
+              loading="lazy"
           />
           <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
         </div>
@@ -74,7 +112,7 @@ const teamMembers = [
     <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-2xl text-center font-neoteric text-nude-text p-4 font-semibold mb-4">
+        class="text-4xl text-center font-neoteric text-nude-text p-4 font-semibold mb-4">
       Nuestras Instalaciones
     </h2>
     <p class="text-xs md:text-sm text-nude-text font-poppins leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
@@ -83,7 +121,10 @@ const teamMembers = [
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {assets.map((asset, index) => (
-        <div class={`rounded-lg shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
+        <div 
+         data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        class={`rounded-lg shadow-lg shadow-gray-300 ${index === assets.length - 1 ? 'md:col-span-2 md:mx-auto lg:col-span-1' : ''}`}>
           <img 
               src={asset.image} 
               alt={asset.alt} 
