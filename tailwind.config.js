@@ -51,7 +51,7 @@ module.exports = {
 'nude-bg': '#f7f6f9',
 'nude-strong' : '#bb8f78',
 'nude-text' : '#33241c',
-'nude-clinica' : '#bea59b',
+'nude-clinica' : '#A68777',
 'footer-color' : '#2b231d',
 
 
