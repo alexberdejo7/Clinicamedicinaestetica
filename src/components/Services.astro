@@ -33,7 +33,7 @@ import { services } from '../utils/services.js';
                 loading="lazy"
                 />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-nude-bg font-neoteric max-w-44 text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-nude-bg font-neoteric max-w-44 text-2xl lg:text-3xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               
@@ -41,7 +41,7 @@ import { services } from '../utils/services.js';
                  {/* SVG  */}
                 <div class="flex items-center space-x-2 mb-2">
                   <img src={service.icon} alt={service.name + ' icon'} class="w-6 overflow-hidden h-6"/>
-                  <p class="font-montserrat max-w-56 leading-snug  text-nude-text text-xs">{service.description}</p>
+                  <p class="font-montserrat max-w-56 leading-snug text-nude-text text-xs lg:text-sm">{service.description}</p>
                 </div>
               </div>
               
@@ -60,8 +60,8 @@ import { services } from '../utils/services.js';
     
   
         <div id="service-details" class=" bg-nude-primary mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
-          <h2 id="service-title" class="text-4xl font-roboto font-semibold mb-4 text-nude-text text-center"></h2>
-          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm md:text-sm text-nude-text text-center"></p>
+          <h2 id="service-title" class="text-xl lg:text-2xl font-neoteric font-semibold mb-4 text-nude-text text-center"></h2>
+          <p id="service-description" class="mb-6 font-poppins leading-relaxed text-sm md:text-base xl:text-lg text-nude-text text-center"></p>
           
           <!-- Updated container for service images -->
           <div id="service-images" class="flex flex-wrap justify-center gap-7 mb-10">
@@ -112,10 +112,10 @@ import { services } from '../utils/services.js';
             serviceFaqs.innerHTML = service.faqs.map(faq => `
               <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-nude-pastel cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
-                  <h4 class="font-semibold text-start text-nude-text text-md text-custom">${faq.question}</h4>
+                  <h4 class="font-semibold text-start text-nude-text text-sm lg:text-base text-custom">${faq.question}</h4>
                   <span class="text-nude-text font-bold transition-transform duration-300 transform">+</span>
                 </div>
-                <p class="text-nude-text  font-poppins text-sm faq-answer hidden mt-2">${faq.answer}</p>
+                <p class="text-nude-text font-poppins text-sm lg:text-lg faq-answer hidden mt-2">${faq.answer}</p>
               </li>
             `).join('');
   

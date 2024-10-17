@@ -1,5 +1,4 @@
 ---
-// MicrobladingCourse.astro
 const pdf = "./img/assets/temario.pdf"; // Ruta del PDF en el directorio público
 ---
 
@@ -30,7 +29,6 @@ const pdf = "./img/assets/temario.pdf"; // Ruta del PDF en el directorio públic
           </ul>
         </div>
 
-        <!-- Información del instructor -->
         <div class="mt-8">
           <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-4">Conoce a tu Master</h3>
           <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
@@ -79,7 +77,19 @@ const pdf = "./img/assets/temario.pdf"; // Ruta del PDF en el directorio públic
   </div>
 </section>
 
+<!-- Widget de Instagram al final con overlay para ocultar branding -->
+<section class="px-4 sm:px-6 py-4 bg-gray-50">
+  
+  <div class="relative">
+    <!-- Instagram widget -->
+    <div class="elfsight-app-28410f40-3e6a-4c52-870c-6cfcfbdc47b7" data-elfsight-app-lazy></div>
+    
+    <!-- Overlay para ocultar el branding -->
+    <div class="absolute bottom-0 left-0 right-0 h-12 bg-White-widget z-10"></div>
+  </div>
+</section>
 
+<!-- Script de funcionalidades propias del curso -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const benefits = [
@@ -87,7 +97,6 @@ const pdf = "./img/assets/temario.pdf"; // Ruta del PDF en el directorio públic
       "Certificación con validez oficial",
       "Prácticas con modelos reales",
       "Material completo incluido",
-      
     ];
 
     const initialModules = [
@@ -127,24 +136,31 @@ const pdf = "./img/assets/temario.pdf"; // Ruta del PDF en el directorio públic
       });
     }
 
-    // Poblamos la lista de beneficios
     populateList(benefits, 'benefits-list');
 
-    // Manejo del botón de "Ver más" para el temario
     document.getElementById('view-more-btn').addEventListener('click', () => {
       const modulesList = document.getElementById('modules-list');
       modulesVisible = !modulesVisible;
-
       if (modulesVisible) {
-        populateList(initialModules.concat(additionalModules), 'modules-list');
-        document.getElementById('view-more-btn').innerText = 'Ver menos';
+        populateList([...initialModules, ...additionalModules], 'modules-list');
+        document.getElementById('view-more-btn').textContent = 'Ver menos';
       } else {
         populateList(initialModules, 'modules-list');
-        document.getElementById('view-more-btn').innerText = 'Ver más';
+        document.getElementById('view-more-btn').textContent = 'Ver más';
       }
     });
 
-    // Inicialmente solo mostramos los módulos principales
     populateList(initialModules, 'modules-list');
   });
 </script>
+
+<!-- Script de Elfsight para Instagram -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+<style>
+  /* CSS adicional para asegurar que el overlay funcione correctamente */
+  .elfsight-app-28410f40-3e6a-4c52-870c-6cfcfbdc47b7 {
+    position: relative;
+    z-index: 1;
+  }
+</style>

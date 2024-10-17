@@ -22,7 +22,7 @@ module.exports = {
 'Azul-Nuevo': '#155864',
 'Azul-Variacion': '#155864',
 'Azul-Aqua' : '#ddecf0',
-'White-Crest': '#F9F8EF',
+'White-widget': '#f9fafb',
 'AzulLogo' : '##427e98',
 'white-secondary' : '#e4effa',
 'cafe-beige': '#E9D6BD',
