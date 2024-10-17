@@ -33,7 +33,7 @@ export const services = [
     description: 'Depilación a largo plazo con tecnologia de láser de diodo.',
     fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
     icon: '../../img/assets/laser-compress.webp',
-    imageList: '../../img/istock2.jpg',  
+    imageList: '../../img/assets/istock2.webp',  
     imageService: ['../../img/assets/depilacionprice.webp', '../../img/assets/zonaslaser.webp' ], // Imágenes
     faqs: [
       {
