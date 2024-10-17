@@ -28,12 +28,12 @@ const mainDoctors = [
 ];
 ---
 
-<section id="about-us" class="bg-nude-bg">
-  <div class="container mx-auto p-5 ">
+<section id="about-us" class="bg-nude-bg max-w-full overflow-hidden">
+  <div class="container mx-auto p-2 sm:p-5 max-w-screen-xl">
     <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-3xl xl:text-4xl font-semibold font-neoteric text-nude-text mt-10 text-center mb-5">
+        class="text-3xl sm:text-4xl xl:text-5xl font-semibold font-neoteric text-nude-text mt-10 text-center mb-5">
       Clínica Medicina Estética
     </h2>
     <p 
@@ -50,12 +50,12 @@ const mainDoctors = [
   </div>
 </section>
 
-<div class="bg-nude-bg">
-  <div class="container mx-auto p-5">
+<div class="bg-nude-bg max-w-full overflow-hidden">
+  <div class="container mx-auto p-2 sm:p-5 max-w-screen-xl">
     <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-4xl text-center font-neoteric text-nude-text p-4 font-semibold mb-2">
+        class="text-3xl sm:text-4xl text-center font-neoteric text-nude-text p-4 font-semibold mb-2">
       Nuestro Equipo
     </h2>
     <p 
@@ -68,7 +68,7 @@ const mainDoctors = [
     </p>
 
     {/* Sección de doctoras principales */}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-16 max-w-4xl mx-auto">
       {mainDoctors.map(doctor => (
         <div class="text-center">
           <img 
@@ -76,7 +76,7 @@ const mainDoctors = [
               alt={doctor.name} 
               data-aos="zoom-in"
               data-aos-duration="1500"
-              class="w-40 h-40 md:w-64 md:h-64 lg:h-72 lg:w-72 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top border-1 overflow-hidden border-nude-text" 
+              class="w-40 h-40 md:w-64 md:h-64 lg:h-72 lg:w-72 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top border border-nude-text max-w-full" 
               loading="lazy"
           />
           <p class="font-medium text-gray-700 font-montserrat text-sm md:text-base mb-1">{doctor.name}</p>
@@ -86,12 +86,10 @@ const mainDoctors = [
     </div>
 
     {/* Separador */}
-    <!-- <div class="w-32 h-0.5 bg-nude-text mx-auto "></div>
-    <h3 
-        
-        class="text-3xl w-full text-center font-neoteric text-nude-text font-semibold ">
+    <div class="w-32 h-0.5 bg-nude-text mx-auto mb-8"></div>
+    <h3 class="text-2xl sm:text-3xl w-full text-center font-neoteric text-nude-text font-semibold mb-8">
       Staff
-    </h3> -->
+    </h3>
 
     {/* Resto del equipo */}
     <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 lg:gap-y-10">
@@ -102,7 +100,7 @@ const mainDoctors = [
               alt={member.name} 
               data-aos="zoom-in"
               data-aos-duration="1500"
-              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-52 lg:w-52 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top" 
+              class="w-24 h-24 border border-nude-text md:w-48 md:h-48 lg:h-52 lg:w-52 rounded-full mx-auto mb-4 shadow-md shadow-gray-300 object-cover object-top max-w-full" 
               loading="lazy"
           />
           <p class="font-thin text-gray-700 font-montserrat text-xs">{member.name}</p>
@@ -112,19 +110,19 @@ const mainDoctors = [
   </div>
 </div>
 
-<div class="mb-5 mt-7">
-  <div class="container mx-auto p-5">
+<div class="mb-5 mt-7 max-w-full overflow-hidden">
+  <div class="container mx-auto p-2 sm:p-5 max-w-screen-xl">
     <h2 
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-4xl text-center font-neoteric text-nude-text p-4 font-semibold mb-4">
+        class="text-3xl sm:text-4xl text-center font-neoteric text-nude-text p-4 font-semibold mb-4">
       Nuestras Instalaciones
     </h2>
     <p class="text-xs md:text-sm text-nude-text font-poppins leading-relaxed text-center mb-10 lg:max-w-[40rem] mx-auto">
       Descubre nuestras <span class="font-semibold">modernas y relajantes instalaciones</span>, para ofrecerte los mejores cuidados en un entorno 
       de <span class="font-semibold">confianza plena y tranquilidad.</span>
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
       {assets.map((asset, index) => (
         <div 
          data-aos="zoom-in-up"
@@ -133,8 +131,8 @@ const mainDoctors = [
           <img 
               src={asset.image} 
               alt={asset.alt} 
-              class="w-full h-52 md:h-60 object-cover rounded-lg" 
-            loading="lazy"
+              class="w-full h-52 md:h-60 object-cover rounded-lg max-w-full" 
+              loading="lazy"
           />
         </div>
       ))}
