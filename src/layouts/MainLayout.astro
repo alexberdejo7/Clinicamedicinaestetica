@@ -8,23 +8,26 @@ const { title, description = "Clínica de Medicina estética en Cuernavaca, More
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title ? `${title} | Clínica Estética Cuernavaca` : 'Clínica Estética Cuernavaca'}</title>
-    <meta name="description" content={description}>
+    <link rel="icon" type="image/webp" href="../../img/assets/logoclinica.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator || "Astro"} />
+    <title>{title ? `${title} | Clínica Medicina Estética Cuernavaca` : 'Clínica Medicina Estética Cuernavaca'}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="medicina estética cuernavaca, depilacion laser, jessica alcala, botox, derpamen, limpieza facial, tratamientos estéticos, ácido hialurónico" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={title || 'Clínica Medicina Estética Cuernavaca'} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={Astro.url || 'https://www.drajessicaalcala.com'} />
+    <meta property="og:image" content="https://www.drajessicaalcala.com/img/assets/logonuevo.webp" />
 
-    <link rel="canonical" href={Astro.url} />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href={Astro.url || 'https://www.drajessicaalcala.com'} />
+
+    <!-- Preload Google Fonts for performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" />
 
   </head>
   <body>
