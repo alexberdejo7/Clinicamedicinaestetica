@@ -24,6 +24,10 @@ export const services = [
         question: '¿Cuáles son los cuidados posteriores al tratamiento?',
         answer: 'Se recomienda no exponerse al sol, no manipular el área tratada por 4 horas después de la aplicación, y mantener una posición vertical durante las 4 horas siguientes al tratamiento.'
       },
+      {
+        question: '¿Cuáles son las diferencias entre el "soft look" y el "full look?',
+        answer: 'Soft Look: efecto natural de hidratacion en labios con volumen ligero.  Full Look: efecto rusian lips, volumen moderado alto en labios + hidratacion + definicion'
+      },
       
     ]
   },
