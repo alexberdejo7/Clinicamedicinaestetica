@@ -1,6 +1,11 @@
+---
+// Importaciones y props
+---
+
 <section id="home" class="relative min-h-screen overflow-hidden bg-nude-bg rounded-b-[70px] sm:rounded-b-[90px] xl:flex xl:items-center" aria-label="Introducción a la Clínica de Medicina Estética">
-  <div class="relative z-10 mx-auto px-4 sm:px-6 py-10 sm:py-16 md:py-28 xl:py-28 xl:w-full xl:max-w-8xl ">
+  <div class="relative z-10 mx-auto px-4 sm:px-6 py-10 sm:py-16 md:py-28 xl:py-28 xl:w-full xl:max-w-8xl">
     <article class="flex flex-col pt-12 lg:flex-row items-center justify-between gap-10 md:gap-10 lg:gap-16 xl:gap-28 p-4">
+      <!-- Text Content -->
       <div class="max-w-3xl xl:max-w-3xl px-4 py-10 text-center bg-White-widget backdrop-blur-md rounded-xl shadow-lg md:bg-transparent md:backdrop-blur-none md:text-left xl:px-7 xl:py-14">
         <h1 class="text-4xl text-center lg:text-start sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-neoteric text-nude-text leading-tight">
           Clínica de <span class="text-nude-clinica block">Medicina Estética</span> 
@@ -9,22 +14,29 @@
           <p class="text-3xl xl:text-5xl text-nude-text font-collection">
             Es momento de cuidarte.
           </p>
-          <img src="../../img/skin.png"
-               class="w-4 h-4 xl:w-6 xl:h-6 ml-2 brightness-0 saturate-200 object-cover" 
-               alt="Icono representativo de piel saludable" 
-               aria-hidden="true">
+          <img 
+            width="24"
+            height="24"
+            src="/img/skin.png"
+            class="w-4 h-4 xl:w-6 xl:h-6 ml-2 brightness-0 saturate-200" 
+            alt="Icono representativo de piel saludable"
+            loading="eager"
+            decoding="async"
+          />
         </div>
         
         <p class="mt-4 text-center lg:text-start text-balance xl:mt-6 text-xs md:text-sm xl:text-md md text-nude-text leading-relaxed font-poppins">
           Descubre la ciencia detrás de una piel perfecta en nuestra clínica. Tu belleza en manos expertas con resultados.
         </p>
         
-        <div class="mt-8 xl:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 animate-fade-in-up animation-delay-600">
-          <a href="https://wa.me/52017772676286" class="btn btn-primary group whitespace-nowrap" aria-label="Contactar a la clínica de medicina estética">
+        <div class="mt-8 xl:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+          <a href="https://wa.me/52017772676286" 
+             class="btn btn-primary group whitespace-nowrap"
+             rel="noopener noreferrer">
             Contáctanos
-            <span class="ml-2 transition-transform duration-300 transform group-hover:translate-x-1" aria-hidden="true">→</span>
+            <span class="ml-2 transition-transform duration-300 transform group-hover:translate-x-1">→</span>
           </a>
-          <a href="#servicios" class="btn btn-secondary group whitespace-nowrap" aria-label="Ver nuestros servicios de medicina estética">
+          <a href="#servicios" class="btn btn-secondary group whitespace-nowrap">
             Nuestros Servicios
           </a>
         </div>
@@ -33,45 +45,68 @@
         <div class="flex justify-center lg:justify-start space-x-4 mt-4 xl:mt-5">
           <a href="https://www.facebook.com/drajessicaalcala" 
              class="transition-transform hover:scale-110"
+             rel="noopener noreferrer"
              aria-label="Visita nuestro Facebook">
-            
-
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" class=" fill-nude-text w-auto h-6 ">
-                <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 25.832031 46 A 1.0001 1.0001 0 0 0 26.158203 46 L 31.832031 46 A 1.0001 1.0001 0 0 0 32.158203 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 33 44 L 33 30 L 36.820312 30 L 38.220703 23 L 33 23 L 33 21 C 33 20.442508 33.05305 20.398929 33.240234 20.277344 C 33.427419 20.155758 34.005822 20 35 20 L 38 20 L 38 14.369141 L 37.429688 14.097656 C 37.429688 14.097656 35.132647 13 32 13 C 29.75 13 27.901588 13.896453 26.71875 15.375 C 25.535912 16.853547 25 18.833333 25 21 L 25 23 L 22 23 L 22 30 L 25 30 L 25 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 32 15 C 34.079062 15 35.38736 15.458455 36 15.701172 L 36 18 L 35 18 C 33.849178 18 32.926956 18.0952 32.150391 18.599609 C 31.373826 19.104024 31 20.061492 31 21 L 31 25 L 35.779297 25 L 35.179688 28 L 31 28 L 31 44 L 27 44 L 27 28 L 24 28 L 24 25 L 27 25 L 27 21 C 27 19.166667 27.464088 17.646453 28.28125 16.625 C 29.098412 15.603547 30.25 15 32 15 z"></path>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" class="fill-nude-text">
+              <path d="M9 4C6.25 4 4 6.25 4 9v32c0 2.75 2.25 5 5 5h16.83c.11 0 .21-.01.32-.03h5.67c.11.02.21.03.32.03H41c2.75 0 5-2.25 5-5V9c0-2.75-2.25-5-5-5H9zm0 2h32c1.67 0 3 1.33 3 3v32c0 1.67-1.33 3-3 3h-8V30h3.82l1.4-7h-5.22v-2c0-.56.05-.6.24-.72.19-.12.77-.28 1.76-.28h3v-5.63l-.57-.27S35.13 13 32 13c-2.25 0-4.1.9-5.28 2.38-1.18 1.47-1.72 3.45-1.72 5.62v2h-3v7h3v14H9c-1.67 0-3-1.33-3-3V9c0-1.67 1.33-3 3-3zm23 9c2.08 0 3.39.46 4 .7V18h-1c-1.15 0-2.07.1-2.85.6-.77.5-1.15 1.46-1.15 2.4v4h4.78l-.6 3H31v16h-4V28h-3v-3h3v-4c0-1.83.46-3.35 1.28-4.37.82-1.03 1.97-1.63 3.72-1.63z"/>
+            </svg>
           </a>
           <a href="https://www.instagram.com/dra_jessicaalcala/" 
              class="transition-transform hover:scale-110"
+             rel="noopener noreferrer"
              aria-label="Síguenos en Instagram">
-             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" class="fill-nude-text w-auto h-6">
-              <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
-              </svg>
-            
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" class="fill-nude-text">
+              <path d="M16 3C8.83 3 3 8.83 3 16v18c0 7.17 5.83 13 13 13h18c7.17 0 13-5.83 13-13V16c0-7.17-5.83-13-13-13H16zm0 2h18c6.09 0 11 4.91 11 11v18c0 6.09-4.91 11-11 11H16c-6.09 0-11-4.91-11-11V16c0-6.09 4.91-11 11-11zm21 6a2 2 0 100 4 2 2 0 000-4zm-12 3c-6.06 0-11 4.94-11 11s4.94 11 11 11 11-4.94 11-11-4.94-11-11-11zm0 2c4.98 0 9 4.02 9 9s-4.02 9-9 9-9-4.02-9-9 4.02-9 9-9z"/>
+            </svg>
           </a>
         </div>
       </div>
 
-      <!-- Sección de imágenes flotantes -->
-      <div class="w-full lg:w-1/2 relative mt-5 lg:mt-0 xl:w-2/5" aria-hidden="true">
+      <!-- Image Section -->
+      <div class="w-full lg:w-1/2 relative mt-5 lg:mt-0 xl:w-2/5">
         <div class="relative w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 mx-auto">
-          <img
-            src="../../img/assets/2.webp"
-            alt="Paciente recibiendo tratamiento facial en nuestra clínica de Cuernavaca"
-            class="rounded-full shadow-2xl object-cover w-full h-full animate-float"
-          />
+          <picture>
+            <source type="image/webp" srcset="/img/assets/2.webp">
+            <img 
+              width="384"
+              height="384"
+              src="/img/assets/2.jpg"
+              alt="Paciente recibiendo tratamiento facial"
+              class="rounded-full shadow-2xl object-cover w-full h-full animate-float"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
+          
           <div class="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 md:-top-12 md:-left-12 xl:-top-16 xl:-left-16 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 xl:w-40 xl:h-40 rounded-full overflow-hidden border-4 border-nude-bg shadow-lg animate-float animation-delay-150">
-            <img
-              src="../../img/assets/facial.webp"
-              alt="Aplicación de tratamiento facial en nuestra clínica estética"
-              class="object-cover w-full h-full"
-            />
+            <picture>
+              <source type="image/webp" srcset="/img/assets/facial.webp">
+              <img
+                width="160"
+                height="160"
+                src="/img/assets/facial.jpg"
+                alt="Aplicación de tratamiento facial"
+                loading="eager"
+                decoding="async"
+                class="object-cover w-full h-full"
+              />
+            </picture>
           </div>
+          
           <div class="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 md:-bottom-10 md:-right-10 xl:-bottom-14 xl:-right-14 w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 xl:w-40 xl:h-40 rounded-full overflow-hidden border-4 border-nude-bg shadow-lg animate-float animation-delay-300">
-            <img
-              src="../../img/assets/teams.webp"
-              alt="Equipo de especialistas en medicina estética de nuestra clínica en Cuernavaca"
-              class="object-cover w-full h-full"
-            />
+            <picture>
+              <source type="image/webp" srcset="/img/assets/teams.webp">
+              <img
+                width="160"
+                height="160"
+                src="/img/assets/teams.jpg"
+                alt="Equipo de especialistas"
+                class="object-cover w-full h-full"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -80,8 +115,8 @@
 
   <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-nude-bg to-transparent"></div>
 </section>
+
 <style>
-  /* Estilos para los botones */
   .btn {
     @apply inline-flex items-center justify-center px-5 py-2.5 text-xs sm:text-xs md:text-xs xl:text-sm xl:px-6 xl:py-3 rounded-full font-poppins transition-all duration-300 ease-in-out min-w-[190px];
   }
@@ -94,33 +129,20 @@
     @apply bg-white text-nude-text border-2 border-nude-clinica hover:bg-nude-bg hover:shadow-lg;
   }
 
-  /* Animaciones personalizadas */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
 
-  /* Clases de animación */
   .animate-float {
     animation: float 5s ease-in-out infinite;
   }
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+
   .animation-delay-150 {
     animation-delay: 150ms;
   }
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
+
   .animation-delay-300 {
     animation-delay: 300ms;
-  }
-  .animation-delay-600 {
-    animation-delay: 600ms;
   }
 </style>
