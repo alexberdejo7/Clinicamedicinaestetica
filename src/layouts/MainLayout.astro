@@ -29,6 +29,15 @@ const { title, description = "Clínica de Medicina estética en Cuernavaca, More
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" />
 
+    <!-- Google Analytics -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-X8T61SMRZ2"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X8T61SMRZ2');
+</script>
+    
   </head>
   <body>
     <Navbar />
@@ -42,13 +51,13 @@ const { title, description = "Clínica de Medicina estética en Cuernavaca, More
 <style is:global>
   @font-face {
     font-family: 'Collection';
-    src: url('/src/fonts/Collection.otf') format('opentype');
+    src: url('../fonts/Collection.otf') format('opentype');
     font-display: swap;
   }
   
   @font-face {
     font-family: 'Neoteric';
-    src: url('/src/fonts/NeotericRegular.ttf') format('truetype');
+    src: url('../fonts/NeotericRegular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -56,7 +65,7 @@ const { title, description = "Clínica de Medicina estética en Cuernavaca, More
 
   @font-face {
     font-family: 'Neoteric';
-    src: url('/src/fonts/NeotericBold.ttf') format('truetype');
+    src: url('../fonts/NeotericBold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
