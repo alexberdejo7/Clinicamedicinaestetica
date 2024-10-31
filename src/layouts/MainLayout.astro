@@ -2,7 +2,10 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description = "Clínica de Medicina estética en Cuernavaca, Morelos. Calidad en servicios de depilación láser diodo, lipoenzimas, armonizacion facial, botox o babybotox, micropigmentacion." } = Astro.props;
+const { 
+  title = 'Clínica Medicina Estética Cuernavaca',
+  description = "Clínica de Medicina estética en Cuernavaca, Morelos. Calidad en servicios de depilación láser diodo, lipoenzimas, armonizacion facial, botox o babybotox, micropigmentacion."
+} = Astro.props;
 ---
 
 <html lang="es">
@@ -11,32 +14,35 @@ const { title, description = "Clínica de Medicina estética en Cuernavaca, More
     <link rel="icon" type="image/webp" href="../../img/assets/logoclinica.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator || "Astro"} />
-    <title>{title ? `${title} | Clínica Medicina Estética Cuernavaca` : 'Clínica Medicina Estética Cuernavaca'}</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content="medicina estética en cuernavaca, depilacion laser diodo, jessica alcala, micropigmentacion, botox, derpamen, limpieza facial, tratamientos estéticos, ácido hialurónico" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title || 'Clínica Medicina Estética Cuernavaca'} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url || 'https://www.drajessicaalcala.com'} />
+    <meta property="og:url" content="https://www.drajessicaalcala.com" />
     <meta property="og:image" content="https://www.drajessicaalcala.com/img/assets/logonuevo.webp" />
-
-
-    <link rel="canonical" href={Astro.url || 'https://www.drajessicaalcala.com'} />
-
+    <link rel="canonical" href="https://www.drajessicaalcala.com" />
+    
     <!-- Preload Google Fonts for performance -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" />
-
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap"></noscript>
+    
     <!-- Google Analytics -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-X8T61SMRZ2"></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X8T61SMRZ2');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8T61SMRZ2"></script>
+    <script is:inline>
+      window.addEventListener('load', function() {
+        if (window.location.pathname.includes('analytics-enabled')) { // Cargar GTM bajo una condición opcional
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-X8T61SMRZ2', { 'send_page_view': false });
+        }
+      });
+    </script>
+    
     
   </head>
   <body>
