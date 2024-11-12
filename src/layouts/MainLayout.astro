@@ -33,14 +33,10 @@ const {
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8T61SMRZ2"></script>
     <script is:inline>
-      window.addEventListener('load', function() {
-        if (window.location.pathname.includes('analytics-enabled')) { // Cargar GTM bajo una condición opcional
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-X8T61SMRZ2', { 'send_page_view': false });
-        }
-      });
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X8T61SMRZ2');
     </script>
     
     
