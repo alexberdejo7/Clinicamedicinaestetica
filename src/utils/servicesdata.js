@@ -85,5 +85,15 @@ export const treatments = [
         "No exponerse al sol",
         "Aplicarse protector solar y aloe vera"
       ]
+    },
+    {
+      title: "MicroPigmentacion",
+      description: "Depilación a largo plazo que puede llegar a ser definitiva usando láser de diodo.",
+      duration: "Variable",
+      effectDuration: "10 sesiones cada 30-45 días",
+      postCare: [
+        "No exponerse al sol",
+        "Aplicarse protector solar y aloe vera"
+      ]
     }
   ];

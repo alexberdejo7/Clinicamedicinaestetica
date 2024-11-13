@@ -63,12 +63,18 @@ import { services } from '../utils/services.js';
   
         <div id="service-details" class=" bg-nude-primary mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
           <h2 id="service-title" class="text-xl lg:text-2xl font-neoteric font-semibold mb-4 text-nude-text text-center"></h2>
-          <p id="service-description" class="mb-6 text-balance font-poppins leading-relaxed mt-7 text-sm md:text-base xl:text-base text-nude-text text-center"></p>
+          <p id="service-description" class="mb-6 p-7 text-start text-balance font-poppins leading-relaxed mt-7 text-sm md:text-base xl:text-base text-nude-text "></p>
           
           <!-- Updated container for service images -->
           <div id="service-images" class="flex flex-wrap justify-center gap-7 mb-10">
-              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 object-fill rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-110" src="" alt="Service image 1"  loading="lazy" >
-              <img class="w-40 h-40 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 object-fill rounded-lg shadow-md m-2 transition-transform duration-300 hover:scale-110" src="" alt="Service image 2" loading="lazy"  >
+            <img class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105" 
+            src="" 
+            alt="Servicio image " 
+            loading="lazy">
+       <img class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105" 
+            src="" 
+            alt="Servicio image " 
+            loading="lazy">
           </div>
           
           <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-text text-center">Preguntas Frecuentes</h3>
@@ -106,7 +112,8 @@ import { services } from '../utils/services.js';
           
           if (service) {
             serviceTitle.textContent = service.name;
-            serviceDescription.textContent = service.fullDescription;
+            serviceDescription.innerHTML = service.fullDescription;
+
             
             // Update service images
             updateServiceImages(service.imageService || []);
