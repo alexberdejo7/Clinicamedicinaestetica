@@ -261,9 +261,9 @@ export const services = [
 },
 {
   id: 'Micropigmentacion',
-  name: 'Micropigmentacion',
+  name: 'Micropigmentacion Medica',
   description: 'Procedimiento estético que mejora, define o recrea la forma y el color de las cejas.',
-  fullDescription: `La micropigmentación es un procedimiento estético que consiste en la aplicación de pigmentos semipermanentes sobre la piel para mejorar, definir o recrear la forma y el color de las cejas. Existen tres técnicas principales:
+  fullDescription: `La micropigmentación medica es un procedimiento estético que consiste en la aplicación de pigmentos semipermanentes sobre la piel para mejorar, definir o recrear la forma y el color de las cejas. Existen tres técnicas principales:
                     <ul class="mt-3 text-balance">
                       <li><strong>Microblading:</strong> Ideal para un aspecto natural, crea trazos individuales que imitan el vello de la ceja.</li>
                       <li><strong>Ceja Híbrida:</strong> Combina microblading con un ligero sombreado para lograr más definición.</li>
