@@ -1,0 +1,7 @@
+# Redirige el subdominio de Netlify al dominio principal
+https://drajessicaalcala.netlify.app/* https://drajessicaalcala.com/:splat 301!
+http://drajessicaalcala.netlify.app/* https://drajessicaalcala.com/:splat 301!
+
+# Redirige www al dominio principal
+https://www.drajessicaalcala.com/* https://drajessicaalcala.com/:splat 301!
+http://www.drajessicaalcala.com/* https://drajessicaalcala.com/:splat 301!
