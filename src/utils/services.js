@@ -304,6 +304,60 @@ export const services = [
       answer: 'No se recomienda aplicar maquillaje en el área de las cejas durante al menos una semana, para permitir que el pigmento se asiente y la piel se recupere adecuadamente.'
     }
   ]
+},
+{
+  id: 'Skinboosters',
+  name: 'Skinboosters',
+  description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
+  fullDescription: `
+    <div>
+      <p class="mb-4">
+        Los skinboosters son tratamientos estéticos mínimamente invasivos diseñados para mejorar la calidad, hidratación y luminosidad de la piel desde las capas más profundas. 
+        A diferencia de los rellenos dérmicos, no tienen como objetivo dar volumen, sino revitalizar la piel y prevenir el envejecimiento prematuro.
+      </p>
+
+      <p class="mb-4">
+        Existen distintas formulaciones de skinboosters. Entre los más innovadores se encuentran:
+      </p>
+
+      <div class="mb-6">
+        <h4 class="font-semibold mb-2">✨ PDRN de Salmón (ácido poli-desoxirribonucleico)</h4>
+        <p>
+          El PDRN se extrae del ADN del salmón y actúa como un regenerador celular potente. 
+          Estimula la producción de colágeno, mejora la elasticidad, reduce inflamación y favorece la reparación de tejidos. 
+          Es ideal para pieles apagadas, con signos de envejecimiento o daño solar.
+        </p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-semibold mb-2">💧 Belotero Revive</h4>
+        <p>
+          Es un skinbooster a base de ácido hialurónico y glicerol. 
+          Su fórmula avanzada proporciona hidratación intensa, suaviza líneas finas y mejora la textura y elasticidad de la piel. 
+          Está especialmente recomendado para personas jóvenes o para quienes desean un efecto “glow” sin recurrir a tratamientos agresivos.
+        </p>
+      </div>
+    </div>
+  `,
+  icon: '../../img/assets/botox.webp',
+  imageService: ['../../img/assets/skinsbost.webp',],
+  imageList: '../../img/assets/skinbooster.webp',
+  faqs: [
+    {
+      question: '¿Cuántas sesiones necesito para ver resultados?',
+      answer: 'Generalmente, se recomiendan entre 2 a 3 sesiones, según las necesidades de la piel y la valoración medica. Los efectos son acumulativos y progresivos.'
+    },
+    {
+      question: '¿Duele el tratamiento?',
+      answer: 'El procedimiento es bien tolerado, y se puede utilizar anestesia tópica para mayor comodidad. Algunas personas pueden experimentar leve enrojecimiento o pequeños hematomas, que desaparecen en pocos días.'
+    },
+    {
+      question: '¿A partir de qué edad se recomienda?',
+      answer: 'A partir de los 25 años, cuando comienzan a disminuir los niveles naturales de colágeno y ácido hialurónico. Es ideal tanto como prevención del envejecimiento como para mejorar la apariencia de pieles más maduras.'
+    }
+    
+  ]
 }
+
   
 ];
