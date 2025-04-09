@@ -29,21 +29,7 @@ const pdf = "./img/assets/curso.pdf"; // Ruta del PDF en el directorio público
           </ul>
         </div>
 
-        <div>
-          <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-4 text-center">Presentación del curso</h3>
-          <div class="aspect-video w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-md">
-            <iframe 
-            src="https://player.vimeo.com/video/1073430432?h=5c2cd665d4&title=0&byline=0&portrait=0"
-            class="w-full h-full"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-          
-          </div>
-        </div>
-        
+       
 
         <div class="mt-8">
           <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-4">Conoce a tu Master</h3>
@@ -54,6 +40,7 @@ const pdf = "./img/assets/curso.pdf"; // Ruta del PDF en el directorio público
             sizes="(max-width: 640px) 100vw, 50vw"
             alt="Retrato de la Dra. Jessica Alcalá, instructora de microblading" 
             class="w-full md:w-1/2 rounded-lg shadow-md">
+
        
 
        
@@ -68,6 +55,27 @@ const pdf = "./img/assets/curso.pdf"; // Ruta del PDF en el directorio público
             </div>
           </div>
         </div>
+
+
+        <div>
+  
+  <div class="aspect-video w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-md">
+    <video 
+  id="video-presentacion" 
+  src="../../public/img/assets/video.mp4" 
+  muted 
+  loop 
+  playsinline 
+  class="w-full h-full object-cover rounded-xl" 
+  preload="none"
+></video>
+
+  </div>
+</div>
+        
+
+
+
 
         <div>
           <h3 class="font-poppins text-sm sm:text-xl font-semibold mb-2">Temario del curso</h3>
@@ -208,5 +216,31 @@ const pdf = "./img/assets/curso.pdf"; // Ruta del PDF en el directorio público
     script.src = "https://static.elfsight.com/platform/platform.js";
     script.async = true; // Load asynchronously
     document.body.appendChild(script);
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("video-presentacion") as HTMLVideoElement;
+
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play();
+              observer.unobserve(video); // Detiene la observación después de reproducir
+            }
+          });
+        },
+        { threshold: 0.5 } // Se activa cuando el 50% del video es visible
+      );
+
+      observer.observe(video);
+    } else {
+      // Fallback para navegadores antiguos
+      video.play();
+    }
   });
 </script>
