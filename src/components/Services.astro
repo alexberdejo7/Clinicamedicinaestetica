@@ -18,7 +18,7 @@ import { services } from '../utils/services.js';
 <!-- ServiceCards -->
 
         <div 
-            class="grid grid-cols-1 p-4 md:grid-cols-2 mx-auto xl:grid-cols-3 md:gap-x-5 gap-y-14 lg:gap-x-8">
+            class="grid grid-cols-1 p-5 md:grid-cols-2 mx-auto xl:grid-cols-3 md:gap-x-5 gap-y-14 lg:gap-x-8">
           {services.map((service, index) => ( 
             <div 
                 class={`relative bg-White rounded-xl shadow-lg shadow-gray-400 overflow-hidden transition-all duration-700 hover:shadow-gray-500 hover:bg-gray-100 flex flex-col mx-auto`}
@@ -29,12 +29,12 @@ import { services } from '../utils/services.js';
             >
               <div class="relative group">
                 <img src={service.imageList} alt={service.name} 
-                class="w-full h-44 brightness-75 object-cover transition-transform duration-500 ease-in 
+                class="w-full h-40 brightness-75 object-cover transition-transform duration-500 ease-in 
                 group-hover:brightness-105 group-hover:saturate-100"
                 loading="lazy"
                 />
                 <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-transform duration-500 ease-in group-hover:scale-105">
-                  <h3 class="text-nude-bg font-neoteric max-w-64 p-3 text-2xl lg:text-3xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
+                  <h3 class="text-nude-bg font-neoteric max-w-64 p-3 text-xl lg:text-2xl font-extrabold px-4 py-2 transition-transform duration-500 ease-in group-hover:scale-105">{service.name}</h3>
                 </div>
               </div>
               
@@ -50,7 +50,7 @@ import { services } from '../utils/services.js';
               <div class="w-full mt-auto">
                 <button
                 aria-label={`Ver detalles sobre ${service.name}`} 
-                 class="bg-nude-primary  font-poppins text-white hover:bg-nude-clinica py-3 text-xs font-semibold rounded 
+                 class="bg-nude-primary  font-poppins text-white hover:bg-nude-clinica py-2 text-xs font-semibold rounded 
                 rounded-t-none w-full hover:text-white transition-all ver-mas-btn" data-id={service.id}>
                   Ver Detalles
                 </button>
@@ -60,64 +60,108 @@ import { services } from '../utils/services.js';
         </div>
     
   
-        <div id="service-details" class=" bg-nude-primary mt-10  p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
-          <h2 id="service-title" class="text-xl lg:text-2xl font-neoteric font-semibold mb-4 text-nude-text text-center"></h2>
-          <p id="service-description" class="mb-6 p-7 text-start text-balance font-poppins leading-relaxed mt-7 text-sm md:text-base xl:text-base text-nude-text "></p>
-          
-          <!-- Updated container for service images -->
-          <div id="service-images" class="flex flex-wrap justify-center gap-7 mb-10">
-            <img class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105" 
-            src="" 
-            alt="Servicio image " 
-            loading="lazy">
-       <img class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105" 
-            src="" 
-            alt="Servicio image " 
-            loading="lazy">
-          </div>
-          
-          <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-text text-center">Preguntas Frecuentes</h3>
-          <ul id="service-faqs" class="space-y-4"></ul>
-      </div>
-    </div>
-  </section>
+        <div id="service-details" class="bg-nude-primary mt-10 p-8 rounded-lg shadow-sm hidden max-w-7xl mx-auto">
+    <h2 id="service-title" class="text-xl lg:text-2xl font-neoteric font-semibold mb-4 text-nude-text text-center"></h2>
+    <p id="service-description" class="mb-6 p-7 text-start text-balance font-poppins leading-relaxed mt-7 text-sm md:text-base xl:text-base text-nude-text "></p>
 
-  <script>
-    import { services } from '../utils/services.js';
-  
-    document.addEventListener('DOMContentLoaded', () => {
-      const verMasBtns = document.querySelectorAll('.ver-mas-btn');
-      const serviceDetails = document.getElementById('service-details');
-      const serviceTitle = document.getElementById('service-title');
-      const serviceDescription = document.getElementById('service-description');
-      const serviceImages = document.getElementById('service-images').querySelectorAll('img');
-      const serviceFaqs = document.getElementById('service-faqs');
-  
-      function updateServiceImages(images) {
-        serviceImages.forEach((imgElement, index) => {
-          if (index < images.length) {
-            imgElement.src = images[index];
-            imgElement.style.display = 'block';
-          } else {
-            imgElement.style.display = 'none';
-          }
-        });
-      }
-  
-      verMasBtns.forEach(button => {
-        button.addEventListener('click', (e) => {
-          const target = e.currentTarget as HTMLElement;
-          const serviceId = target.getAttribute('data-id');
-          const service = services.find(s => s.id === serviceId);
-          
-          if (service) {
-            serviceTitle.textContent = service.name;
-            serviceDescription.innerHTML = service.fullDescription;
-  
-            // Update service images
-            updateServiceImages(service.imageService || []);
-            
-            serviceFaqs.innerHTML = service.faqs.map(faq => `
+    <!-- Contenedor para imágenes y videos -->
+    <div id="service-media" class="flex flex-wrap justify-center gap-7 mb-10">
+      <!-- 2 imágenes (por defecto hidden, se mostrarán si aplica) -->
+      <img
+        class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105 hidden"
+        src=""
+        alt="Servicio imagen"
+        loading="lazy"
+      />
+      <img
+        class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105 hidden"
+        src=""
+        alt="Servicio imagen"
+        loading="lazy"
+      />
+
+      <!-- 2 videos (por defecto hidden, se mostrarán solo para últimos dos servicios) -->
+      <video
+        class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105 hidden"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
+      <video
+        class="w-80 h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105 hidden"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+    <h3 class="text-xl font-semibold font-roboto mb-4 text-nude-text text-center">Preguntas Frecuentes</h3>
+    <ul id="service-faqs" class="space-y-4"></ul>
+  </div>
+</section>
+<script>
+  import { services } from '../utils/services.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const verMasBtns = document.querySelectorAll('.ver-mas-btn');
+    const serviceDetails = document.getElementById('service-details');
+    const serviceTitle = document.getElementById('service-title');
+    const serviceDescription = document.getElementById('service-description');
+    const serviceFaqs = document.getElementById('service-faqs');
+    const mediaContainer = document.getElementById('service-media');
+
+    function updateServiceMedia(service) {
+      // Limpia el contenedor de media
+      mediaContainer.innerHTML = '';
+
+      service.imageService.forEach(src => {
+        const ext = src.split('.').pop().toLowerCase();
+        if (['mp4', 'webm', 'ogg'].includes(ext)) {
+          // Crear y configurar elemento video
+          const video = document.createElement('video');
+          video.src = src;
+          video.autoplay = true;
+          video.muted = true;
+          video.loop = true;
+          video.playsInline = true;
+          video.className = 'w-full h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 ';
+          mediaContainer.appendChild(video);
+        } else {
+          // Crear y configurar elemento imagen
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = service.name + ' imagen';
+          img.loading = 'lazy';
+          img.className = 'w-full h-80 sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105';
+          mediaContainer.appendChild(img);
+        }
+      });
+    }
+
+    verMasBtns.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement; 
+const serviceId = target.getAttribute('data-id');
+const service = services.find(s => s.id === serviceId);
+
+
+        if (service) {
+          serviceTitle.textContent = service.name;
+          serviceDescription.innerHTML = service.fullDescription;
+
+          updateServiceMedia(service);
+
+          serviceFaqs.innerHTML = service.faqs
+            .map(
+              (faq) => `
               <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-nude-pastel cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
                   <h4 class="font-semibold text-start text-nude-text text-xs lg:text-sm text-custom">${faq.question}</h4>
@@ -125,30 +169,33 @@ import { services } from '../utils/services.js';
                 </div>
                 <p class="text-nude-text text-balance font-poppins text-xs lg:text-base faq-answer hidden mt-2">${faq.answer}</p>
               </li>
-            `).join('');
-  
-            serviceDetails.classList.remove('hidden');
-            serviceDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
-            // Comportamiento del acordeón
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-              const question = item.querySelector('.faq-question');
-              const answer = item.querySelector('.faq-answer');
-              const toggleIcon = question.querySelector('span');
-  
-              question.addEventListener('click', () => {
-                answer.classList.toggle('hidden');
-                toggleIcon.textContent = answer.classList.contains('hidden') ? '+' : '-';
-                toggleIcon.classList.toggle('rotate-180');
-                item.classList.toggle('faq-expanded');
-              });
+              `
+            )
+            .join('');
+
+          serviceDetails.classList.remove('hidden');
+          serviceDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // Acordeón FAQs
+          const faqItems = document.querySelectorAll('.faq-item');
+          faqItems.forEach((item) => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const toggleIcon = question.querySelector('span');
+
+            question.addEventListener('click', () => {
+              answer.classList.toggle('hidden');
+              toggleIcon.textContent = answer.classList.contains('hidden') ? '+' : '-';
+              toggleIcon.classList.toggle('rotate-180');
+              item.classList.toggle('faq-expanded');
             });
-          }
-        });
+          });
+        }
       });
     });
-  </script>
+  });
+</script>
+
 
   <style>
     .faq-item:hover {

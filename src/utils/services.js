@@ -357,7 +357,97 @@ export const services = [
     }
     
   ]
+},
+{
+  id: 'hollywood-peel',
+  name: 'Hollywood Peel',
+  description: 'Limpieza profunda, control de acné y efecto glow inmediato con láser y carbón activado.',
+fullDescription: `<strong>El Hollywood Peel </strong>  es un tratamiento láser facial que limpia profundamente la piel, cierra poros, estimula colágeno, controla la producción de grasa y mejora el tono. Utiliza una combinación de carbón activado y láser ND:YAG para una exfoliación suave pero eficaz, que reduce impurezas, líneas finas, manchas y signos de fatiga, dejando una piel luminosa y uniforme.<br><br>
+
+<strong>Conoce nuestro láser NdYag Schindler Medical Systems</strong><br>
+En nuestra clínica contamos con la más alta tecnología alemana de Schindler Medical Systems, garantía de precisión, durabilidad y eficacia. Además, este equipo cuenta con certificación FDA, lo que avala su seguridad y eficacia según los más estrictos estándares internacionales.<br><br>
+
+<strong>Principales beneficios:</strong><br>
+- Tecnología Alemana de Vanguardia: Diseñado y fabricado en Alemania para ofrecer potencia y control superiores, con sistemas de enfriamiento continuo y protocolos personalizables.<br>
+- Certificación FDA: La U.S. Food and Drug Administration ha validado su uso médico-estético, brindándote la tranquilidad de un equipo probado y regulado.<br>
+- Rapidez y Versatilidad: Sesiones de 50 min, combinables entre sí, ideales para ajustarse a tu ritmo de vida.`,
+
+  icon: '../../img/assets/esteticos.webp',
+  imageList: '../../img/assets/holly.webp',
+  imageService: ['../../img/assets/Hollywood-peel.mp4'],
+  faqs: [
+    {
+      question: '¿Cuáles son sus beneficios?',
+      answer: `
+        • Limpia y reduce el tamaño poros.<br>
+        • Reduce brillo graso y brotes de acné.<br>
+        • Mejora la luminosidad y uniformidad del tono.<br>
+        • Estimula colágeno superficial, suavizando líneas finas.<br>
+        • Es indoloro y permite volver a las actividades al instante.
+      `
+    },
+    {
+      question: '¿Qué cuidados debo tener antes del tratamiento?',
+      answer: `
+        • Evitar bronceado y camas solares al menos 2 semanas.<br>
+        • Suspender exfoliantes fuertes o retinoides 3-5 días antes.<br>
+        • Llegar con el rostro limpio, sin maquillaje ni cremas.
+      `
+    },
+    {
+      question: '¿Qué cuidados debo tener después del tratamiento?',
+      answer: `
+        • Usar protector solar SPF 50 cada 3 h durante 1-2 semanas.<br>
+        • Aplicar hidratante ligera y evitar exfoliaciones 48 h.<br>
+        • No saunas, piscinas ni ejercicio intenso el mismo día.
+      `
+    }
+  ]
+},
+{
+  id: 'remocion-tatuaje',
+  name: 'Remoción de Tatuaje',
+  description: 'Eliminación progresiva y segura de tatuajes o micropigmentaciones con láser ND:YAG.',
+  fullDescription: 'La remoción de tatuajes o micropigmentaciones en cejas se realiza mediante láser ND:YAG, el cual fragmenta los pigmentos sin dañar la piel circundante. Dependiendo del color del tatuaje, se elige una longitud de onda específica (1064 nm para tintas negras o azules, 532 nm para rojos y amarillos). Tras un disparo de prueba, se procede al tratamiento completo. Las sesiones duran entre 10 a 30 minutos y se programan cada 4 a 8 semanas. En promedio, se requieren hasta 10 sesiones para resultados efectivos.',
+  icon: '../../img/assets/botox.webp',
+  mediaType: "video", 
+  imageList: '../../img/assets/tatuajes.webp',
+  imageService: ['../../img/assets/removideo.mp4'],
+  faqs: [
+    {
+      question: '¿Cuál es el protocolo de tratamiento de remoción de tatuajes o micropigmentación en cejas?',
+      answer: `• Se realiza una valoración del tatuaje y colores.<br>
+• Se elige la longitud de onda adecuada:<br>
+• 1064 nm para tintas negras o azules, 532 nm para rojos y amarillos<br>
+• Se hace un disparo de prueba y luego se aplica el láser sobre todo el tatuaje.<br>
+• Cada sesión dura de 10 a 30 minutos.<br>
+• Las sesiones se espacian cada 4 a 8 semanas.<br>
+• Generalmente se requieren hasta 10 sesiones para resultados óptimos.`
+    },
+    {
+      question: '¿Cuáles son sus beneficios?',
+      answer: `• Fragmenta la tinta sin dañar la piel alrededor.<br>
+• Minimiza el riesgo de cicatriz en comparación con métodos abrasivos.<br>
+• Permite tratar varios colores con el mismo equipo.<br>
+• Apto para la mayoría de los fototipos cutáneos.<br>
+• Tiempo de recuperación corto (aproximadamente 10 días).`
+    },
+    {
+      question: '¿Qué cuidados debo tener antes del tratamiento?',
+      answer: `• Evitar exposición solar y autobronceadores.<br>
+• No tomar fármacos fotosensibilizantes ni anticoagulantes sin consulta médica.<br>
+• Acudir con la piel limpia, sin cremas ni maquillaje.`
+    },
+    {
+      question: '¿Qué cuidados debo tener después del tratamiento?',
+      answer: `• Aplicar tratamiento reparador tópico según indicación.<br>
+• No manipular el área tratada ni aplicar maquillaje.<br>
+• Evitar piscinas, saunas y ejercicio intenso hasta la completa recuperación.<br>
+• Usar protector solar SPF 50 en la zona tratada durante todo el proceso.`
+    }
+  ]
 }
+
 
   
 ];
