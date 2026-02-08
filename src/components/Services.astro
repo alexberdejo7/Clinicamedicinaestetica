@@ -118,29 +118,59 @@ import { services } from '../utils/services.js';
     const serviceFaqs = document.getElementById('service-faqs');
     const mediaContainer = document.getElementById('service-media');
 
+    // Convierte cualquier cosa a array:
+    // - array => igual
+    // - string => [string]
+    // - undefined/null => []
+    function toArray(value) {
+      if (Array.isArray(value)) return value;
+      if (typeof value === 'string' && value.trim()) return [value.trim()];
+      return [];
+    }
+
     function updateServiceMedia(service) {
-      // Limpia el contenedor de media
       mediaContainer.innerHTML = '';
 
-      service.imageService.forEach(src => {
-        const ext = src.split('.').pop().toLowerCase();
+      // ✅ Soporta varios nombres por si tu data está mezclada
+      const media = toArray(
+        service.imageService ?? service.imageList ?? service.media ?? service.images
+      );
+
+      // ✅ DEBUG: te dice cuál servicio NO trae media
+      if (!media.length) {
+        console.warn('[Services] Este servicio no tiene media válida:', {
+          id: service.id,
+          name: service.name,
+          imageService: service.imageService,
+          imageList: service.imageList,
+          media: service.media,
+          images: service.images,
+        });
+      }
+
+      media.forEach((src) => {
+        if (!src) return;
+
+        const cleanSrc = String(src).trim();
+        const ext = cleanSrc.split('?')[0].split('#')[0].split('.').pop().toLowerCase();
+
         if (['mp4', 'webm', 'ogg'].includes(ext)) {
-          // Crear y configurar elemento video
           const video = document.createElement('video');
-          video.src = src;
           video.autoplay = true;
           video.muted = true;
           video.loop = true;
           video.playsInline = true;
-          video.className = 'w-full h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 ';
+          video.className =
+            'w-full h-auto sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2';
+          video.src = cleanSrc;
           mediaContainer.appendChild(video);
         } else {
-          // Crear y configurar elemento imagen
           const img = document.createElement('img');
-          img.src = src;
+          img.src = cleanSrc;
           img.alt = service.name + ' imagen';
           img.loading = 'lazy';
-          img.className = 'w-full h-80 sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105';
+          img.className =
+            'w-full h-80 sm:w-96 md:w-[400px] lg:w-[450px] object-contain rounded-xl shadow-lg m-2 transition-all duration-300 hover:scale-105';
           mediaContainer.appendChild(img);
         }
       });
@@ -148,49 +178,57 @@ import { services } from '../utils/services.js';
 
     verMasBtns.forEach((button) => {
       button.addEventListener('click', (e) => {
-        const target = e.currentTarget as HTMLElement; 
-const serviceId = target.getAttribute('data-id');
-const service = services.find(s => s.id === serviceId);
+        const target = e.currentTarget;
 
+        // ✅ Normaliza id (string/number)
+        const rawId = target.getAttribute('data-id');
+        const service = services.find((s) => String(s.id) === String(rawId));
 
-        if (service) {
-          serviceTitle.textContent = service.name;
-          serviceDescription.innerHTML = service.fullDescription;
+        if (!service) {
+          console.error('[Services] No encontré el servicio con id:', rawId, services);
+          return;
+        }
 
-          updateServiceMedia(service);
+        serviceTitle.textContent = service.name ?? '';
+        serviceDescription.innerHTML = service.fullDescription ?? '';
 
-          serviceFaqs.innerHTML = service.faqs
-            .map(
-              (faq) => `
+        updateServiceMedia(service);
+
+        // ✅ FAQs defensivo (por si algún servicio no trae faqs)
+        const faqs = Array.isArray(service.faqs) ? service.faqs : [];
+        serviceFaqs.innerHTML = faqs
+          .map(
+            (faq) => `
               <li class="bg-white text-text-nude-text p-4 text-center font-poppins rounded-lg faq-item transition-all duration-200 hover:bg-nude-pastel cursor-pointer">
                 <div class="flex justify-between items-center faq-question">
-                  <h4 class="font-semibold text-start text-nude-text text-xs lg:text-sm text-custom">${faq.question}</h4>
+                  <h4 class="font-semibold text-start text-nude-text text-xs lg:text-sm text-custom">${faq.question ?? ''}</h4>
                   <span class="text-nude-text font-bold transition-transform duration-300 transform">+</span>
                 </div>
-                <p class="text-nude-text text-balance font-poppins text-xs lg:text-base faq-answer hidden mt-2">${faq.answer}</p>
+                <p class="text-nude-text text-balance font-poppins text-xs lg:text-base faq-answer hidden mt-2">${faq.answer ?? ''}</p>
               </li>
-              `
-            )
-            .join('');
+            `
+          )
+          .join('');
 
-          serviceDetails.classList.remove('hidden');
-          serviceDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        serviceDetails.classList.remove('hidden');
+        serviceDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-          // Acordeón FAQs
-          const faqItems = document.querySelectorAll('.faq-item');
-          faqItems.forEach((item) => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-            const toggleIcon = question.querySelector('span');
+        // Acordeón FAQs
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach((item) => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+          const toggleIcon = question?.querySelector('span');
 
-            question.addEventListener('click', () => {
-              answer.classList.toggle('hidden');
-              toggleIcon.textContent = answer.classList.contains('hidden') ? '+' : '-';
+          question?.addEventListener('click', () => {
+            answer?.classList.toggle('hidden');
+            if (toggleIcon) {
+              toggleIcon.textContent = answer?.classList.contains('hidden') ? '+' : '-';
               toggleIcon.classList.toggle('rotate-180');
-              item.classList.toggle('faq-expanded');
-            });
+            }
+            item.classList.toggle('faq-expanded');
           });
-        }
+        });
       });
     });
   });
