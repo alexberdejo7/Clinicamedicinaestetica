@@ -61,5 +61,27 @@ export const services = [
           answer: 'Nuestros esteticistas realizan una consulta personalizada para evaluar su tipo de piel y sus preocupaciones específicas. Basándonos en esta evaluación, recomendamos el tratamiento más adecuado para usted.'
         }
       ]
-    }
+    },
+    {
+    id: 'lipoenzimas',
+    name: 'Lipoenzimas',
+    description: 'Tratamiento inyectable para reducir grasa localizada.',
+    fullDescription: 'Las lipoenzimas son un tratamiento inyectable a base de enzimas que ayuda a reducir la grasa localizada actuando en los adipocitos (células grasas). Las lipoenzimas no solo ayudan a la reducción de grasa, sino que también estimulan la producción de colágeno, lo que puede mejorar la firmeza y elasticidad de la piel, ofreciendo un resultado más tonificado. Este tratamiento es ideal para zonas como el abdomen, los flancos, los muslos y la papada.',
+    icon: '../../img/assets/barbilla-compress.webp',
+    imageList: '../../img/assets/lista7.webp',
+    faqs: [
+      {
+        question: '¿Cuántas sesiones se necesitan?',
+        answer: 'Se requieren en promedio de 4 a 6 visitas para lograr un resultado satisfactorio.'
+      },
+      {
+        question: '¿Cuánto duran los resultados?',
+        answer: 'El tratamiento es permanente siempre y cuando se conserven buenos hábitos alimenticios.'
+      },
+      {
+        question: '¿Qué factores influyen en los resultados?',
+        answer: 'Los resultados dependen de la grasa a tratar y factores propios del paciente como metabolismo, edad, apego al tratamiento, entre otros.'
+      }
+    ]
+  },
   ];

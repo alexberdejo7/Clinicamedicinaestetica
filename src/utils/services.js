@@ -1,7 +1,7 @@
 export const services = [
   {
     id: 'botox',
-    name: 'Botox o Baby Botox',
+    name: 'Tratamiento con Toxina Botulinica',
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
     fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: '../../img/assets/botox.webp',
@@ -91,7 +91,7 @@ export const services = [
     id: 'bioestimuladores',
     name: 'Bioestimuladores ',
     description: 'Sustancias inyectables que estimulan la producción de colágeno en la piel.',
-    fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica (Radiesse).',
+    fullDescription: 'Los bioestimuladores son sustancias inyectables utilizadas en procedimientos estéticos y médicos para estimular la producción de colágeno en la piel, proporcionando estructura, firmeza y elasticidad. Uno de los bioestimuladores más utilizados es la Hidroxiapatita cálcica.',
     icon: '../../img/assets/botox.webp',
     imageList: '../../img/istock3.webp',
     faqs: [
@@ -110,28 +110,7 @@ export const services = [
     ]
   },
  
-  {
-    id: 'lipoenzimas',
-    name: 'Lipoenzimas',
-    description: 'Tratamiento inyectable para reducir grasa localizada.',
-    fullDescription: 'Las lipoenzimas son un tratamiento inyectable a base de enzimas que ayuda a reducir la grasa localizada actuando en los adipocitos (células grasas). Las lipoenzimas no solo ayudan a la reducción de grasa, sino que también estimulan la producción de colágeno, lo que puede mejorar la firmeza y elasticidad de la piel, ofreciendo un resultado más tonificado. Este tratamiento es ideal para zonas como el abdomen, los flancos, los muslos y la papada.',
-    icon: '../../img/assets/barbilla-compress.webp',
-    imageList: '../../img/assets/lista7.webp',
-    faqs: [
-      {
-        question: '¿Cuántas sesiones se necesitan?',
-        answer: 'Se requieren en promedio de 4 a 6 visitas para lograr un resultado satisfactorio.'
-      },
-      {
-        question: '¿Cuánto duran los resultados?',
-        answer: 'El tratamiento es permanente siempre y cuando se conserven buenos hábitos alimenticios.'
-      },
-      {
-        question: '¿Qué factores influyen en los resultados?',
-        answer: 'Los resultados dependen de la grasa a tratar y factores propios del paciente como metabolismo, edad, apego al tratamiento, entre otros.'
-      }
-    ]
-  },
+  
   {
     id: 'acido-hialuronico',
     name: 'Rellenos de Ácido Hialurónico',
