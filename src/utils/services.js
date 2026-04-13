@@ -3,13 +3,13 @@ export const services = [
     id: 'botox',
     name: 'Tratamiento con Toxina Botulinica',
     description: 'Prevención y tratamiento de arrugas de expresión mediante un tratamiento inyectable.',
-    fullDescription: 'El Botox es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
+    fullDescription: 'Toxina Botulinica es un tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión. Las zonas posibles de tratamiento incluyen entrecejo, frente, área periocular (patas de gallo), bunny lines, lifting de ceja, masetero y sonrisa gingival. La dosis se mide por unidades y se personaliza según las necesidades del paciente.',
     icon: '../../img/assets/botox.webp',
     imageService: [ ], // Imágenes 
     imageList: '../../img/assets/11.webp',
     faqs: [
       {
-        question: '¿Cuánto dura el tratamiento de Botox?',
+        question: '¿Cuánto dura el tratamiento de toxina botulinica?',
         answer: 'El procedimiento dura aproximadamente 35 minutos, y los resultados se mantienen alrededor de 4 meses.'
       },
       {
@@ -24,10 +24,7 @@ export const services = [
         question: '¿Cuáles son los cuidados posteriores al tratamiento?',
         answer: 'Se recomienda no exponerse al sol, no manipular el área tratada por 4 horas después de la aplicación, y mantener una posición vertical durante las 4 horas siguientes al tratamiento.'
       },
-      {
-        question: '¿Cuáles son las diferencias entre el "soft look" y el "full look?',
-        answer: 'Soft Look: efecto natural de hidratacion en labios con volumen ligero.  Full Look: efecto rusian lips, volumen moderado alto en labios + hidratacion + definicion'
-      },
+      
       
     ]
   },
@@ -35,7 +32,7 @@ export const services = [
     id: 'depilacion-laser',
     name: 'Depilación Láser Diodo',
     description: 'Depilación a largo plazo con tecnologia de láser de diodo.',
-    fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos Coolite Evo, uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
+    fullDescription: 'La depilación láser diodo utiliza un rayo de luz monocromática y unidireccional que ataca la melanina del folículo piloso hasta destruirlo. Se considera un tipo de depilación a largo plazo que puede llegar a ser definitiva. Utilizamos uno de los mejores láseres diodo de fibra óptica, que cuenta con un potente sistema de enfriamiento para una depilación confortable.',
     icon: '../../img/assets/laser-compress.webp',
     imageList: '../../img/assets/istock2.webp',  
     imageService: ['../../img/assets/depilacionprice.webp', '../../img/assets/zonaslaser.webp' ], // Imágenes
@@ -130,7 +127,11 @@ export const services = [
       {
         question: '¿Qué cuidados debo tener después del tratamiento?',
         answer: 'Se recomienda no exponerse al sol, no manipular el área tratada durante 24 horas, no aplicar frío o calor en la zona tratada, y mantener vigilancia durante 48 horas.'
-      }
+      },
+      {
+        question: '¿Cuáles son las diferencias entre el "soft look" y el "full look?',
+        answer: 'Soft Look: efecto natural de hidratacion en labios con volumen ligero.  Full Look: efecto rusian lips, volumen moderado alto en labios + hidratacion + definicion'
+      },
     ]
   },
   {
@@ -158,7 +159,7 @@ export const services = [
   },
   {
     id: 'dermapen',
-    name: 'Dermapen',
+    name: 'Microagujas',
     description: 'Tratamiento estético para mejorar la textura y el aspecto de la piel.',
     fullDescription: 'El Dermapen es un tratamiento estético que mejora la textura y el aspecto de la piel a través de micropunciones. También conocido como microneedling, estimula la producción de colágeno y elastina, ayudando a reafirmar y rejuvenecer la piel. Además, se pueden agregar diferentes activos que complementan el tratamiento, como vitamina C y ácido hialurónico.',
     icon: '../../img/assets/esteticos.webp',
@@ -182,7 +183,7 @@ export const services = [
 
   {
     id: 'NCTF',
-    name: 'NCTF Tratamiento Iluminador de Ojeras',
+    name: 'Tratamiento Iluminador de Ojeras',
     description: 'Tratamiento inyectable para la renovación y revitalización de la zona de la ojera.',
     fullDescription: `El NCTF es un tratamiento inyectable diseñado para revitalizar y renovar la zona de la ojera mediante un cóctel de ingredientes activos que incluyen ácido hialurónico, 12 vitaminas, 23 aminoácidos, 6 minerales, 6 ácidos nucleicos, y 6 coenzimas. Proporciona hidratación, elasticidad, luminosidad y firmeza.
 
@@ -211,7 +212,7 @@ export const services = [
 },
 {
     id: 'Smartpeeling',
-    name: 'Smartpeeling o Smartker',
+    name: 'Peeling Enzimaticos',
     description: 'Peeling enzimático para exfoliar, renovar y revitalizar la piel según la necesidad de cada paciente.',
     fullDescription: `Smartpeeling o Smartker es un peeling enzimático formulado para exfoliar, renovar y revitalizar la piel mediante una combinación de activos especializados. Existen cinco presentaciones diferentes según las necesidades individuales de cada paciente.
 
@@ -240,7 +241,7 @@ export const services = [
 },
 {
   id: 'Micropigmentacion',
-  name: 'Micropigmentacion Medica',
+  name: 'Micropigmentacion ',
   description: 'Procedimiento estético que mejora, define o recrea la forma y el color de las cejas.',
   fullDescription: `La micropigmentación medica es un procedimiento estético que consiste en la aplicación de pigmentos semipermanentes sobre la piel para mejorar, definir o recrear la forma y el color de las cejas. Existen tres técnicas principales:
                     <ul class="mt-3 text-balance">
@@ -309,7 +310,7 @@ export const services = [
       </div>
 
       <div class="mb-6">
-        <h4 class="font-semibold mb-2">💧 Belotero Revive</h4>
+        <h4 class="font-semibold mb-2">💧 Acido Hialuronico de bajo peso molecular </h4>
         <p>
           Es un skinbooster a base de ácido hialurónico y glicerol. 
           Su fórmula avanzada proporciona hidratación intensa, suaviza líneas finas y mejora la textura y elasticidad de la piel. 
@@ -343,11 +344,11 @@ export const services = [
   description: 'Limpieza profunda, control de acné y efecto glow inmediato con láser y carbón activado.',
 fullDescription: `<strong>El Hollywood Peel </strong>  es un tratamiento láser facial que limpia profundamente la piel, cierra poros, estimula colágeno, controla la producción de grasa y mejora el tono. Utiliza una combinación de carbón activado y láser ND:YAG para una exfoliación suave pero eficaz, que reduce impurezas, líneas finas, manchas y signos de fatiga, dejando una piel luminosa y uniforme.<br><br>
 
-<strong>Conoce nuestro láser NdYag Schindler Medical Systems</strong><br>
-En nuestra clínica contamos con la más alta tecnología alemana de Schindler Medical Systems, garantía de precisión, durabilidad y eficacia. Además, este equipo cuenta con certificación FDA, lo que avala su seguridad y eficacia según los más estrictos estándares internacionales.<br><br>
+<strong>Conoce nuestro láser </strong><br>
+En nuestra clínica contamos con la más alta tecnología, garantía de precisión, durabilidad y eficacia. Además, este equipo cuenta con certificación FDA, lo que avala su seguridad y eficacia según los más estrictos estándares internacionales.<br><br>
 
 <strong>Principales beneficios:</strong><br>
-- Tecnología Alemana de Vanguardia: Diseñado y fabricado en Alemania para ofrecer potencia y control superiores, con sistemas de enfriamiento continuo y protocolos personalizables.<br>
+- Tecnología de Vanguardia: Diseñado y fabricado en Alemania para ofrecer potencia y control superiores, con sistemas de enfriamiento continuo y protocolos personalizables.<br>
 - Certificación FDA: La U.S. Food and Drug Administration ha validado su uso médico-estético, brindándote la tranquilidad de un equipo probado y regulado.<br>
 - Rapidez y Versatilidad: Sesiones de 50 min, combinables entre sí, ideales para ajustarse a tu ritmo de vida.`,
 
@@ -391,7 +392,7 @@ En nuestra clínica contamos con la más alta tecnología alemana de Schindler M
   icon: '../../img/assets/botox.webp',
   mediaType: "video", 
   imageList: '../../img/assets/tatuajes.webp',
-  imageService: ['../../img/assets/removideo.mp4'],
+  imageService: [''],
   faqs: [
     {
       question: '¿Cuál es el protocolo de tratamiento de remoción de tatuajes o micropigmentación en cejas?',
