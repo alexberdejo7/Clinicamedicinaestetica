@@ -1,0 +1,218 @@
+---
+const currentDate = new Date().getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Aviso de Privacidad</title>
+  </head>
+
+  <body class="bg-nude-bg">
+
+    <main class="py-16 px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-4xl mx-auto">
+
+        <!-- HEADER -->
+        <div class="text-center mb-14">
+
+          <div class="flex justify-center mb-5">
+            <div class="w-20 h-20 rounded-full bg-[#f8f1ec] flex items-center justify-center shadow-md">
+              <span class="text-3xl">🔒</span>
+            </div>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl font-bold font-roboto text-black tracking-tight">
+            Aviso de Privacidad
+          </h1>
+
+          <div class="w-24 h-1 bg-[#ceaa97] mx-auto rounded-full mt-5"></div>
+
+          <p class="mt-5 text-sm text-gray-500 font-poppins">
+            Última actualización {currentDate}
+          </p>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="space-y-10 text-gray-700 leading-8 font-poppins text-sm sm:text-base">
+
+          <div class="bg-white rounded-[32px] p-8 shadow-lg border border-[#f1e7e1]">
+
+            <p>
+              <strong class="text-black">
+                Dra. Jessica Leticia Alcalá Jiménez
+              </strong>,
+              mejor conocido como Clínica Medicina Estética,
+              con domicilio en Avenida 10 de abril, Número 6,
+              Colonia Granjas, Cuernavaca Morelos C.P. 62460,
+              es responsable del uso y protección de sus datos personales.
+            </p>
+          </div>
+
+          <!-- FINALIDADES -->
+          <div class="bg-[#fcf8f5] rounded-[32px] p-8 border border-[#f1e7e1] shadow-lg">
+
+            <h2 class="text-2xl font-semibold text-black font-roboto mb-8 text-center">
+              Finalidad del uso de datos
+            </h2>
+
+            <div class="grid gap-5">
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 text-lg">✔️</div>
+
+                <p>
+                  Prestación de servicios generales y especializados
+                  de medicina estética.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 text-lg">✔️</div>
+
+                <p>
+                  Agendamiento y confirmación de citas.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 text-lg">✔️</div>
+
+                <p>
+                  Seguimiento y atención al cliente.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 text-lg">✔️</div>
+
+                <p>
+                  Mercadotecnia, promociones y publicidad.
+                </p>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 text-lg">✔️</div>
+
+                <p>
+                  Prospección comercial y contacto informativo.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TEXTO -->
+          <div class="bg-white rounded-[32px] p-8 shadow-lg border border-[#f1e7e1]">
+
+            <p>
+              Para más información acerca del tratamiento de sus datos
+              personales y de los derechos que puede hacer valer,
+              puede solicitar el aviso de privacidad integral
+              directamente en nuestro consultorio.
+            </p>
+          </div>
+
+          <!-- CONTACTO -->
+          <div class="bg-[#f8f1ec] rounded-[32px] p-8 border border-[#ead9cf] shadow-lg">
+
+            <h2 class="text-2xl font-semibold text-black font-roboto mb-8 text-center">
+              Información de contacto
+            </h2>
+
+            <div class="space-y-5 text-sm sm:text-base">
+
+              <div class="flex items-start gap-4">
+                <span class="text-xl">📍</span>
+
+                <p>
+                  Avenida 10 de abril, Número 6,
+                  Colonia Granjas, Cuernavaca Morelos C.P. 62460
+                </p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-xl">📞</span>
+
+                <a
+                  href="tel:+527772676286"
+                  class="hover:text-black transition-colors hover:underline"
+                >
+                  777 267 6286
+                </a>
+              </div>
+
+              <!-- <div class="flex items-center gap-4">
+                <span class="text-xl">✉️</span>
+
+                <a
+                  href="mailto:clinicaesteticadra@gmail.com"
+                  class="hover:text-black transition-colors hover:underline break-all"
+                >
+                  clinicaesteticadra@gmail.com
+                </a>
+              </div> -->
+
+            </div>
+          </div>
+
+          <!-- BOTONES -->
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
+
+            <a
+              href="/"
+              class="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3 rounded-full font-neoteric text-sm shadow-md hover:scale-105 transition-all duration-300"
+            >
+              ← Volver al Inicio
+            </a>
+
+            <a
+              href="/img/assets/aviso.pdf"
+              download
+              class="inline-flex items-center justify-center gap-2 bg-[#5d2c12] text-white px-8 py-3 rounded-full font-neoteric text-sm shadow-md hover:scale-105 transition-all duration-300"
+            >
+              📄 Descargar Aviso PDF
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="mt-6 text-center font-poppins text-md  text-nude-text space-y-1">
+      <h4 class="text-lg font-semibold font-roboto">
+        Dra. Jessica Leticia Alcalá Jiménez
+      </h4>
+
+
+      <p class="text-sm font-poppins">
+        Céd. Prof. Medico Cirujano UAEM No. 11911567
+      </p>
+
+      <p class="text-sm font-poppins">
+        Ced. Prof. Medicina Estética y Longevidad No. 13113841
+      </p>
+
+      <p class="text-sm font-poppins">
+        Ced. Prof. Especialidad en Estética Facial No. 14834489 KIREI
+      </p>
+
+      <p class="text-xs font-poppins mt-2">
+        COFEPRIS 26110720002A00044
+      </p>
+    </div>
+
+  </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>

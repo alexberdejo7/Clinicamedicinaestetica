@@ -65,7 +65,7 @@ export const treatments = [
       ]
     },
     {
-      title: "Armonización facial",
+      title: "Definicion de contornos faciales",
       description: "Conjunto de técnicas que buscan equilibrar las proporciones y características del rostro del paciente.",
       duration: "15-45min",
       effectDuration: "Personalizado según necesidades del paciente",
@@ -86,14 +86,14 @@ export const treatments = [
         "Aplicarse protector solar y aloe vera"
       ]
     },
-    {
-      title: "MicroPigmentacion",
-      description: "Depilación a largo plazo que puede llegar a ser definitiva usando láser de diodo.",
-      duration: "Variable",
-      effectDuration: "10 sesiones cada 30-45 días",
-      postCare: [
-        "No exponerse al sol",
-        "Aplicarse protector solar y aloe vera"
-      ]
-    }
+    // {
+    //   title: "MicroPigmentacion",
+    //   description: "Depilación a largo plazo que puede llegar a ser definitiva usando láser de diodo.",
+    //   duration: "Variable",
+    //   effectDuration: "10 sesiones cada 30-45 días",
+    //   postCare: [
+    //     "No exponerse al sol",
+    //     "Aplicarse protector solar y aloe vera"
+    //   ]
+    // }
   ];

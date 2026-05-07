@@ -8,15 +8,23 @@ import Feature from '../components/Feature.astro';
 import Frase from '../components/Frase.astro';
 import Testimonios from '../components/Testimonios.astro';
 import Maps from '../components/Maps.astro'
-import New from '../components/New.astro'
+
 
 import 'aos/dist/aos.css';
 ---
 
 
-
-<New/>
-
+<Layout title="Clinica Medicina Estetica | Dra Jessica Alcala">
+  <HeroTest5 />
+  <Feature />
+  <Services />
+  <Frase />
+  <Aboutus />
+  <Testimonios />
+  <Course />
+  <Maps/>
+  
+</Layout>
 
 <script>
   // Inicializar AOS de manera diferida
