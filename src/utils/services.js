@@ -239,52 +239,53 @@ export const services = [
       }
     ]
 },
-{
-  id: 'Micropigmentacion',
-  name: 'Micropigmentacion ',
-  description: 'Procedimiento estético que mejora, define o recrea la forma y el color de las cejas.',
-  fullDescription: `La micropigmentación medica es un procedimiento estético que consiste en la aplicación de pigmentos semipermanentes sobre la piel para mejorar, definir o recrear la forma y el color de las cejas. Existen tres técnicas principales:
-                    <ul class="mt-3 text-balance">
-                      <li><strong>Microblading:</strong> Ideal para un aspecto natural, crea trazos individuales que imitan el vello de la ceja.</li>
-                      <li><strong>Ceja Híbrida:</strong> Combina microblading con un ligero sombreado para lograr más definición.</li>
-                      <li><strong>Powder Brows:</strong> Aporta un efecto de cejas rellenas con un acabado difuminado y suave.</li>
-                    </ul>
 
-                    <p class="mt-4 font-neoteric"> Detalles del Procedimiento </p>
-                    <ul class="mt-1 text-start text-balance">
-                  <li><strong>Primera Sesión:</strong> Dura aproximadamente 2 horas e incluye el diseño inicial de la ceja.</li>
-                  <li><strong>Retoques:</strong> Uno o dos retoques son necesarios después de un mes y medio para asegurar que el pigmento se asiente adecuadamente.</li>
-                </ul>
+// {
+//   id: 'Micropigmentacion',
+//   name: 'Micropigmentacion ',
+//   description: 'Procedimiento estético que mejora, define o recrea la forma y el color de las cejas.',
+//   fullDescription: `La micropigmentación medica es un procedimiento estético que consiste en la aplicación de pigmentos semipermanentes sobre la piel para mejorar, definir o recrear la forma y el color de las cejas. Existen tres técnicas principales:
+//                     <ul class="mt-3 text-balance">
+//                       <li><strong>Microblading:</strong> Ideal para un aspecto natural, crea trazos individuales que imitan el vello de la ceja.</li>
+//                       <li><strong>Ceja Híbrida:</strong> Combina microblading con un ligero sombreado para lograr más definición.</li>
+//                       <li><strong>Powder Brows:</strong> Aporta un efecto de cejas rellenas con un acabado difuminado y suave.</li>
+//                     </ul>
+
+//                     <p class="mt-4 font-neoteric"> Detalles del Procedimiento </p>
+//                     <ul class="mt-1 text-start text-balance">
+//                   <li><strong>Primera Sesión:</strong> Dura aproximadamente 2 horas e incluye el diseño inicial de la ceja.</li>
+//                   <li><strong>Retoques:</strong> Uno o dos retoques son necesarios después de un mes y medio para asegurar que el pigmento se asiente adecuadamente.</li>
+//                 </ul>
                     
                     
-                    `,
+//                     `,
 
                     
-  icon: '../../img/assets/ceja.webp',
-  imageList: '../../img/assets/micro.webp',
-  imageService: ['../../img/assets/micro1.webp', '../../img/assets/micro2.webp'],
-  faqs: [
+//   icon: '../../img/assets/ceja.webp',
+//   imageList: '../../img/assets/micro.webp',
+//   imageService: ['../../img/assets/micro1.webp', '../../img/assets/micro2.webp'],
+//   faqs: [
     
-    {
-      question: '¿Cuánto tiempo dura cada técnica?',
-      answer: 'La duración del efecto de la micropigmentación depende de la técnica utilizada:    Microblading: Entre 6 y 8 meses. Ceja Híbrida: Entre 8 y 12 meses. Powder Brows: Entre 8 y 12 meses.'
+//     {
+//       question: '¿Cuánto tiempo dura cada técnica?',
+//       answer: 'La duración del efecto de la micropigmentación depende de la técnica utilizada:    Microblading: Entre 6 y 8 meses. Ceja Híbrida: Entre 8 y 12 meses. Powder Brows: Entre 8 y 12 meses.'
                
-    },
-    {
-      question: '¿Qué cuidados debo tener después del tratamiento?',
-      answer: 'Para obtener los mejores resultados y evitar complicaciones, se recomienda: Usar un kit de cejas recomendado por el especialista. Evitar la exposición solar intensa. No aplicar maquillaje en el área de las cejas. Evitar piscinas y saunas durante los primeros 7 días.'
+//     },
+//     {
+//       question: '¿Qué cuidados debo tener después del tratamiento?',
+//       answer: 'Para obtener los mejores resultados y evitar complicaciones, se recomienda: Usar un kit de cejas recomendado por el especialista. Evitar la exposición solar intensa. No aplicar maquillaje en el área de las cejas. Evitar piscinas y saunas durante los primeros 7 días.'
                 
-    },
-    {
-      question: '¿Es doloroso el procedimiento?',
-      answer: 'La mayoría de las personas sienten solo una leve molestia, ya que se aplica anestesia tópica para reducir el dolor durante el tratamiento.'
-    },
-    {
-      question: '¿Puedo maquillarme las cejas después del tratamiento?',
-      answer: 'No se recomienda aplicar maquillaje en el área de las cejas durante al menos una semana, para permitir que el pigmento se asiente y la piel se recupere adecuadamente.'
-    }
-  ]
-},
+//     },
+//     {
+//       question: '¿Es doloroso el procedimiento?',
+//       answer: 'La mayoría de las personas sienten solo una leve molestia, ya que se aplica anestesia tópica para reducir el dolor durante el tratamiento.'
+//     },
+//     {
+//       question: '¿Puedo maquillarme las cejas después del tratamiento?',
+//       answer: 'No se recomienda aplicar maquillaje en el área de las cejas durante al menos una semana, para permitir que el pigmento se asiente y la piel se recupere adecuadamente.'
+//     }
+//   ]
+// },
 {
   id: 'Skinboosters',
   name: 'Skinboosters',

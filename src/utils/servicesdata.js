@@ -1,6 +1,6 @@
 export const treatments = [
     {
-      title: "Botox | Baby Botox",
+      title: "Toxina botulínica",
       description: "Tratamiento inyectable que ayuda a prevenir y tratar arrugas de la expresión.",
       duration: "35min",
       effectDuration: "4 meses",
