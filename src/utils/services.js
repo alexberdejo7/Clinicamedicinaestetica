@@ -66,7 +66,7 @@ export const services = [
     id: 'armonizacion-facial',
     name: 'Definicion de contornos faciales',
     description: 'Conjunto de técnicas para equilibrar las proporciones del rostro.',
-    fullDescription: 'La correcion de angulos faciales comprende un un conjunto de técnicas orientadas a mejorar la estructura y proporcion del rostro, mediante la definicion y ajuste de sus puntos clave. El objetivo es lograr un equilibrio visual que resalte las caracteristicas naturales del paciente y aporte una apariencia mas estetica y estructuraa. Entre los procedimientos mas utilizados se encuentran la toxina botulinica, los rellenos dermicos y los bioestimuladores, entre otros.',
+    fullDescription: 'La correcion de angulos faciales comprende un un conjunto de técnicas orientadas a mejorar la estructura y proporcion del rostro, mediante la definicion y ajuste de sus puntos clave. El objetivo es lograr un equilibrio visual que resalte las caracteristicas naturales del paciente y aporte una apariencia mas estetica y estructura. Entre los procedimientos mas utilizados se encuentran la toxina botulinica, los rellenos dermicos y los bioestimuladores, entre otros.',
     icon: '../../img/assets/cirugia-compress.webp',
     imageList: '../../img/assets/armoni.webp',
     faqs: [
